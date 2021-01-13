@@ -1,0 +1,95 @@
+@import "../mixins", "../vars";
+
+
+.colors {
+  display: grid;
+  grid-template-columns: [caption] 1fr [color-1] 128px [color-2] 128px [color-3] 128px [color-4] 128px;
+  grid-gap: 50px 40px;
+  padding-right: 20px;
+
+  &__caption {
+    grid-column: caption;
+    font-size: 24px;
+    line-height: 29.23px;
+  }
+
+  &__color-1 {
+    grid-column: color-1;
+  }
+
+  &__color-2 {
+    grid-column: color-2;
+  }
+
+  &__color-3 {
+    grid-column: color-3;
+  }
+
+  &__color-4 {
+    grid-column: color-4;
+  }
+
+  &__box {
+    width: 100px;
+    height: 100px;
+    font-family: "Myriad Pro Semibold", serif;
+    font-size: 12px;
+    line-height: 14.62px;
+    text-align: center;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_blue {
+      color: white;
+      background: $Blue;
+    }
+
+    &_light-blue {
+      background: $LightBlue;
+    }
+
+    &_orange {
+      background: $Orange;
+    }
+
+    &_light-orange {
+      background: $LightOrange;
+    }
+
+    &_dark-gray {
+      color: white;
+      background: $DarkGray;
+    }
+
+    &_gray {
+      background: $Gray;
+    }
+
+    &_light-gray {
+      background: $LightGray;
+    }
+
+    &_white {
+      background: white;
+    }
+  }
+
+  &__text{
+    color: #8A8F92;
+    font-size: 12px;
+    line-height: 14.62px;
+    margin-top: 14px;
+    &:first-of-type {
+      margin-top: 24px;
+    }
+
+    &_bold {
+      width: 50px;
+      font-family: "Myriad Pro Black", serif;
+      color: $DarkGray;
+      display: inline-block;
+    }
+  }
+}

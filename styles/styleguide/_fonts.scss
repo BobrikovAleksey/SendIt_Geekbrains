@@ -1,0 +1,69 @@
+@import "../mixins", "../vars";
+
+
+.fonts {
+  display: grid;
+  grid-template-columns: [font-1] 1fr [font-2] 1fr;
+  grid-template-rows: 140px;
+  grid-gap: 39px 60px;
+  padding: 22px 21px 48px;
+
+  &__caption {
+    grid-column: caption;
+    font-size: 24px;
+    line-height: 29.23px;
+  }
+
+  &__font-1, &__font-2 {
+    color: $DarkGray;
+    display: flex;
+  }
+
+  &__font-1 {
+    grid-column: font-1;
+  }
+
+  &__font-2 {
+    grid-column: font-2;
+  }
+
+  &__view {
+    width: 144px;
+    font-size: 105px;
+    line-height: 126px;
+    margin-top: -14px;
+  }
+
+  &__info {
+    margin-left: 5px;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 31.2px;
+    margin-top: 3px;
+  }
+
+  &__example {
+    margin-top: 13px;
+    &:last-of-type {
+      margin-top: 6px;
+    }
+  }
+
+  &_light {
+    font-family: "Myriad Pro Light", serif;
+  }
+
+  &_regular &__view {
+    margin-top: -18px;
+  }
+
+  &_semibold {
+    font-family: "Myriad Pro Semibold", serif;
+  }
+
+  &_black {
+    font-family: "Myriad Pro Black", serif;
+  }
+}

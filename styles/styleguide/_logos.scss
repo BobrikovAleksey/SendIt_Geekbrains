@@ -1,0 +1,68 @@
+@import "../mixins", "../vars";
+
+
+.main-logo {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+
+  &__block {
+    width: 453px;
+  }
+
+  &__image {
+    height: 244px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_without-tagline {
+      width: 238px;
+      margin: 0 3px 3px 0;
+    }
+
+    &_with-tagline {
+      width: 281px;
+      margin: 5px 0 0 47px;
+    }
+  }
+
+  &__label {
+    margin: 18px 0 0 1px;
+  }
+}
+
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+  &__image {
+    width: 453px;
+    height: 187px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_black {
+      background: $DarkGray;
+      padding: 0 12px 10px 0;
+    }
+
+    &_blue {
+      background: $Blue;
+      padding: 0 3px 8px 0;
+    }
+
+    &_white {
+      background: white;
+      padding: 0 5px 13px 0;
+    }
+
+    &_white-blue {
+      background: white;
+      padding: 0 0 5px 1px;
+    }
+  }
+}
