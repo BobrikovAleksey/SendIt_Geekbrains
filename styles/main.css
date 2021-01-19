@@ -20,7 +20,7 @@
   color: white;
 }
 .header__text:nth-child(2) {
-  margin-top: 25px;
+  margin-top: 24px;
 }
 .header__button {
   margin-top: 42px;
@@ -50,9 +50,10 @@
   background: #F7F7F7;
 }
 .description__container {
+  min-height: 457px;
   display: flex;
   justify-content: space-between;
-  padding: 63px 112px 92px 111px;
+  padding: 62px 112px 48px 111px;
 }
 .description__banner {
   width: 660px;
@@ -65,7 +66,7 @@
 }
 .description__icon_bringo {
   width: 82px;
-  height: 52px;
+  height: 53px;
   background: url("../images/delivery/bringo.png") center center;
   background-size: 82px auto;
   top: 50px;
@@ -73,7 +74,7 @@
 }
 .description__icon_cdek {
   width: 88px;
-  height: 56px;
+  height: 57px;
   background: url("../images/delivery/cdek.png") center center;
   background-size: 88px auto;
   top: 126px;
@@ -81,7 +82,7 @@
 }
 .description__icon_city-express {
   width: 88px;
-  height: 56px;
+  height: 57px;
   background: url("../images/delivery/city-express.png") center center;
   background-size: 88px auto;
   top: 79px;
@@ -92,7 +93,7 @@
   height: 68px;
   background: url("../images/delivery/dpd.png") center center;
   background-size: 107px auto;
-  top: 83px;
+  top: 84px;
   left: 14px;
 }
 .description__icon_pony-express {
@@ -108,7 +109,7 @@
   height: 56px;
   background: url("../images/delivery/spsr.png") center center;
   background-size: 88px auto;
-  top: 170px;
+  top: 171px;
   right: 36px;
 }
 .description__icon_tnt {
@@ -121,15 +122,15 @@
 }
 .description__icon_ups {
   width: 70px;
-  height: 48px;
-  background: url("../images/delivery/ups.png") center -47px;
-  background-size: 70px auto;
-  top: 123px;
+  height: 46px;
+  background: url("../images/delivery/ups.png") center -45px;
+  background-size: 70px 137px;
+  top: 124px;
   right: 137px;
 }
 .description__boxman {
   width: 200px;
-  height: 265px;
+  height: 266px;
   position: absolute;
   top: 70px;
   left: 240px;
@@ -139,12 +140,10 @@
   padding: 22px 18px 12px 0;
 }
 .description__text {
-  margin-top: 29px;
+  margin-top: 26px;
 }
 .description__button {
-  width: 360px;
-  height: 48px;
-  margin-top: 32px;
+  margin-top: 33px;
 }
 
 .scenario__container {

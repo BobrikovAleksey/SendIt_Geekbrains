@@ -1,0 +1,117 @@
+@import "../vars", "../mixins";
+
+
+.description {
+  background: $VeryLightSilver;
+
+  &__container {
+    min-height: 457px;
+    display: flex;
+    justify-content: space-between;
+    padding: 62px 112px 48px 111px;
+  }
+
+  &__banner {
+    width: 660px;
+    height: 267px;
+    background: url("../images/cloud.png") no-repeat;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+
+    &_bringo {
+      width: 82px;
+      height: 53px;
+      background: url("../images/delivery/bringo.png") center center;
+      background-size: 82px auto;
+      top: 50px;
+      left: 139px;
+    }
+
+    &_cdek {
+      width: 88px;
+      height: 57px;
+      background: url("../images/delivery/cdek.png") center center;
+      background-size: 88px auto;
+      top: 126px;
+      left: 131px;
+    }
+
+    &_city-express {
+      width: 88px;
+      height: 57px;
+      background: url("../images/delivery/city-express.png") center center;
+      background-size: 88px auto;
+      top: 79px;
+      right: 31px;
+    }
+
+    &_dpd {
+      width: 107px;
+      height: 68px;
+      background: url("../images/delivery/dpd.png") center center;
+      background-size: 107px auto;
+      top: 84px;
+      left: 14px;
+    }
+
+    &_pony-express {
+      width: 110px;
+      height: 72px;
+      background: url("../images/delivery/pony-express.png") center center;
+      background-size: 110px auto;
+      top: 168px;
+      left: 34px;
+    }
+
+    &_spsr {
+      width: 88px;
+      height: 56px;
+      background: url("../images/delivery/spsr.png") center center;
+      background-size: 88px auto;
+      top: 171px;
+      right: 36px;
+    }
+
+    &_tnt {
+      width: 82px;
+      height: 52px;
+      background: url("../images/delivery/tnt.png") center center;
+      background-size: 82px auto;
+      top: 34px;
+      right: 166px;
+    }
+
+    &_ups {
+      width: 70px;
+      height: 46px;
+      background: url("../images/delivery/ups.png") center -45px;
+      background-size: 70px 137px;
+      top: 124px;
+      right: 137px;
+    }
+  }
+
+  &__boxman {
+    width: 200px;
+    height: 266px;
+    position: absolute;
+    top: 70px;
+    left: 240px;
+  }
+
+  &__about {
+    width: 460px;
+    padding: 22px 18px 12px 0;
+  }
+
+  &__text {
+    margin-top: 26px;
+  }
+
+  &__button {
+    margin-top: 33px;
+  }
+}
