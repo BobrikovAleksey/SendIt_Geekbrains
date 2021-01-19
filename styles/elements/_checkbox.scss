@@ -1,0 +1,56 @@
+@import "../mixins", "../vars";
+
+
+.checkbox {
+  cursor: pointer;
+  width: fit-content;
+  color: white;
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+
+
+  .checkbox__input {
+    visibility: hidden;
+    position: absolute;
+
+    &:checked + .checkbox__check {
+      &:before {
+        visibility: hidden;
+        position: absolute;
+      }
+      &:after {
+        visibility: visible;
+        position: static;
+      }
+    }
+  }
+
+
+  .checkbox__check {
+    width: 16px;
+    font-family: "FontAwesome", serif;
+    font-size: 13px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    &:before {
+      content:"\f096";
+      visibility: visible;
+      position: static;
+    }
+    &:after {
+      content:"\f046";
+      visibility: hidden;
+      position: absolute;
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      width: calc(16px + (#{$Breakpoint-630} - 100vw) * #{2 / ($Breakpoint-630N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      width: 18px;
+    }
+  }
+}

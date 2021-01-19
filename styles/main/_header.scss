@@ -1,0 +1,67 @@
+@import "../vars", "../mixins";
+
+
+.header {
+  &__container {
+    height: $HeightDesktopBG;
+    background: url("../images/background.jpg") no-repeat 0 -2px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    position: relative;
+  }
+
+
+  &__logo {
+    width: 160px;
+    height: 46px;
+    margin-top: -1px;
+  }
+
+
+  &__caption {
+    position: absolute;
+    top: 153px;
+    left: 140px;
+  }
+
+
+  &__text {
+    color: white;
+    &:nth-child(2) {
+      margin-top: 25px;
+    }
+  }
+
+
+  &__button {
+    margin-top: 42px;
+  }
+}
+
+
+.main-menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    padding: 8px 2px 0 0;
+  }
+
+
+  &__item {
+    margin-left: 60px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:nth-child(4) {
+      margin-left: 62px;
+    }
+  }
+
+
+  &__link {
+    color: white;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

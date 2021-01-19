@@ -1,9 +1,5 @@
-@import 'fonts', 'mixins', 'vars';
+@import "fonts", "mixins", "vars";
 
-body {
-  font-family: "Myriad Pro Regular", serif;
-  color: $Black;
-}
 
 * {
   box-sizing: border-box;
@@ -12,6 +8,11 @@ body {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Myriad Pro Regular", serif;
+  color: $Black;
 }
 
 h1, h2, h3 {
@@ -30,13 +31,27 @@ h3 {
   @include H3;
 }
 
-a, p {
-  font-size: 16px;
-  line-height: 19.2px;
+p {
+  @include P;
 }
 
 a {
-  text-decoration: none;
+  @include A;
+}
+
+details > summary {
+  list-style: none
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.link {
   color: $DarkBlue;
   border-bottom: 1px solid $DarkBlue;
   &:hover:not(:active) {
@@ -48,28 +63,38 @@ a {
   }
 }
 
-.button {
-  @include Button;
 
-  &_blue {
+.input {
+  @include P;
+  width: $InputWidthLg;
+  height: $InputHeightLg;
+  color: white;
+  border: 1px solid white;
+  border-radius: $InputHeightLg / 8 * 5;
+  padding: 1px 20px 0;
+  &::placeholder {
     color: white;
-    background: $Blue;
-    &:hover:not(:active):not(:disabled) {
-      box-shadow: 0 4px 15px rgba($Blue, 0.45)
-    }
-    &:active:not(:disabled) {
-      background: $LightBlue;
-    }
   }
 
-  &_orange {
-    color: $DarkGray;
-    background: $Orange;
-    &:hover:not(:active):not(:disabled) {
-      box-shadow: 0 4px 20px rgba($Orange, 0.45)
-    }
-    &:active:not(:disabled) {
-      background: $LightOrange;
-    }
+  @media (max-width: $Breakpoint-1220) {
+    padding: 1px calc(20px - (#{$Breakpoint-1220} - 100vw) * #{4 / ($Breakpoint-1220N - $SizeTabletN)}) 0;
+  }
+
+  @media (max-width: $SizeTablet) {
+    padding: 1px 16px 0;
+  }
+
+  @media (max-width: $Breakpoint-630) {
+    padding: 0 calc(20px + (#{$Breakpoint-630} - 100vw) * #{3 / ($Breakpoint-630N - $SizePhoneN)}) 1px;
+  }
+
+  @media (max-width: $SizePhone) {
+    padding: 0 23px 1px;
   }
 }
+
+
+@import "elements/button";
+@import "elements/checkbox";
+@import "elements/slick";
+@import "elements/container";

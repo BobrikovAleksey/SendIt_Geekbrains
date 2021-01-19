@@ -1,11 +1,73 @@
-// palette
-$Black: #495C6C;
+// S I Z E S
+
+// breakpoints
+$SizePhoneN: 320;
+$SizePhone: 320px;
+$SizeTabletN: 768;
+$SizeTablet: 768px;
+$SizeDesktopN: 1440;
+$SizeDesktop: 1440px;
+$Breakpoint-1220N: 1220;
+$Breakpoint-1220: 1220px;
+$Breakpoint-830N: 830;
+$Breakpoint-830: 830px;
+$Breakpoint-730N: 730;
+$Breakpoint-730: 730px;
+$Breakpoint-630N: 630;
+$Breakpoint-630: 630px;
+
+// background
+$WidthPhoneBG: 790px;
+$HeightPhoneBG: 288px;
+$WidthTabletBG: 1138px;
+$HeightTabletBG: 415px;
+$WidthDesktopBG: 1440px;
+$HeightDesktopBG: 523px;
+
+// padding
+$ContainerPaddingLgN: 140;
+$ContainerPaddingLg: 140px;
+$ContainerPaddingMdN: 34;
+$ContainerPaddingMd: 34px;
+$ContainerPaddingSmN: 21;
+$ContainerPaddingSm: 21px;
+
+
+// input, button
+$InputWidthLgN: 360;
+$InputWidthLg: 360px;
+$InputHeightLgN: 48;
+$InputHeightLg: 48px;
+$InputWidthMdN: 280;
+$InputWidthMd: 280px;
+$InputHeightMdN: 48;
+$InputHeightMd: 48px;
+
+
+// P A L E T T E
+
+// blue
+$Aquamarine: #7CC3E1;
+$LightAquamarine: rgba(#7CC3E1, 0.6);
 $Blue: #008DCD;
 $LightBlue: #94D1EC;
+$Lavender: #D2ECF7;
 $DarkBlue: #0055B8;
+
+// gray
 $Gray: #B3B3B3;
-$LightGray: #E1E1E1;
+$VeryLightGray: #E9E9E9;
+$LightGray: #C4C4C4;
+$VeryDarkGray: #363636;
+
+// silver
+$Silver: #F4F4F4;
+$LightSilver: #F4F4F4;
+$VeryLightSilver: #F7F7F7;
+
+
+
+$Black: #495C6C;
 $DarkGray: #363636;
 $Orange: #FFCC00;
 $LightOrange: #FCE39C;
-$Silver: #F4F4F4;

@@ -1,4 +1,4 @@
-@import 'mixins', 'vars';
+@import "mixins", "vars";
 
 
 body {
@@ -240,4 +240,7 @@ body {
 }
 
 
-@import 'styleguide/fonts', 'styleguide/breadcrumbs', 'styleguide/colors', 'styleguide/logos';
+@import "styleguide/fonts";
+@import "styleguide/breadcrumbs";
+@import "styleguide/colors";
+@import "styleguide/logos";

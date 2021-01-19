@@ -1,0 +1,43 @@
+@import "../mixins", "../vars";
+
+
+.slick {
+  &-arrow {
+    cursor: pointer;
+    overflow: hidden;
+    width: 22px;
+    height: 22px;
+    color: transparent;
+    border-bottom: 2px solid $LightGray;
+    border-left: 2px solid $LightGray;
+    position: absolute;
+    &:hover, &:active, &:focus {
+      border-color: $Blue;
+    }
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(22px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(22px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      width: calc(20px - (#{$Breakpoint-730} - 100vw) * #{6 / ($Breakpoint-730N - $SizePhoneN)});
+      height: calc(20px - (#{$Breakpoint-730} - 100vw) * #{6 / ($Breakpoint-730N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+
+  &-prev {
+    transform: rotate(45deg);
+  }
+
+
+  &-next {
+    transform: rotate(-135deg);
+  }
+}

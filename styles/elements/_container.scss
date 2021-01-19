@@ -1,0 +1,21 @@
+@import "../mixins", "../vars";
+
+
+.container {
+  max-width: $WidthDesktopBG;
+  min-width: 320px;
+  padding: 0 140px;
+  margin: 0 auto;
+
+  @media (max-width: $SizeDesktop) {
+    padding: 0 calc(#{$ContainerPaddingLg} - (#{$SizeDesktop} - 100vw) * #{($ContainerPaddingLgN - $ContainerPaddingMdN) / ($SizeDesktopN - $Breakpoint-1220N)});
+  }
+
+  @media (max-width: $Breakpoint-1220) {
+    padding: 0 $ContainerPaddingMd;
+  }
+
+  @media (max-width: $Breakpoint-630) {
+    padding: 0 $ContainerPaddingSm;
+  }
+}
