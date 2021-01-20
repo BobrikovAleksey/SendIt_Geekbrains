@@ -1,0 +1,27 @@
+@import "../vars", "../mixins";
+
+
+.parcel {
+  background: $Silver;
+
+
+  &__container {
+    min-height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+
+
+  &__title {
+    text-transform: none;
+    padding: 0 48px 2px 0;
+  }
+
+
+  &__button {
+
+  }
+}

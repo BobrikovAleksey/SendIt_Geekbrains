@@ -157,7 +157,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 47px 120px;
-  padding: 64px 182px 68px 198px;
+  padding: 64px 182px 69px 198px;
 }
 .scenario__figure {
   width: 480px;
@@ -200,20 +200,17 @@
   background: #F4F4F4;
 }
 .parcel__container {
+  min-height: 180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 65px;
-  padding-bottom: 67px;
+  padding-top: 44px;
+  padding-bottom: 48px;
 }
 .parcel__title {
-  margin-top: -2px;
+  text-transform: none;
+  padding: 0 48px 2px 0;
 }
-.parcel__button {
-  width: 360px;
-  height: 48px;
-}
-
 .callback {
   background: #008DCD;
 }
