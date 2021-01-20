@@ -46,13 +46,13 @@ h1 {
 
 h2 {
   font-family: "Myriad Pro Bold", serif;
+  text-transform: uppercase;
   font-size: 36px;
   line-height: 43px;
 }
 
 h3 {
   font-family: "Myriad Pro Semibold", serif;
-  text-transform: uppercase;
   font-size: 30px;
   line-height: 36px;
 }
