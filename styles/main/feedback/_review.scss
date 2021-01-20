@@ -1,0 +1,245 @@
+@import "../../vars", "../../mixins";
+
+
+.review {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 160px 260px;
+  grid-template-areas: "photo info" "message message";
+  grid-gap: 23px 40px;
+
+  @media (max-width: $SizeDesktop - 1px) {
+    width: calc(500px - (#{$SizeDesktop} - 100vw) * #{200 / ($SizeDesktopN - $SizeTabletN)});
+    grid-template-columns: calc(160px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)})
+                           calc(261px - (#{$SizeDesktop} - 100vw) * #{99 / ($SizeDesktopN - $SizeTabletN)});
+    grid-gap: calc(23px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)})
+              calc(39px - (#{$SizeDesktop} - 100vw) * #{21 / ($SizeDesktopN - $SizeTabletN)});
+  }
+
+  @media (max-width: $SizeTablet) {
+    width: 300px;
+    grid-template-columns: 100px 161px;
+  }
+
+  @media (max-width: $Breakpoint-730) {
+    width: calc(460px - (#{$Breakpoint-730} - 100vw) * #{210 / ($Breakpoint-730N - $SizePhoneN)});
+    grid-template-columns: calc(160px - (#{$Breakpoint-730} - 100vw) * #{60 / ($Breakpoint-730N - $SizePhoneN)})
+                           calc(270px - (#{$Breakpoint-730} - 100vw) * #{159 / ($Breakpoint-730N - $SizePhoneN)});
+    grid-gap: calc(12px - (#{$Breakpoint-730} - 100vw) * #{3 / ($Breakpoint-730N - $SizePhoneN)})
+              calc(30px - (#{$Breakpoint-730} - 100vw) * #{11 / ($Breakpoint-730N - $SizePhoneN)});
+  }
+
+  @media (max-width: $SizePhone) {
+    width: 250px;
+    grid-template-columns: 100px 111px;
+  }
+
+  @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+    grid-gap: 9px 19px;
+  }
+
+
+  &__photo {
+    grid-area: photo;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin-top: 6px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(160px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(160px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: 5px;
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      width: calc(160px - (#{$Breakpoint-730} - 100vw) * #{60 / ($Breakpoint-730N - $SizePhoneN)});
+      height: calc(160px - (#{$Breakpoint-730} - 100vw) * #{60 / ($Breakpoint-730N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+      width: 100px;
+      height: 101px;
+    }
+
+
+    &_1 img {
+      width: 251px;
+      height: 167px;
+      margin: -8px 0 0 -56px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(251px - (#{$SizeDesktop} - 100vw) * #{94 / ($SizeDesktopN - $SizeTabletN)});
+        margin: calc(-8px + (#{$SizeDesktop} - 100vw) * #{3 / ($SizeDesktopN - $SizeTabletN)})
+                0 0 calc(-56px + (#{$SizeDesktop} - 100vw) * #{21 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $Breakpoint-730) {
+        width: calc(251px - (#{$Breakpoint-730} - 100vw) * #{94 / ($Breakpoint-730N - $SizePhoneN)});
+        margin-top: calc(-8px + (#{$Breakpoint-730} - 100vw) * #{3 / ($Breakpoint-730N - $SizePhoneN)});
+        margin-left: calc(-56px + (#{$Breakpoint-730} - 100vw) * #{21 / ($Breakpoint-730N - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+        width: 157px;
+        margin-top: -5px;
+        margin-left: -35px;
+      }
+    }
+
+
+    &_2 img {
+      width: 161px;
+      height: 215px;
+      margin-top: -4px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(161px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)});
+        margin-top: calc(-4px + (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $Breakpoint-730) {
+        width: calc(161px - (#{$Breakpoint-730} - 100vw) * #{60 / ($Breakpoint-730N - $SizePhoneN)});
+        margin-top: calc(-4px + (#{$Breakpoint-730} - 100vw) * #{2 / ($Breakpoint-730N - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+        width: 101px;
+        margin-top: -2px;
+      }
+    }
+  }
+
+
+  &__info {
+    grid-area: info;
+  }
+
+
+  &__name {
+    font-family: "Myriad Pro Light", serif;
+    text-transform: none;
+    letter-spacing: 1px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      font-size: calc(36px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(43.2px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
+      letter-spacing: calc(1px - (#{$SizeDesktop} - 100vw) * #{0.33 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      font-size: calc(32px - (#{$Breakpoint-730} - 100vw) * #{10 / ($Breakpoint-730N - $SizePhoneN)});
+      line-height: calc(43px - (#{$Breakpoint-730} - 100vw) * #{12 / ($Breakpoint-730N - $SizePhoneN)});
+      letter-spacing: calc(1px - (#{$Breakpoint-730} - 100vw) * #{0.33 / ($Breakpoint-730N - $SizePhoneN)});
+      margin: 0 0 0 1px;
+    }
+
+    @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+      font-size: 26px;
+      line-height: 31px;
+      letter-spacing: 0.67px;
+      margin: -1px 0 0;
+    }
+  }
+
+
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 14px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      font-size: calc(20px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(24px - (#{$SizeDesktop} - 100vw) * #{2.4 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc(14px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      font-size: calc(20px - (#{$Breakpoint-730} - 100vw) * #{2 / ($Breakpoint-730N - $SizePhoneN)});
+      line-height: calc(24px - (#{$Breakpoint-730} - 100vw) * #{2.4 / ($Breakpoint-730N - $SizePhoneN)});
+      margin-top: calc(14px - (#{$Breakpoint-730} - 100vw) * #{12 / ($Breakpoint-730N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+      font-size: 18px;
+      line-height: 21.6px;
+      margin: 3px 0 0 -1px;
+    }
+  }
+
+
+  &__parcel, &__from-where, &__where-to {
+    @media (max-width: $SizeDesktop - 1px) {
+      font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(19.2px - (#{$SizeDesktop} - 100vw) * #{7.2 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      font-size: calc(16px - (#{$Breakpoint-730} - 100vw) * #{6 / ($Breakpoint-730N - $SizePhoneN)});
+      line-height: calc(19.2px - (#{$Breakpoint-730} - 100vw) * #{7.2 / ($Breakpoint-730N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+      font-size: 10px;
+      line-height: 12px;
+      margin-left: -1px;
+    }
+  }
+
+
+  &__parcel {
+    margin-top: 16px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      margin-top: calc(16px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      margin-top: calc(16px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
+      margin-top: 7px;
+    }
+  }
+
+
+  &__from-where {
+    margin-top: 5px;
+  }
+
+
+  &__where-to {
+    margin-top: 3px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      margin-top: 4px;
+    }
+  }
+
+
+  &__message {
+    grid-area: message;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(19.2px - (#{$SizeDesktop} - 100vw) * #{2.2 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    @media (max-width: $Breakpoint-730) {
+      font-size: calc(16px - (#{$Breakpoint-730} - 100vw) * #{4 / ($Breakpoint-730N - $SizePhoneN)});
+      line-height: calc(19.2px - (#{$Breakpoint-730} - 100vw) * #{4.4 / ($Breakpoint-730N - $SizePhoneN)});
+      margin-top: 1px;
+    }
+
+    @media (max-width: $SizePhone) {
+      font-size: 12px;
+      line-height: 14.8px;
+    }
+  }
+}
