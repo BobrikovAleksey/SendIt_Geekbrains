@@ -33,8 +33,9 @@
 }
 
 body {
+  user-select: none;
   font-family: "Myriad Pro Regular", serif;
-  color: #495C6C;
+  color: black;
 }
 
 h1, h2, h3 {
@@ -104,41 +105,6 @@ li {
   border-bottom: 1px solid #003675;
 }
 
-.input {
-  font-family: "Myriad Pro Regular", serif;
-  font-size: 16px;
-  line-height: 19px;
-  width: 360px;
-  height: 48px;
-  color: white;
-  border: 1px solid white;
-  border-radius: 30px;
-  padding: 1px 20px 0;
-}
-.input::placeholder {
-  color: white;
-}
-@media (max-width: 1220px) {
-  .input {
-    padding: 1px calc(20px - (1220px - 100vw) * 0.0088495575) 0;
-  }
-}
-@media (max-width: 768px) {
-  .input {
-    padding: 1px 16px 0;
-  }
-}
-@media (max-width: 630px) {
-  .input {
-    padding: 0 calc(20px + (630px - 100vw) * 0.0096774194) 1px;
-  }
-}
-@media (max-width: 320px) {
-  .input {
-    padding: 0 23px 1px;
-  }
-}
-
 .button {
   transition: linear 250ms;
   cursor: pointer;
@@ -203,9 +169,45 @@ li {
   }
 }
 
+.input {
+  font-family: "Myriad Pro Regular", serif;
+  font-size: 16px;
+  line-height: 19px;
+  width: 360px;
+  height: 48px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 1px 20px 0;
+}
+.input::placeholder {
+  color: white;
+}
+@media (max-width: 1220px) {
+  .input {
+    padding: 1px calc(20px - (1220px - 100vw) * 0.0088495575) 0;
+  }
+}
+@media (max-width: 768px) {
+  .input {
+    padding: 1px 16px 0;
+  }
+}
+@media (max-width: 630px) {
+  .input {
+    padding: 0 calc(20px + (630px - 100vw) * 0.0096774194) 1px;
+  }
+}
+@media (max-width: 320px) {
+  .input {
+    padding: 0 23px 1px;
+  }
+}
+
 .checkbox {
   cursor: pointer;
   width: fit-content;
+  height: fit-content;
   color: white;
   font-size: 10px;
   line-height: 12px;

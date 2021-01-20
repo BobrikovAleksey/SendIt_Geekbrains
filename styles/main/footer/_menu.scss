@@ -1,0 +1,31 @@
+@import "../../vars", "../../mixins";
+
+
+.footer-menu {
+  min-height: 94px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0 12px 12px;
+
+
+  .main-menu {
+    margin: 0 -3px 10px 0;
+
+
+    &__item {
+      margin-left: 77px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:nth-child(4) {
+        margin-left: 78px;
+      }
+    }
+
+
+    &__link {
+      color: black;
+    }
+  }
+}

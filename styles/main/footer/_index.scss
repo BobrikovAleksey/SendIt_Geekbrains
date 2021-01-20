@@ -1,0 +1,22 @@
+@import "callback", "menu", "copyright";
+
+
+.footer {
+  background: $VeryLightGray;
+
+
+  &-callback, &-menu {
+    border-bottom: 1px solid $LightGray;
+  }
+
+
+  &__container {
+    padding: 0 135px;
+  }
+
+
+  &__logo {
+    width: 160px;
+    height: 48px;
+  }
+}

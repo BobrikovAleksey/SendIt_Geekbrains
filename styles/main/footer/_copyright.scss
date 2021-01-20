@@ -1,0 +1,53 @@
+@import "../../vars", "../../mixins";
+
+
+.footer-copyright {
+  min-height: 62px;
+  padding: 12px 12px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &__text {
+    width: 40%;
+
+
+    &_right {
+      text-align: right;
+    }
+
+
+    &_year {
+      margin-left: 69px;
+    }
+  }
+
+
+  &__links {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+
+  &__link {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 29px;
+    &:first-of-type {
+      margin-left: -1px;
+    }
+
+
+    img {
+      width: 20px;
+    }
+  }
+}
