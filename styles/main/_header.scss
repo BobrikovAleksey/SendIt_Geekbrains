@@ -3,12 +3,20 @@
 
 .header {
   &__container {
+    overflow: hidden;
     height: $HeightDesktopBG;
     background: url("../images/background.jpg") no-repeat 0 -2px;
     display: flex;
     justify-content: space-between;
     padding-top: 28px;
     position: relative;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      height: calc(#{$HeightDesktopBG} - (#{$SizeDesktop} - 100vw) * #{($HeightDesktopBGN - $HeightTabletBGN) / ($SizeDesktopN - $SizeTabletN)});
+      background-size: calc(1440px - (#{$SizeDesktop} - 100vw) * #{302 / ($SizeDesktopN - $SizeTabletN)});
+      background-position: calc((#{$SizeDesktop} - 100vw) * #{-258 / ($SizeDesktopN - $SizeTabletN)})
+                           calc(-2px + (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
@@ -16,26 +24,62 @@
     width: 160px;
     height: 46px;
     margin-top: -1px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(160px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(46px - (#{$SizeDesktop} - 100vw) * #{17 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc(-1px + (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
   &__caption {
+    width: 60%;
     position: absolute;
     top: 153px;
     left: 140px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      top: calc(153px - (#{$SizeDesktop} - 100vw) * #{48 / ($SizeDesktopN - $SizeTabletN)});
+      left: calc(#{$ContainerPaddingLg} - (#{$SizeDesktop} - 100vw) * #{($ContainerPaddingLgN - $ContainerPaddingMdN) / ($SizeDesktopN - $Breakpoint-1220N)});
+    }
+
+    @media (max-width: $Breakpoint-1220) {
+      left: $ContainerPaddingMd;
+    }
   }
 
 
   &__text {
     color: white;
+
+    &:first-child {
+      @media (max-width: $SizeDesktop - 1px) {
+        font-size: calc(48px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
+        line-height: calc(58px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)});
+      }
+    }
+
     &:nth-child(2) {
-      margin-top: 25px;
+      text-transform: none;
+      margin-top: 24px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        font-size: calc(36px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+        line-height: calc(43px - (#{$SizeDesktop} - 100vw) * #{9 / ($SizeDesktopN - $SizeTabletN)});
+        margin-top: calc(24px - (#{$SizeDesktop} - 100vw) * #{3 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
   }
 
 
   &__button {
     margin-top: 42px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(#{$InputWidthLg} - (#{$SizeDesktop} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc(42px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 }
 
@@ -45,16 +89,36 @@
     display: flex;
     align-items: center;
     padding: 8px 2px 0 0;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      padding: calc(8px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}) 2px 0 0;
+      margin-right: calc((#{$SizeDesktop} - 100vw) * #{-3 / ($SizeDesktopN - $SizeTabletN)})
+    }
   }
 
 
   &__item {
     margin-left: 60px;
-    &:first-child {
+    order: 7;
+    &:first-of-type {
+      order: 1;
       margin-left: 0;
     }
-    &:nth-child(4) {
-      margin-left: 62px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      margin-left: calc(60px - (#{$SizeDesktop} - 100vw) * #{27 / ($SizeDesktopN - $SizeTabletN)});
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    @media (min-width: $SizeTablet) and (max-width: $Breakpoint-830) {
+      &:nth-of-type(4), &:nth-of-type(6) {
+        order: 3;
+      }
+      &:nth-of-type(2), &:nth-of-type(5) {
+        order: 5;
+      }
     }
   }
 
@@ -63,5 +127,10 @@
     color: white;
     font-size: 18px;
     line-height: 22px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      font-size: calc(18px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(22px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 }

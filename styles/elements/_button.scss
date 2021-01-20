@@ -7,14 +7,15 @@
   width: $InputWidthLg;
   height: $InputHeightLg;
   font-family: "Myriad Pro Bold", serif;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 19px;
-  text-transform: uppercase;
+  text-align: center;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9px 40px 8px;
+  padding: 9px 26px 8px;
   &:active:not(:disabled) {
     transition: linear 25ms;
   }
@@ -22,6 +23,11 @@
     color: #B3B3B3;
     background: none;
     border: 1px solid #B3B3B3;
+  }
+
+  @media (min-width: $SizeTablet) and (max-width: $Breakpoint-830) {
+    text-align: right;
+    justify-content: flex-end;
   }
 
 

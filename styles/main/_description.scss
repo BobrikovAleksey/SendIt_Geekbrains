@@ -4,12 +4,14 @@
 .description {
   background: $VeryLightSilver;
 
+
   &__container {
     min-height: 457px;
     display: flex;
     justify-content: space-between;
     padding: 62px 112px 48px 111px;
   }
+
 
   &__banner {
     width: 660px;
@@ -18,8 +20,10 @@
     position: relative;
   }
 
+
   &__icon {
     position: absolute;
+
 
     &_bringo {
       width: 82px;
@@ -30,6 +34,7 @@
       left: 139px;
     }
 
+
     &_cdek {
       width: 88px;
       height: 57px;
@@ -38,6 +43,7 @@
       top: 126px;
       left: 131px;
     }
+
 
     &_city-express {
       width: 88px;
@@ -48,6 +54,7 @@
       right: 31px;
     }
 
+
     &_dpd {
       width: 107px;
       height: 68px;
@@ -56,6 +63,7 @@
       top: 84px;
       left: 14px;
     }
+
 
     &_pony-express {
       width: 110px;
@@ -66,6 +74,7 @@
       left: 34px;
     }
 
+
     &_spsr {
       width: 88px;
       height: 56px;
@@ -75,6 +84,7 @@
       right: 36px;
     }
 
+
     &_tnt {
       width: 82px;
       height: 52px;
@@ -83,6 +93,7 @@
       top: 34px;
       right: 166px;
     }
+
 
     &_ups {
       width: 70px;
@@ -94,6 +105,7 @@
     }
   }
 
+
   &__boxman {
     width: 200px;
     height: 266px;
@@ -102,14 +114,22 @@
     left: 240px;
   }
 
+
   &__about {
     width: 460px;
     padding: 22px 18px 12px 0;
   }
 
+
+  &__title {
+    text-transform: none;
+  }
+
+
   &__text {
     margin-top: 26px;
   }
+
 
   &__button {
     margin-top: 33px;
