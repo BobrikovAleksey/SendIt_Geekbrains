@@ -68,7 +68,6 @@
 }
 @media (max-width: 1439px) {
   .header__button {
-    width: calc(360px - (1440px - 100vw) * 0.119047619);
     margin-top: calc(42px - (1440px - 100vw) * 0.0014880952);
   }
 }
@@ -128,12 +127,36 @@
   display: flex;
   justify-content: space-between;
   padding: 62px 112px 48px 111px;
+  position: relative;
+}
+@media (max-width: 1439px) {
+  .description__container {
+    min-height: calc(457px - (1440px - 100vw) * 0.212797619);
+    padding: calc(62px - (1440px - 100vw) * 0.0639880952) calc(112px - (1440px - 100vw) * 0.1160714286) calc(48px - (1440px - 100vw) * 0.0238095238) calc(111px - (1440px - 100vw) * 0.1145833333);
+  }
 }
 .description__banner {
   width: 660px;
   height: 267px;
   background: url("../images/cloud.png") no-repeat;
+  background-size: 660px auto;
   position: relative;
+}
+@media (max-width: 1439px) {
+  .description__banner {
+    width: calc(660px - (1440px - 100vw) * 0.3898809524);
+    height: calc(267px - (1440px - 100vw) * 0.15625);
+    background-size: calc(660px - (1440px - 100vw) * 0.3898809524) auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1439px) {
+  .description__banner {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 6px;
+    left: calc(111px - (1440px - 100vw) * 0.1145833333);
+  }
 }
 .description__icon {
   position: absolute;
@@ -141,66 +164,138 @@
 .description__icon_bringo {
   width: 82px;
   height: 53px;
-  background: url("../images/delivery/bringo.png") center center;
+  background: url("../images/delivery/bringo-main.png") center center no-repeat;
   background-size: 82px auto;
   top: 50px;
   left: 139px;
 }
+@media (max-width: 1439px) {
+  .description__icon_bringo {
+    width: calc(82px - (1440px - 100vw) * 0.0461309524);
+    height: calc(53px - (1440px - 100vw) * 0.0327380952);
+    background-size: calc(82px - (1440px - 100vw) * 0.0484375) auto;
+    top: calc(50px - (1440px - 100vw) * 0.0282738095);
+    left: calc(139px - (1440px - 100vw) * 0.0833333333);
+  }
+}
 .description__icon_cdek {
   width: 88px;
   height: 57px;
-  background: url("../images/delivery/cdek.png") center center;
+  background: url("../images/delivery/cdek-main.png") center center no-repeat;
   background-size: 88px auto;
   top: 126px;
   left: 131px;
 }
+@media (max-width: 1439px) {
+  .description__icon_cdek {
+    width: calc(88px - (1440px - 100vw) * 0.0520833333);
+    height: calc(57px - (1440px - 100vw) * 0.0342261905);
+    background-size: calc(88px - (1440px - 100vw) * 0.0519791667) auto;
+    top: calc(126px - (1440px - 100vw) * 0.0729166667);
+    left: calc(131px - (1440px - 100vw) * 0.0773809524);
+  }
+}
 .description__icon_city-express {
   width: 88px;
   height: 57px;
-  background: url("../images/delivery/city-express.png") center center;
+  background: url("../images/delivery/city-express-main.png") center center no-repeat;
   background-size: 88px auto;
   top: 79px;
   right: 31px;
 }
+@media (max-width: 1439px) {
+  .description__icon_city-express {
+    width: calc(88px - (1440px - 100vw) * 0.0520833333);
+    height: calc(57px - (1440px - 100vw) * 0.0342261905);
+    background-size: calc(88px - (1440px - 100vw) * 0.0519791667) auto;
+    top: calc(79px - (1440px - 100vw) * 0.0461309524);
+    right: calc(31px - (1440px - 100vw) * 0.0193452381);
+  }
+}
 .description__icon_dpd {
   width: 107px;
   height: 68px;
-  background: url("../images/delivery/dpd.png") center center;
+  background: url("../images/delivery/dpd-main.png") center center no-repeat;
   background-size: 107px auto;
   top: 84px;
   left: 14px;
 }
+@media (max-width: 1439px) {
+  .description__icon_dpd {
+    width: calc(107px - (1440px - 100vw) * 0.0625);
+    height: calc(68px - (1440px - 100vw) * 0.0401785714);
+    background-size: calc(107px - (1440px - 100vw) * 0.0632142857) auto;
+    top: calc(84px - (1440px - 100vw) * 0.0491071429);
+    left: calc(14px - (1440px - 100vw) * 0.0089285714);
+  }
+}
 .description__icon_pony-express {
   width: 110px;
   height: 72px;
-  background: url("../images/delivery/pony-express.png") center center;
+  background: url("../images/delivery/pony-express-main.png") center center no-repeat;
   background-size: 110px auto;
   top: 168px;
   left: 34px;
 }
+@media (max-width: 1439px) {
+  .description__icon_pony-express {
+    width: calc(110px - (1440px - 100vw) * 0.0654761905);
+    height: calc(72px - (1440px - 100vw) * 0.0431547619);
+    background-size: calc(110px - (1440px - 100vw) * 0.064985119) auto;
+    top: calc(168px - (1440px - 100vw) * 0.0982142857);
+    left: calc(34px - (1440px - 100vw) * 0.0193452381);
+  }
+}
 .description__icon_spsr {
   width: 88px;
   height: 56px;
-  background: url("../images/delivery/spsr.png") center center;
+  background: url("../images/delivery/spsr-main.png") center center no-repeat;
   background-size: 88px auto;
   top: 171px;
   right: 36px;
 }
+@media (max-width: 1439px) {
+  .description__icon_spsr {
+    width: calc(88px - (1440px - 100vw) * 0.0520833333);
+    height: calc(56px - (1440px - 100vw) * 0.0327380952);
+    background-size: calc(88px - (1440px - 100vw) * 0.0520833333) auto;
+    top: calc(171px - (1440px - 100vw) * 0.1011904762);
+    right: calc(36px - (1440px - 100vw) * 0.0223214286);
+  }
+}
 .description__icon_tnt {
   width: 82px;
   height: 52px;
-  background: url("../images/delivery/tnt.png") center center;
+  background: url("../images/delivery/tnt-main.png") center center no-repeat;
   background-size: 82px auto;
   top: 34px;
   right: 166px;
 }
+@media (max-width: 1439px) {
+  .description__icon_tnt {
+    width: calc(82px - (1440px - 100vw) * 0.0491071429);
+    height: calc(52px - (1440px - 100vw) * 0.03125);
+    background-size: calc(82px - (1440px - 100vw) * 0.0484375) auto;
+    top: calc(34px - (1440px - 100vw) * 0.0193452381);
+    right: calc(166px - (1440px - 100vw) * 0.0982142857);
+  }
+}
 .description__icon_ups {
   width: 70px;
   height: 46px;
-  background: url("../images/delivery/ups.png") center -45px;
-  background-size: 70px 137px;
-  top: 124px;
+  background: url("../images/delivery/ups-main.png") center center no-repeat;
+  background-size: 70px 46px;
+  top: 125px;
   right: 137px;
+}
+@media (max-width: 1439px) {
+  .description__icon_ups {
+    width: calc(70px - (1440px - 100vw) * 0.0416666667);
+    height: calc(46px - (1440px - 100vw) * 0.0282738095);
+    background-size: calc(70px - (1440px - 100vw) * 0.0413541667) calc(46px - (1440px - 100vw) * 0.0280654762);
+    top: calc(125px - (1440px - 100vw) * 0.0729166667);
+    right: calc(137px - (1440px - 100vw) * 0.0818452381);
+  }
 }
 .description__boxman {
   width: 200px;
@@ -209,18 +304,50 @@
   top: 70px;
   left: 240px;
 }
+@media (max-width: 1439px) {
+  .description__boxman {
+    width: calc(200px - (1440px - 100vw) * 0.118139881);
+    height: calc(266px - (1440px - 100vw) * 0.1571279762);
+    top: calc(70px - (1440px - 100vw) * 0.0401785714);
+    left: calc(240px - (1440px - 100vw) * 0.1413690476);
+  }
+}
 .description__about {
   width: 460px;
   padding: 22px 18px 12px 0;
 }
+@media (max-width: 1439px) {
+  .description__about {
+    width: calc(460px + (1440px - 100vw) * 0.3571428571);
+    padding: calc(22px - (1440px - 100vw) * 0.0327380952) 0 0;
+  }
+}
 .description__title {
   text-transform: none;
+}
+@media (max-width: 1439px) {
+  .description__title {
+    width: calc(460px + (1440px - 100vw) * 0.1339285714);
+  }
 }
 .description__text {
   margin-top: 26px;
 }
+@media (max-width: 1439px) {
+  .description__text {
+    width: calc(460px - (1440px - 100vw) * 0.2678571429);
+    font-size: calc(16px - (1440px - 100vw) * 0.0029761905);
+    line-height: calc(19px - (1440px - 100vw) * 0.0029761905);
+    margin-top: calc(26px - (1440px - 100vw) * 0.0089285714);
+  }
+}
 .description__button {
   margin-top: 33px;
+}
+@media (max-width: 1439px) {
+  .description__button {
+    margin-top: calc(33px - (1440px - 100vw) * 0.0029761905);
+  }
 }
 
 .scenario {
@@ -507,53 +634,9 @@
     height: 101px;
   }
 }
-.review__photo_1 img {
-  width: 251px;
-  height: 167px;
-  margin: -8px 0 0 -56px;
-}
-@media (max-width: 1439px) {
-  .review__photo_1 img {
-    width: calc(251px - (1440px - 100vw) * 0.1398809524);
-    margin: calc(-8px + (1440px - 100vw) * 0.0044642857) 0 0 calc(-56px + (1440px - 100vw) * 0.03125);
-  }
-}
-@media (max-width: 730px) {
-  .review__photo_1 img {
-    width: calc(251px - (730px - 100vw) * 0.2292682927);
-    margin-top: calc(-8px + (730px - 100vw) * 0.0073170732);
-    margin-left: calc(-56px + (730px - 100vw) * 0.0512195122);
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__photo_1 img {
-    width: 157px;
-    margin-top: -5px;
-    margin-left: -35px;
-  }
-}
-.review__photo_2 img {
-  width: 161px;
-  height: 215px;
-  margin-top: -4px;
-}
-@media (max-width: 1439px) {
-  .review__photo_2 img {
-    width: calc(161px - (1440px - 100vw) * 0.0892857143);
-    margin-top: calc(-4px + (1440px - 100vw) * 0.0029761905);
-  }
-}
-@media (max-width: 730px) {
-  .review__photo_2 img {
-    width: calc(161px - (730px - 100vw) * 0.1463414634);
-    margin-top: calc(-4px + (730px - 100vw) * 0.0048780488);
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__photo_2 img {
-    width: 101px;
-    margin-top: -2px;
-  }
+.review__photo img {
+  width: inherit;
+  height: inherit;
 }
 .review__info {
   grid-area: info;
@@ -1731,29 +1814,29 @@
   }
 }
 .partners__icon_bringo {
-  background: url("../images/delivery/bringo.png") 0 -61px no-repeat;
+  background: url("../images/delivery/bringo-main.png") 0 3px no-repeat;
 }
 .partners__icon_cdek {
-  background: url("../images/delivery/cdek.png") 0 -62px no-repeat;
+  background: url("../images/delivery/cdek-main.png") 0 2px no-repeat;
 }
 .partners__icon_city-express {
-  background: url("../images/delivery/city-express.png") 0 -62px no-repeat;
+  background: url("../images/delivery/city-express-main.png") 0 2px no-repeat;
 }
 .partners__icon_dpd {
-  background: url("../images/delivery/dpd.png") 0 -67px no-repeat;
+  background: url("../images/delivery/dpd-main.png") 0 -3px no-repeat;
 }
 .partners__icon_pony-express {
-  background: url("../images/delivery/pony-express.png") -1px -60px no-repeat;
+  background: url("../images/delivery/pony-express-main.png") -1px 4px no-repeat;
 }
 .partners__icon_spsr {
-  background: url("../images/delivery/spsr.png") -1px -59px no-repeat;
+  background: url("../images/delivery/spsr-main.png") -1px 5px no-repeat;
 }
 .partners__icon_tnt {
-  background: url("../images/delivery/tnt.png") -1px -61px no-repeat;
+  background: url("../images/delivery/tnt-main.png") -1px 3px no-repeat;
 }
 .partners__icon_ups {
   height: 64px;
-  background: url("../images/delivery/ups.png") -1px -63px no-repeat;
+  background: url("../images/delivery/ups-main.png") -1px 1px no-repeat;
   margin-bottom: 4px;
 }
 @media (max-width: 1439px) {

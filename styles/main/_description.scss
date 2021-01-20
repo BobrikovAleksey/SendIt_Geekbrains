@@ -10,6 +10,15 @@
     display: flex;
     justify-content: space-between;
     padding: 62px 112px 48px 111px;
+    position: relative;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      min-height: calc(457px - (#{$SizeDesktop} - 100vw) * #{143 / ($SizeDesktopN - $SizeTabletN)});
+      padding: calc(62px - (#{$SizeDesktop} - 100vw) * #{43 / ($SizeDesktopN - $SizeTabletN)})
+               calc(112px - (#{$SizeDesktop} - 100vw) * #{78 / ($SizeDesktopN - $SizeTabletN)})
+               calc(48px - (#{$SizeDesktop} - 100vw) * #{16 / ($SizeDesktopN - $SizeTabletN)})
+               calc(111px - (#{$SizeDesktop} - 100vw) * #{77 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
@@ -17,7 +26,22 @@
     width: 660px;
     height: 267px;
     background: url("../images/cloud.png") no-repeat;
+    background-size: 660px auto;
     position: relative;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(660px - (#{$SizeDesktop} - 100vw) * #{262 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(267px - (#{$SizeDesktop} - 100vw) * #{105 / ($SizeDesktopN - $SizeTabletN)});
+      background-size: calc(660px - (#{$SizeDesktop} - 100vw) * #{262 / ($SizeDesktopN - $SizeTabletN)}) auto;
+    }
+
+    @media (min-width: $SizeTablet) and (max-width: $SizeDesktop - 1px) {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 6px;
+      left: calc(111px - (#{$SizeDesktop} - 100vw) * #{77 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
@@ -28,80 +52,145 @@
     &_bringo {
       width: 82px;
       height: 53px;
-      background: url("../images/delivery/bringo.png") center center;
+      background: url("../images/delivery/bringo-main.png") center center no-repeat;
       background-size: 82px auto;
       top: 50px;
       left: 139px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(82px - (#{$SizeDesktop} - 100vw) * #{31 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(53px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(82px - (#{$SizeDesktop} - 100vw) * #{32.55 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(50px - (#{$SizeDesktop} - 100vw) * #{19 / ($SizeDesktopN - $SizeTabletN)});
+        left: calc(139px - (#{$SizeDesktop} - 100vw) * #{56 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_cdek {
       width: 88px;
       height: 57px;
-      background: url("../images/delivery/cdek.png") center center;
+      background: url("../images/delivery/cdek-main.png") center center no-repeat;
       background-size: 88px auto;
       top: 126px;
       left: 131px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(88px - (#{$SizeDesktop} - 100vw) * #{35 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(57px - (#{$SizeDesktop} - 100vw) * #{23 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(88px - (#{$SizeDesktop} - 100vw) * #{34.93 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(126px - (#{$SizeDesktop} - 100vw) * #{49 / ($SizeDesktopN - $SizeTabletN)});
+        left: calc(131px - (#{$SizeDesktop} - 100vw) * #{52 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_city-express {
       width: 88px;
       height: 57px;
-      background: url("../images/delivery/city-express.png") center center;
+      background: url("../images/delivery/city-express-main.png") center center no-repeat;
       background-size: 88px auto;
       top: 79px;
       right: 31px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(88px - (#{$SizeDesktop} - 100vw) * #{35 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(57px - (#{$SizeDesktop} - 100vw) * #{23 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(88px - (#{$SizeDesktop} - 100vw) * #{34.93 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(79px - (#{$SizeDesktop} - 100vw) * #{31 / ($SizeDesktopN - $SizeTabletN)});
+        right: calc(31px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_dpd {
       width: 107px;
       height: 68px;
-      background: url("../images/delivery/dpd.png") center center;
+      background: url("../images/delivery/dpd-main.png") center center no-repeat;
       background-size: 107px auto;
       top: 84px;
       left: 14px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(107px - (#{$SizeDesktop} - 100vw) * #{42 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(68px - (#{$SizeDesktop} - 100vw) * #{27 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(107px - (#{$SizeDesktop} - 100vw) * #{42.48 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(84px - (#{$SizeDesktop} - 100vw) * #{33 / ($SizeDesktopN - $SizeTabletN)});
+        left: calc(14px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_pony-express {
       width: 110px;
       height: 72px;
-      background: url("../images/delivery/pony-express.png") center center;
+      background: url("../images/delivery/pony-express-main.png") center center no-repeat;
       background-size: 110px auto;
       top: 168px;
       left: 34px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(110px - (#{$SizeDesktop} - 100vw) * #{44 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(72px - (#{$SizeDesktop} - 100vw) * #{29 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(110px - (#{$SizeDesktop} - 100vw) * #{43.67 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(168px - (#{$SizeDesktop} - 100vw) * #{66 / ($SizeDesktopN - $SizeTabletN)});
+        left: calc(34px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_spsr {
       width: 88px;
       height: 56px;
-      background: url("../images/delivery/spsr.png") center center;
+      background: url("../images/delivery/spsr-main.png") center center no-repeat;
       background-size: 88px auto;
       top: 171px;
       right: 36px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(88px - (#{$SizeDesktop} - 100vw) * #{35 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(56px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(88px - (#{$SizeDesktop} - 100vw) * #{35 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(171px - (#{$SizeDesktop} - 100vw) * #{68 / ($SizeDesktopN - $SizeTabletN)});
+        right: calc(36px - (#{$SizeDesktop} - 100vw) * #{15 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_tnt {
       width: 82px;
       height: 52px;
-      background: url("../images/delivery/tnt.png") center center;
+      background: url("../images/delivery/tnt-main.png") center center no-repeat;
       background-size: 82px auto;
       top: 34px;
       right: 166px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(82px - (#{$SizeDesktop} - 100vw) * #{33 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(52px - (#{$SizeDesktop} - 100vw) * #{21 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(82px - (#{$SizeDesktop} - 100vw) * #{32.55 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        top: calc(34px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
+        right: calc(166px - (#{$SizeDesktop} - 100vw) * #{66 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     &_ups {
       width: 70px;
       height: 46px;
-      background: url("../images/delivery/ups.png") center -45px;
-      background-size: 70px 137px;
-      top: 124px;
+      background: url("../images/delivery/ups-main.png") center center no-repeat;
+      background-size: 70px 46px;
+      top: 125px;
       right: 137px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        width: calc(70px - (#{$SizeDesktop} - 100vw) * #{28 / ($SizeDesktopN - $SizeTabletN)});
+        height: calc(46px - (#{$SizeDesktop} - 100vw) * #{19 / ($SizeDesktopN - $SizeTabletN)});
+        background-size: calc(70px - (#{$SizeDesktop} - 100vw) * #{27.79 / ($SizeDesktopN - $SizeTabletN)})
+                         calc(46px - (#{$SizeDesktop} - 100vw) * #{18.86 / ($SizeDesktopN - $SizeTabletN)});
+        top: calc(125px - (#{$SizeDesktop} - 100vw) * #{49 / ($SizeDesktopN - $SizeTabletN)});
+        right: calc(137px - (#{$SizeDesktop} - 100vw) * #{55 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
   }
 
@@ -112,26 +201,53 @@
     position: absolute;
     top: 70px;
     left: 240px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(200px - (#{$SizeDesktop} - 100vw) * #{79.39 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(266px - (#{$SizeDesktop} - 100vw) * #{105.59 / ($SizeDesktopN - $SizeTabletN)});
+      top: calc(70px - (#{$SizeDesktop} - 100vw) * #{27 / ($SizeDesktopN - $SizeTabletN)});
+      left: calc(240px - (#{$SizeDesktop} - 100vw) * #{95 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
   &__about {
     width: 460px;
     padding: 22px 18px 12px 0;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(460px + (#{$SizeDesktop} - 100vw) * #{240 / ($SizeDesktopN - $SizeTabletN)});
+      padding: calc(22px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)}) 0 0;
+    }
   }
 
 
   &__title {
     text-transform: none;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(460px + (#{$SizeDesktop} - 100vw) * #{90 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
   &__text {
     margin-top: 26px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(460px - (#{$SizeDesktop} - 100vw) * #{180 / ($SizeDesktopN - $SizeTabletN)});
+      font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(19px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc(26px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
   &__button {
     margin-top: 33px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      margin-top: calc(33px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 }

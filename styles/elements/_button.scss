@@ -25,6 +25,10 @@
     border: 1px solid #B3B3B3;
   }
 
+  @media (max-width: $SizeDesktop - 1px) {
+    width: calc(#{$InputWidthLg} - (#{$SizeDesktop} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($SizeDesktopN - $SizeTabletN)});
+  }
+
   @media (min-width: $SizeTablet) and (max-width: $Breakpoint-830) {
     text-align: right;
     justify-content: flex-end;

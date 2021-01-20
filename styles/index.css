@@ -36,7 +36,6 @@ body {
   user-select: none;
   font-family: "Myriad Pro Regular", serif;
   color: black;
-  overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -129,6 +128,11 @@ li {
   color: #B3B3B3;
   background: none;
   border: 1px solid #B3B3B3;
+}
+@media (max-width: 1439px) {
+  .button {
+    width: calc(360px - (1440px - 100vw) * 0.119047619);
+  }
 }
 @media (min-width: 768px) and (max-width: 830px) {
   .button {
