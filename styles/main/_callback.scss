@@ -1,0 +1,156 @@
+@import "../vars", "../mixins";
+
+
+.callback {
+  background: $Blue;
+
+
+  &__container {
+    min-height: 240px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+    padding-bottom: 36px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      padding-top: calc(64px - (#{$SizeDesktop} - 100vw) * #{38 / ($SizeDesktopN - $SizeTabletN)});
+      padding-bottom: calc(36px - (#{$SizeDesktop} - 100vw) * #{24 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-1220) {
+      min-height: calc(240px - (#{$Breakpoint-1220} - 100vw) * #{69 / ($Breakpoint-1220N - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      min-height: 171px;
+      padding-top: 26px;
+      padding-bottom: 12px;
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      min-height: 283px;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-bottom: 6px;
+    }
+  }
+
+
+  &__caption {
+    padding: 1px 48px 0 0;
+
+    @media (max-width: $Breakpoint-1220) {
+      width: calc(750px - (#{$Breakpoint-1220} - 100vw) * #{450 / ($Breakpoint-1220N - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      width: 300px;
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      width: calc(#{$InputWidthLg} - (#{$Breakpoint-630} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($Breakpoint-630N - $SizePhoneN)});
+      margin: 0 auto;
+    }
+
+    @media (max-width: $SizePhone) {
+      width: $InputWidthMd;
+    }
+  }
+
+
+  &__title {
+    color: white;
+
+    @media (max-width: $Breakpoint-1220) {
+      font-size: calc(48px - (#{$Breakpoint-1220} - 100vw) * #{20 / ($Breakpoint-1220N - $SizeTabletN)});
+      line-height: calc(57.6px - (#{$Breakpoint-1220} - 100vw) * #{23.6 / ($Breakpoint-1220N - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+
+  &__text {
+    font-family: "Myriad Pro Semibold", serif;
+    color: white;
+    font-size: 24px;
+    line-height: 23px;
+    margin-top: 12px;
+
+    @media (max-width: $Breakpoint-1220) {
+      font-size: calc(24px - (#{$Breakpoint-1220} - 100vw) * #{10 / ($Breakpoint-1220N - $SizeTabletN)});
+      line-height: calc(23px - (#{$Breakpoint-1220} - 100vw) * #{9.6 / ($Breakpoint-1220N - $SizeTabletN)});
+      margin-top: calc(17px - (#{$Breakpoint-1220} - 100vw) * #{2 / ($Breakpoint-1220N - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      font-size: 14px;
+      line-height: 13.4px;
+      margin-top: 15px;
+    }
+  }
+
+
+  &__form {
+    width: $InputWidthLg;
+    padding-top: 4px;
+
+    @media (max-width: $Breakpoint-1220) {
+      width: calc(#{$InputWidthLg} - (#{$Breakpoint-1220} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($Breakpoint-1220N - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      width: $InputWidthMd;
+      padding-top: 5px;
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      width: calc(#{$InputWidthLg} - (#{$Breakpoint-630} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($Breakpoint-630N - $SizePhoneN)});
+      margin: 11px auto 0;
+    }
+
+    @media (max-width: $SizePhone) {
+      width: $InputWidthMd;
+    }
+  }
+
+
+  &__phone {
+    @media (max-width: $Breakpoint-1220) {
+      width: inherit;
+    }
+  }
+
+
+  &__button {
+    margin-top: 9px;
+
+    @media (max-width: $Breakpoint-1220) {
+      width: inherit;
+    }
+
+    @media (max-width: $SizeTablet) {
+      text-align: right;
+    }
+  }
+
+
+  &__consent {
+    margin-top: 15px;
+
+    @media (max-width: $SizeTablet) {
+      margin-top: 8px;
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      margin: 6px 0 0 8px;
+    }
+
+    @media (max-width: $SizePhone) {
+      margin: 6px 0 0 8px;
+    }
+  }
+}
