@@ -155,7 +155,7 @@
     margin: auto;
     top: 0;
     bottom: 6px;
-    left: calc(111px - (1440px - 100vw) * 0.1145833333);
+    right: calc(111px - (1440px - 100vw) * 0.1145833333);
   }
 }
 .description__icon {
@@ -359,41 +359,105 @@
   grid-gap: 47px 120px;
   padding: 64px 182px 69px 198px;
 }
+@media (max-width: 1439px) {
+  .scenario__container {
+    grid-gap: calc(47px - (1440px - 100vw) * 0.037202381) calc(120px - (1440px - 100vw) * 0.0729166667);
+    padding: calc(64px - (1440px - 100vw) * 0.0416666667) calc(182px - (1440px - 100vw) * 0.1919642857) calc(69px - (1440px - 100vw) * 0.0074404762) calc(198px - (1440px - 100vw) * 0.1845238095);
+  }
+}
 .scenario__figure {
   width: 480px;
 }
+@media (max-width: 1439px) {
+  .scenario__figure {
+    width: calc(480px - (1440px - 100vw) * 0.2827380952);
+  }
+}
 .scenario__image {
   height: 314px;
+}
+@media (max-width: 1439px) {
+  .scenario__image {
+    height: calc(314px - (1440px - 100vw) * 0.181547619);
+  }
 }
 .scenario__image_step-1 {
   width: 462px;
   height: 312px;
   margin-top: 5px;
 }
+@media (max-width: 1439px) {
+  .scenario__image_step-1 {
+    width: calc(462px - (1440px - 100vw) * 0.2693452381);
+    height: calc(312px - (1440px - 100vw) * 0.181547619);
+    margin-top: calc(5px - (1440px - 100vw) * 0.0044642857);
+  }
+}
 .scenario__image_step-2 {
   width: 459px;
   height: 299px;
   margin: 12px 0 0 1px;
+}
+@media (max-width: 1439px) {
+  .scenario__image_step-2 {
+    width: calc(459px - (1440px - 100vw) * 0.2693452381);
+    height: calc(299px - (1440px - 100vw) * 0.1755952381);
+    margin: calc(12px - (1440px - 100vw) * 0.0148809524) 0 0 1px;
+  }
 }
 .scenario__image_step-3 {
   width: 460px;
   height: 311px;
   margin-top: 17px;
 }
+@media (max-width: 1439px) {
+  .scenario__image_step-3 {
+    width: calc(460px - (1440px - 100vw) * 0.2678571429);
+    height: calc(311px - (1440px - 100vw) * 0.181547619);
+    margin: calc(17px - (1440px - 100vw) * 0.0238095238) 0 0 1px;
+  }
+}
 .scenario__image_step-4 {
   width: 461px;
   height: 299px;
   margin: 14px 0 0 1px;
 }
+@media (max-width: 1439px) {
+  .scenario__image_step-4 {
+    width: calc(461px - (1440px - 100vw) * 0.2708333333);
+    height: calc(299px - (1440px - 100vw) * 0.1755952381);
+    margin: calc(14px - (1440px - 100vw) * 0.0178571429) 0 0 1px;
+  }
+}
 .scenario__caption {
   width: 462px;
   margin-top: 40px;
+}
+@media (max-width: 1439px) {
+  .scenario__caption {
+    width: calc(462px - (1440px - 100vw) * 0.2708333333);
+    margin-top: calc(40px - (1440px - 100vw) * 0.0386904762);
+  }
+}
+@media (max-width: 1439px) {
+  .scenario__title {
+    font-size: calc(30px - (1440px - 100vw) * 0.005952381);
+    line-height: calc(36px - (1440px - 100vw) * 0.0074404762);
+  }
 }
 .scenario__text {
   min-height: 60px;
   font-size: 20px;
   line-height: 24px;
   margin-top: 9px;
+}
+@media (max-width: 1439px) {
+  .scenario__text {
+    min-height: calc(60px - (1440px - 100vw) * 0.0238095238);
+    font-size: calc(20px - (1440px - 100vw) * 0.005952381);
+    line-height: calc(24px - (1440px - 100vw) * 0.0074404762);
+    margin-top: calc(9px + (1440px - 100vw) * 0.0029761905);
+  }
 }
 
 .parcel {
