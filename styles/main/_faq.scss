@@ -1,0 +1,211 @@
+@import "../vars", "../mixins";
+
+
+.faq {
+  background: $Lavender;
+
+
+  &__container {
+    padding-top: 58px;
+    padding-bottom: 60px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      padding-top: calc(58px - (#{$SizeDesktop} - 100vw) * #{23 / ($SizeDesktopN - $SizeTabletN)});
+      padding-bottom: calc(60px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      padding-top: calc(35px - (#{$SizeTablet} - 100vw) * #{13 / ($SizeTabletN - $SizePhoneN)});
+      padding-bottom: calc(42px - (#{$SizeTablet} - 100vw) * #{18 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      padding-top: 22px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  &__title {
+    @media (max-width: $SizeTablet - 1px) {
+      font-size: calc(36px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(43.2px - (#{$SizeTablet} - 100vw) * #{9.6 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    margin-top: 31px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      margin-top: calc(31px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $Breakpoint-830) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      margin-top: calc(19px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 17px;
+    }
+  }
+
+
+  &__column {
+    width: 100%;
+    max-width: 558px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $Breakpoint-830) {
+      max-width: 100%;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 29px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        margin-left: calc(29px - (#{$SizeDesktop} - 100vw) * #{14 / ($SizeDesktopN - $Breakpoint-830N)});
+      }
+
+      @media (max-width: $Breakpoint-830) {
+        margin: 10px 0 0;
+      }
+    }
+  }
+
+
+  &__item {
+    transition: linear 250ms;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 32px;
+    margin-top: 16px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      border-radius: calc(32px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc(16px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      border-radius: calc(24px + (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
+      margin-top: 10px;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:not([open]) {
+      &:not(:active):hover {
+        box-shadow: 0 4px 20px $LightAquamarine;
+      }
+      &:active {
+        transition: linear 25ms;
+        box-shadow:  none;
+      }
+    }
+  }
+
+
+  &__question {
+    cursor: pointer;
+    width: 100%;
+    min-height: 64px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 4px 60px 6px 30px;
+    position: relative;
+
+    @media (max-width: $Breakpoint-830) {
+      min-height: calc(64px - (#{$Breakpoint-830} - 100vw) * #{16 / ($Breakpoint-830N - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      min-height: calc(48px + (#{$SizeTablet} - 100vw) * #{32 / ($SizeTabletN - $SizePhoneN)});
+      font-size: calc(16px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(19.2px - (#{$SizeTablet} - 100vw) * #{2.4 / ($SizeTabletN - $SizePhoneN)});
+      padding: calc(4px + (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)})
+               calc(60px + (#{$SizeTablet} - 100vw) * #{12 / ($SizeTabletN - $SizePhoneN)})
+               calc(5px + (#{$SizeTablet} - 100vw) * #{3 / ($SizeTabletN - $SizePhoneN)})
+               calc(30px + (#{$SizeTablet} - 100vw) * #{6 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      min-height: 80px;
+      font-size: 14px;
+      line-height: 16.8px;
+      padding: 6px 48px 8px 24px;
+    }
+
+    &:before {
+      content: "";
+      transform: rotate(-45deg);
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid $Blue;
+      border-left: 2px solid $Blue;
+      display: block;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 9px;
+      right: 31px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        right: calc(31px + (#{$SizeDesktop} - 100vw) * #{3 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(10px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(10px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+        right: calc(33px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 8px;
+        height: 8px;
+        right: 26px;
+      }
+    }
+
+    .faq__item[open] > &:before {
+      transform: rotate(135deg);
+      top: 9px;
+      bottom: 0;
+    }
+  }
+
+
+  &__answer {
+    background: $VeryLightSilver;
+    padding: 15px 30px 30px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      padding: calc(15px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)})
+               calc(30px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)})
+               calc(30px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      font-size: calc(16px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(19.2px - (#{$SizeTablet} - 100vw) * #{2.4 / ($SizeTabletN - $SizePhoneN)});
+      padding: 10px 24px 20px;
+    }
+
+    @media (max-width: $SizePhone) {
+      font-size: 14px;
+      line-height: 16.8px;
+    }
+  }
+}
