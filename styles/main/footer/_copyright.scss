@@ -3,23 +3,54 @@
 
 .footer-copyright {
   min-height: 62px;
-  padding: 12px 12px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 12px 22px;
+
+  @media (max-width: $SizeDesktop - 1px) {
+    min-height: calc(62px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
+    padding: calc(12px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)})
+             calc(12px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)})
+             calc(22px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)});
+  }
 
 
   &__text {
     width: 40%;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(19px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+
+    &_year {
+      margin: 0 69px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        margin: 0 calc(69px - (#{$SizeDesktop} - 100vw) * #{45 / ($SizeDesktopN - $SizeTabletN)});
+      }
+    }
+
+
+    &_left &_year {
+      @media (max-width: $Breakpoint-830) {
+        visibility: hidden;
+      }
+    }
 
 
     &_right {
       text-align: right;
     }
 
+    &_right &_year {
+      visibility: hidden;
 
-    &_year {
-      margin-left: 69px;
+      @media (max-width: $Breakpoint-830) {
+        visibility: visible;
+      }
     }
   }
 
@@ -29,6 +60,10 @@
     display: flex;
     justify-content: center;
     margin-top: 6px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      margin-top: calc(6px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
@@ -41,13 +76,24 @@
     justify-content: center;
     align-items: center;
     margin-left: 29px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(20px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(20px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
+      margin-left: calc(29px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
     &:first-of-type {
       margin-left: -1px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        margin-left: calc(-1px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
 
     img {
-      width: 20px;
+      width: inherit;
     }
   }
 }

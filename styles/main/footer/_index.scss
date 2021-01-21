@@ -12,11 +12,20 @@
 
   &__container {
     padding: 0 135px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      padding: 0 calc(135px - (#{$SizeDesktop} - 100vw) * #{101 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
   &__logo {
     width: 160px;
     height: 48px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(160px - (#{$SizeDesktop} - 100vw) * #{61 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(48px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 }

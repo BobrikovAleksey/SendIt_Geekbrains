@@ -1,10 +1,7 @@
-@import "mixins", "vars";
-@import "main/header";
+@import "main/header/index";
 @import "main/description";
 @import "main/scenario";
 @import "main/parcel";
-
-
 @import "main/callback";
 @import "main/feedback/index";
 @import "main/advantage";

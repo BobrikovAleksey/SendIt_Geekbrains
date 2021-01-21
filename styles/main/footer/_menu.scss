@@ -8,18 +8,30 @@
   align-items: center;
   padding: 8px 0 12px 12px;
 
+  @media (max-width: $SizeDesktop - 1px) {
+    min-height: calc(94px - (#{$SizeDesktop} - 100vw) * #{14 / ($SizeDesktopN - $SizeTabletN)});
+    padding: 8px 0 calc(12px + (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)})
+             calc(12px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
+  }
+
 
   .main-menu {
     margin: 0 -3px 10px 0;
 
+    @media (max-width: $SizeDesktop - 1px) {
+      margin: 0 calc(-3px + (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)}) 10px 0;
+    }
+
 
     &__item {
       margin-left: 77px;
-      &:first-child {
-        margin-left: 0;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        margin-left: calc(77px - (#{$SizeDesktop} - 100vw) * #{44.5 / ($SizeDesktopN - $SizeTabletN)});
       }
-      &:nth-child(4) {
-        margin-left: 78px;
+
+      &:first-of-type {
+        margin-left: 0;
       }
     }
 
