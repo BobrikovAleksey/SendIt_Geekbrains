@@ -29,9 +29,17 @@
     width: calc(#{$InputWidthLg} - (#{$SizeDesktop} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($SizeDesktopN - $SizeTabletN)});
   }
 
-  @media (min-width: $SizeTablet) and (max-width: $Breakpoint-830) {
+  @media (max-width: $Breakpoint-830) {
     text-align: right;
     justify-content: flex-end;
+  }
+
+  @media (max-width: $SizeTablet - 1px) {
+    width: calc(#{$InputWidthMd} - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+  }
+
+  @media (max-width: $SizePhone - 1px) {
+    width: #{$InputWidthMd - 2px};
   }
 
 

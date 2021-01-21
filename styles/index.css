@@ -24,6 +24,7 @@
   src: url("../fonts/myriadpro-lightsemiext.ttf");
 }
 * {
+  height: fit-content;
   box-sizing: border-box;
   outline: none;
   background: none;
@@ -134,10 +135,20 @@ li {
     width: calc(360px - (1440px - 100vw) * 0.119047619);
   }
 }
-@media (min-width: 768px) and (max-width: 830px) {
+@media (max-width: 830px) {
   .button {
     text-align: right;
     justify-content: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  .button {
+    width: calc(280px - (768px - 100vw) * 0.0044642857);
+  }
+}
+@media (max-width: 319px) {
+  .button {
+    width: 278px;
   }
 }
 .button_blue {
@@ -317,15 +328,15 @@ li {
 }
 @media (max-width: 1439px) {
   .container {
-    padding: 0 calc(140px - (1440px - 100vw) * 0.4818181818);
+    padding: 0 calc(140px - (1440px - 100vw) * 0.1577380952);
   }
 }
-@media (max-width: 1220px) {
+@media (max-width: 767px) {
   .container {
-    padding: 0 34px;
+    padding: 0 calc(34px - (768px - 100vw) * 0.0290178571);
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 320px) {
   .container {
     padding: 0 21px;
   }

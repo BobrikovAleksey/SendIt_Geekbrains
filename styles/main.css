@@ -1,3 +1,6 @@
+.main-menu {
+  display: none;
+}
 .main-menu__list {
   display: flex;
   align-items: center;
@@ -47,7 +50,7 @@
 
 .header__container {
   overflow: hidden;
-  height: 523px;
+  min-height: 523px;
   background: url("../images/background.jpg") no-repeat 0 -2px;
   display: flex;
   justify-content: space-between;
@@ -56,9 +59,28 @@
 }
 @media (max-width: 1439px) {
   .header__container {
-    height: calc(523px - (1440px - 100vw) * 0.1607142857);
-    background-size: calc(1440px - (1440px - 100vw) * 0.4494047619);
+    min-height: calc(523px - (1440px - 100vw) * 0.1607142857);
+    background-size: calc(1440px - (1440px - 100vw) * 0.4494047619) auto;
     background-position: calc((1440px - 100vw) * -0.3839285714) calc(-2px + (1440px - 100vw) * 0.0029761905);
+  }
+}
+@media (max-width: 767px) {
+  .header__container {
+    min-height: calc(415px - 5px - (768px - 100vw) * 0.2834821429);
+    background-size: calc(1138px - (768px - 100vw) * 0.7767857143) auto;
+    background-position: calc(-258px - (768px - 100vw) * 0.34375) calc(-2px - (768px - 100vw) * 0.0200892857);
+  }
+}
+@media (max-width: 630px) {
+  .header__container {
+    min-height: calc(699px - (768px - 100vw) * 0.2834821429 - (630px - 100vw) * 0.1838709677);
+  }
+}
+@media (max-width: 320px) {
+  .header__container {
+    min-height: 515px;
+    background-size: 790px;
+    background-position: -412px -11px;
   }
 }
 .header__logo {
@@ -73,8 +95,30 @@
     margin-top: calc(-1px + (1440px - 100vw) * 0.0029761905);
   }
 }
+@media (max-width: 767px) {
+  .header__logo {
+    width: 100px;
+    height: 29px;
+    margin-top: calc(1px - (768px - 100vw) * 0.0044642857);
+  }
+}
+@media (max-width: 320px) {
+  .header__logo {
+    margin-top: -1px;
+  }
+}
+.header__menu-icon {
+  cursor: pointer;
+  height: fit-content;
+  padding: 4px 2px;
+  margin: -5px -2px 0 0;
+}
+.header__menu-icon input[type=checkbox] {
+  display: none;
+}
 .header__caption {
   width: 60%;
+  min-width: 278px;
   position: absolute;
   top: 153px;
   left: 140px;
@@ -82,21 +126,52 @@
 @media (max-width: 1439px) {
   .header__caption {
     top: calc(153px - (1440px - 100vw) * 0.0714285714);
-    left: calc(140px - (1440px - 100vw) * 0.4818181818);
+    left: calc(140px - (1440px - 100vw) * 0.1577380952);
   }
 }
-@media (max-width: 1220px) {
+@media (max-width: 767px) {
   .header__caption {
-    left: 34px;
+    top: calc(105px - (768px - 100vw) * 0.1231884058);
+    left: calc(34px - (768px - 100vw) * 0.0290178571);
+  }
+}
+@media (max-width: 630px) {
+  .header__caption {
+    width: 80%;
+    top: auto;
+    bottom: calc(44px - (630px - 100vw) * 0.0193548387);
+  }
+}
+@media (max-width: 320px) {
+  .header__caption {
+    bottom: 38px;
+    left: 21px;
   }
 }
 .header__text {
   color: white;
 }
+@media (max-width: 630px) {
+  .header__text {
+    color: black;
+  }
+}
 @media (max-width: 1439px) {
-  .header__text:first-child {
+  .header__text:nth-child(1) {
     font-size: calc(48px - (1440px - 100vw) * 0.005952381);
     line-height: calc(58px - (1440px - 100vw) * 0.0074404762);
+  }
+}
+@media (max-width: 767px) {
+  .header__text:nth-child(1) {
+    font-size: calc(44px - (768px - 100vw) * 0.0267857143);
+    line-height: calc(53px - (768px - 100vw) * 0.0334821429);
+  }
+}
+@media (max-width: 320px) {
+  .header__text:nth-child(1) {
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 .header__text:nth-child(2) {
@@ -110,12 +185,36 @@
     margin-top: calc(24px - (1440px - 100vw) * 0.0044642857);
   }
 }
+@media (max-width: 767px) {
+  .header__text:nth-child(2) {
+    font-size: calc(28px - (768px - 100vw) * 0.0089285714);
+    line-height: calc(34px - (768px - 100vw) * 0.0111607143);
+    margin-top: calc(21px - (768px - 100vw) * 0.0245535714);
+  }
+}
+@media (max-width: 320px) {
+  .header__text:nth-child(2) {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 10px;
+  }
+}
 .header__button {
   margin-top: 42px;
 }
 @media (max-width: 1439px) {
   .header__button {
     margin-top: calc(42px - (1440px - 100vw) * 0.0014880952);
+  }
+}
+@media (max-width: 768px) {
+  .header__button {
+    margin-top: calc(41px - (768px - 100vw) * 0.0446428571);
+  }
+}
+@media (max-width: 320px) {
+  .header__button {
+    margin-top: 21px;
   }
 }
 

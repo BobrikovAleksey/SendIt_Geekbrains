@@ -8,14 +8,14 @@
   margin: 0 auto;
 
   @media (max-width: $SizeDesktop - 1px) {
-    padding: 0 calc(#{$ContainerPaddingLg} - (#{$SizeDesktop} - 100vw) * #{($ContainerPaddingLgN - $ContainerPaddingMdN) / ($SizeDesktopN - $Breakpoint-1220N)});
+    padding: 0 calc(#{$ContainerPaddingLg} - (#{$SizeDesktop} - 100vw) * #{($ContainerPaddingLgN - $ContainerPaddingMdN) / ($SizeDesktopN - $SizeTabletN)});
   }
 
-  @media (max-width: $Breakpoint-1220) {
-    padding: 0 $ContainerPaddingMd;
+  @media (max-width: $SizeTablet - 1px) {
+    padding: 0 calc(#{$ContainerPaddingMd} - (#{$SizeTablet} - 100vw) * #{($ContainerPaddingMdN - $ContainerPaddingSmN) / ($SizeTabletN - $SizePhoneN)});
   }
 
-  @media (max-width: $Breakpoint-630) {
+  @media (max-width: $SizePhone) {
     padding: 0 $ContainerPaddingSm;
   }
 }
