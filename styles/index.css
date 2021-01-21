@@ -36,6 +36,8 @@ body {
   user-select: none;
   font-family: "Myriad Pro Regular", serif;
   color: black;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 h1, h2, h3 {
@@ -290,16 +292,16 @@ li {
     height: calc(22px - (1440px - 100vw) * 0.0119047619);
   }
 }
+@media (max-width: 768px) {
+  .slick-arrow {
+    width: 14px;
+    height: 14px;
+  }
+}
 @media (max-width: 730px) {
   .slick-arrow {
     width: calc(20px - (730px - 100vw) * 0.0146341463);
     height: calc(20px - (730px - 100vw) * 0.0146341463);
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .slick-arrow {
-    width: 14px;
-    height: 14px;
   }
 }
 .slick-prev {

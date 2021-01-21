@@ -636,14 +636,8 @@
 @media (max-width: 1439px) {
   .review {
     width: calc(500px - (1440px - 100vw) * 0.2976190476);
-    grid-template-columns: calc(160px - (1440px - 100vw) * 0.0892857143) calc(261px - (1440px - 100vw) * 0.1473214286);
-    grid-gap: calc(23px - (1440px - 100vw) * 0.0193452381) calc(39px - (1440px - 100vw) * 0.03125);
-  }
-}
-@media (max-width: 768px) {
-  .review {
-    width: 300px;
-    grid-template-columns: 100px 161px;
+    grid-template-columns: calc(160px - (1440px - 100vw) * 0.0892857143) calc(260px - (1440px - 100vw) * 0.1488095238);
+    grid-gap: calc(23px - (1440px - 100vw) * 0.0193452381) calc(39px - (1440px - 100vw) * 0.0297619048);
   }
 }
 @media (max-width: 730px) {
@@ -659,11 +653,6 @@
     grid-template-columns: 100px 111px;
   }
 }
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review {
-    grid-gap: 9px 19px;
-  }
-}
 .review__photo {
   grid-area: photo;
   overflow: hidden;
@@ -675,19 +664,12 @@
   .review__photo {
     width: calc(160px - (1440px - 100vw) * 0.0892857143);
     height: calc(160px - (1440px - 100vw) * 0.0892857143);
-    margin-top: 5px;
   }
 }
 @media (max-width: 730px) {
   .review__photo {
     width: calc(160px - (730px - 100vw) * 0.1463414634);
     height: calc(160px - (730px - 100vw) * 0.1463414634);
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__photo {
-    width: 100px;
-    height: 101px;
   }
 }
 .review__photo img {
@@ -705,8 +687,9 @@
 @media (max-width: 1439px) {
   .review__name {
     font-size: calc(36px - (1440px - 100vw) * 0.0148809524);
-    line-height: calc(43.2px - (1440px - 100vw) * 0.0178571429);
-    letter-spacing: calc(1px - (1440px - 100vw) * 0.0004910714);
+    line-height: calc(43px - (1440px - 100vw) * 0.0178571429);
+    letter-spacing: calc(1px - (1440px - 100vw) * 0.000297619);
+    margin-left: calc((1440px - 100vw) * 0.0014880952);
   }
 }
 @media (max-width: 730px) {
@@ -715,14 +698,6 @@
     line-height: calc(43px - (730px - 100vw) * 0.0292682927);
     letter-spacing: calc(1px - (730px - 100vw) * 0.000804878);
     margin: 0 0 0 1px;
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__name {
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: 0.67px;
-    margin: -1px 0 0;
   }
 }
 .review__title {
@@ -741,33 +716,19 @@
   .review__title {
     font-size: calc(20px - (730px - 100vw) * 0.0048780488);
     line-height: calc(24px - (730px - 100vw) * 0.0058536585);
-    margin-top: calc(14px - (730px - 100vw) * 0.0292682927);
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__title {
-    font-size: 18px;
-    line-height: 21.6px;
-    margin: 3px 0 0 -1px;
+    margin-top: calc(14px - (730px - 100vw) * 0.0268292683);
   }
 }
 @media (max-width: 1439px) {
   .review__parcel, .review__from-where, .review__where-to {
     font-size: calc(16px - (1440px - 100vw) * 0.0089285714);
-    line-height: calc(19.2px - (1440px - 100vw) * 0.0107142857);
+    line-height: calc(19px - (1440px - 100vw) * 0.0104166667);
   }
 }
 @media (max-width: 730px) {
   .review__parcel, .review__from-where, .review__where-to {
     font-size: calc(16px - (730px - 100vw) * 0.0146341463);
     line-height: calc(19.2px - (730px - 100vw) * 0.0175609756);
-  }
-}
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__parcel, .review__from-where, .review__where-to {
-    font-size: 10px;
-    line-height: 12px;
-    margin-left: -1px;
   }
 }
 .review__parcel {
@@ -783,11 +744,6 @@
     margin-top: calc(16px - (730px - 100vw) * 0.0195121951);
   }
 }
-@media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
-  .review__parcel {
-    margin-top: 7px;
-  }
-}
 .review__from-where {
   margin-top: 5px;
 }
@@ -796,7 +752,7 @@
 }
 @media (max-width: 1439px) {
   .review__where-to {
-    margin-top: 4px;
+    margin-top: calc(3px + (1440px - 100vw) * 0.0014880952);
   }
 }
 .review__message {
@@ -805,13 +761,7 @@
 @media (max-width: 1439px) {
   .review__message {
     font-size: calc(16px - (1440px - 100vw) * 0.0029761905);
-    line-height: calc(19.2px - (1440px - 100vw) * 0.0032738095);
-  }
-}
-@media (max-width: 768px) {
-  .review__message {
-    font-size: 14px;
-    line-height: 17px;
+    line-height: calc(19px - (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 730px) {
@@ -839,15 +789,8 @@
 @media (max-width: 1439px) {
   .feedback__container {
     min-height: calc(547px - (1440px - 100vw) * 0.2172619048);
-    padding-top: calc(63px - (1440px - 100vw) * 0.037202381);
+    padding-top: calc(63px - (1440px - 100vw) * 0.0386904762);
     padding-bottom: calc(48px - (1440px - 100vw) * 0.0238095238);
-  }
-}
-@media (max-width: 768px) {
-  .feedback__container {
-    min-height: 401px;
-    padding-top: 38px;
-    padding-bottom: 32px;
   }
 }
 @media (max-width: 730px) {
@@ -879,12 +822,6 @@
   .feedback__reviews {
     width: calc(960px - (1440px - 100vw) * 0.5654761905);
     margin: calc(54px - (1440px - 100vw) * 0.0461309524) auto 0;
-  }
-}
-@media (max-width: 768px) {
-  .feedback__reviews {
-    width: 580px;
-    margin: 23px auto 0;
   }
 }
 @media (max-width: 730px) {
@@ -919,11 +856,6 @@
     top: calc(122px - (1440px - 100vw) * 0.068452381);
   }
 }
-@media (max-width: 768px) {
-  .feedback__reviews .slick-arrow {
-    top: 76px;
-  }
-}
 @media (max-width: 730px) {
   .feedback__reviews .slick-arrow {
     top: 118px;
@@ -935,11 +867,6 @@
 @media (max-width: 1439px) {
   .feedback__reviews .slick-prev {
     left: calc(-95px + (1440px - 100vw) * 0.056547619);
-  }
-}
-@media (max-width: 768px) {
-  .feedback__reviews .slick-prev {
-    left: calc(-58px + (768px - 100vw) * 0.5263157895);
   }
 }
 @media (max-width: 730px) {
@@ -958,11 +885,6 @@
 @media (max-width: 1439px) {
   .feedback__reviews .slick-next {
     right: calc(-95px + (1440px - 100vw) * 0.0550595238);
-  }
-}
-@media (max-width: 768px) {
-  .feedback__reviews .slick-next {
-    right: calc(-58px + (768px - 100vw) * 0.5263157895);
   }
 }
 @media (max-width: 730px) {
