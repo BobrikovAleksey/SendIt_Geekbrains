@@ -46,8 +46,12 @@
       position: absolute;
     }
 
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(16px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
     @media (max-width: $Breakpoint-630) {
-      width: calc(16px + (#{$Breakpoint-630} - 100vw) * #{2 / ($Breakpoint-630N - $SizePhoneN)});
+      width: calc(16px + (#{$Breakpoint-630} - 100vw) * #{3 / ($Breakpoint-630N - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
