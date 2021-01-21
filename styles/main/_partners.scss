@@ -15,8 +15,8 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       min-height: calc(172px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)});
-      padding-top: calc(28px - (#{$SizeDesktop} - 100vw) * #{14 / ($SizeDesktopN - $SizeTabletN)});
-      padding-bottom: calc(16px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      padding-top: calc(48px - (#{$SizeDesktop} - 100vw) * #{34 / ($SizeDesktopN - $SizeTabletN)});
+      padding-bottom: calc(36px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
     }
 
     @media (max-width: $SizeTablet - 1px) {
@@ -41,7 +41,7 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       width: calc(983px - (#{$SizeDesktop} - 100vw) * #{385 / ($SizeDesktopN - $SizeTabletN)});
-      margin-left: calc(21px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
+      margin-left: calc(24px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
     }
 
     @media (max-width: $SizeTablet - 1px) {
@@ -89,48 +89,54 @@
 
 
     &_bringo {
-      background: url("../images/delivery/bringo.png") 0 -61px no-repeat;
+      background: url("../images/delivery/bringo-main.png") 0 3px no-repeat;
     }
 
     &_cdek {
-      background: url("../images/delivery/cdek.png") 0 -62px no-repeat;
+      background: url("../images/delivery/cdek-main.png") 0 2px no-repeat;
     }
 
     &_city-express {
-      background: url("../images/delivery/city-express.png") 0 -62px no-repeat;
+      background: url("../images/delivery/city-express-main.png") 0 2px no-repeat;
     }
 
     &_dpd {
-      background: url("../images/delivery/dpd.png") 0 -67px no-repeat;
+      background: url("../images/delivery/dpd-main.png") 0 -3px no-repeat;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        background-position: 0 calc(-3px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
     &_pony-express {
-      background: url("../images/delivery/pony-express.png") -1px -60px no-repeat;
+      background: url("../images/delivery/pony-express-main.png") -1px 4px no-repeat;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        background-position: -1px calc(4px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
     &_spsr {
-      background: url("../images/delivery/spsr.png") -1px -59px no-repeat;
+      background: url("../images/delivery/spsr-main.png") -1px 5px no-repeat;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        background-position: -1px calc(5px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
     &_tnt {
-      background: url("../images/delivery/tnt.png") -1px -61px no-repeat;
+      background: url("../images/delivery/tnt-main.png") -1px 3px no-repeat;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        background-position: -1px calc(3px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+      }
     }
 
     &_ups {
-      height: 64px;
-      background: url("../images/delivery/ups.png") -1px -63px no-repeat;
-      margin-bottom: 4px;
+      background: url("../images/delivery/ups-main.png") -1px 1px no-repeat;
 
       @media (max-width: $SizeDesktop - 1px) {
-        //height: calc(4px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
-      }
-
-      @media (max-width: $SizeTablet - 1px) {
-        //height: calc(4px - (#{$SizeTablet} - 100vw) * #{1 / ($SizeTabletN - $SizePhoneN)});
-      }
-
-      @media (max-width: $SizePhone - 1px) {
-        //height: 3px;
+        background-position: -1px calc(1px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
       }
     }
 
@@ -171,12 +177,12 @@
     margin: auto;
 
     @media (max-width: $SizeDesktop - 1px) {
-      bottom: calc(11px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      bottom: calc(11px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      width: calc(19.2px + (#{$SizeTablet} - 100vw) * #{9.2 / ($SizeTabletN - $SizePhoneN)});
-      height: calc(19.2px + (#{$SizeTablet} - 100vw) * #{9.2 / ($SizeTabletN - $SizePhoneN)});
+      width: calc(19px + (#{$SizeTablet} - 100vw) * #{9 / ($SizeTabletN - $SizePhoneN)});
+      height: calc(19px + (#{$SizeTablet} - 100vw) * #{9 / ($SizeTabletN - $SizePhoneN)});
       bottom: 10px;
     }
 
@@ -206,7 +212,7 @@
     right: -72px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      right: calc(-72px + (#{$SizeDesktop} - 100vw) * #{33 / ($SizeDesktopN - $SizeTabletN)});
+      right: calc(-72px + (#{$SizeDesktop} - 100vw) * #{32 / ($SizeDesktopN - $SizeTabletN)});
     }
 
     @media (max-width: $SizeTablet - 1px) {
