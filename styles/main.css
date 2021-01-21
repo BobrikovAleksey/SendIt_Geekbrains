@@ -789,7 +789,7 @@
 @media (max-width: 1439px) {
   .feedback__container {
     min-height: calc(547px - (1440px - 100vw) * 0.2172619048);
-    padding-top: calc(63px - (1440px - 100vw) * 0.0386904762);
+    padding-top: calc(63px - (1440px - 100vw) * 0.037202381);
     padding-bottom: calc(48px - (1440px - 100vw) * 0.0238095238);
   }
 }
@@ -821,7 +821,7 @@
 @media (max-width: 1439px) {
   .feedback__reviews {
     width: calc(960px - (1440px - 100vw) * 0.5654761905);
-    margin: calc(54px - (1440px - 100vw) * 0.0461309524) auto 0;
+    margin: calc(54px - (1440px - 100vw) * 0.0476190476) auto 0;
   }
 }
 @media (max-width: 730px) {
@@ -929,7 +929,7 @@
 }
 @media (max-width: 1439px) {
   .advantage__title {
-    margin-left: 1px;
+    margin-left: calc((1440px - 100vw) * 0.0014880952);
   }
 }
 @media (max-width: 767px) {
@@ -956,7 +956,6 @@
 @media (max-width: 1439px) {
   .advantage__content {
     grid-gap: calc(40px - (1440px - 100vw) * 0.0297619048);
-    margin-top: 32px;
   }
 }
 @media (max-width: 767px) {
@@ -1024,7 +1023,7 @@
 @media (max-width: 1439px) {
   .advantage__icon_free {
     width: calc(84px - (1440px - 100vw) * 0.0416666667);
-    margin: calc(3px - (1440px - 100vw) * 0.0044642857) 0 calc((1440px - 100vw) * 0.0029761905) calc(6px - (1440px - 100vw) * 0.0029761905);
+    margin: calc(3px - (1440px - 100vw) * 0.0014880952) 0 calc((1440px - 100vw) * 0.0029761905) calc(6px - (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -1046,7 +1045,7 @@
 @media (max-width: 1439px) {
   .advantage__icon_checklist {
     width: calc(62px - (1440px - 100vw) * 0.0327380952);
-    margin: 0 0 calc((1440px - 100vw) * 0.0029761905) calc(6px - (1440px - 100vw) * 0.0029761905);
+    margin: 0 0 calc((768px - 100vw) * 0.0022321429) calc(6px - (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -1067,7 +1066,6 @@
 @media (max-width: 1439px) {
   .advantage__icon_reward {
     width: calc(66px - (1440px - 100vw) * 0.0357142857);
-    margin-bottom: calc((1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -1089,7 +1087,7 @@
 @media (max-width: 1439px) {
   .advantage__icon_hand {
     width: calc(68px - (1440px - 100vw) * 0.037202381);
-    margin-top: calc(4px - (1440px - 100vw) * 0.005952381);
+    margin-top: calc(3px - (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -1124,7 +1122,6 @@
 }
 .advantage__icon_scan {
   width: 74px;
-  height: 58px;
   margin: 12px 0 0 8px;
 }
 @media (max-width: 1439px) {
@@ -1147,7 +1144,7 @@
 .advantage__caption {
   font-family: "Myriad Pro Regular", serif;
   font-size: 18px;
-  line-height: 21.6px;
+  line-height: 22px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1156,8 +1153,8 @@
 @media (max-width: 1439px) {
   .advantage__caption {
     font-size: calc(18px - (1440px - 100vw) * 0.0089285714);
-    line-height: calc(21.6px - (1440px - 100vw) * 0.0107142857);
-    margin-top: calc(32px - (1440px - 100vw) * 0.0282738095);
+    line-height: calc(22px - (1440px - 100vw) * 0.0119047619);
+    margin-top: calc(32px - (1440px - 100vw) * 0.0267857143);
   }
 }
 @media (max-width: 767px) {

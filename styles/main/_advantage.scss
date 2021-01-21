@@ -32,7 +32,7 @@
 
   &__title {
     @media (max-width: $SizeDesktop - 1px) {
-      margin-left: 1px;
+      margin-left: calc((#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
     }
 
     @media (max-width: $SizeTablet - 1px) {
@@ -58,7 +58,6 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       grid-gap: calc(40px - (#{$SizeDesktop} - 100vw) * #{20 / ($SizeDesktopN - $SizeTabletN)});
-      margin-top: 32px;
     }
 
     @media (max-width: $SizeTablet - 1px) {
@@ -123,7 +122,7 @@
 
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(84px - (#{$SizeDesktop} - 100vw) * #{28 / ($SizeDesktopN - $SizeTabletN)});
-        margin: calc(3px - (#{$SizeDesktop} - 100vw) * #{3 / ($SizeDesktopN - $SizeTabletN)})
+        margin: calc(3px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)})
                 0 calc((#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
                 calc(6px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
       }
@@ -146,7 +145,7 @@
 
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(62px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)});
-        margin: 0 0 calc((#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
+        margin: 0 0 calc((#{$SizeTablet} - 100vw) * #{1 / ($SizeTabletN - $SizePhoneN)})
                 calc(6px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
       }
 
@@ -168,7 +167,6 @@
 
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(66px - (#{$SizeDesktop} - 100vw) * #{24 / ($SizeDesktopN - $SizeTabletN)});
-        margin-bottom: calc((#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
       }
 
       @media (max-width: $SizeTablet - 1px) {
@@ -190,7 +188,7 @@
 
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(68px - (#{$SizeDesktop} - 100vw) * #{25 / ($SizeDesktopN - $SizeTabletN)});
-        margin-top: calc(4px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
+        margin-top: calc(3px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
       }
 
       @media (max-width: $SizeTablet - 1px) {
@@ -224,7 +222,6 @@
 
     &_scan {
       width: 74px;
-      height: 58px;
       margin: 12px 0 0 8px;
 
       @media (max-width: $SizeDesktop - 1px) {
@@ -249,7 +246,7 @@
   &__caption {
     font-family: "Myriad Pro Regular", serif;
     font-size: 18px;
-    line-height: 21.6px;
+    line-height: 22px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -257,8 +254,8 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       font-size: calc(18px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
-      line-height: calc(21.6px - (#{$SizeDesktop} - 100vw) * #{7.2 / ($SizeDesktopN - $SizeTabletN)});
-      margin-top: calc(32px - (#{$SizeDesktop} - 100vw) * #{19 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(22px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc(32px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
     }
 
     @media (max-width: $SizeTablet - 1px) {
