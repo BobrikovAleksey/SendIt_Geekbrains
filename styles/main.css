@@ -1508,6 +1508,11 @@
     padding-bottom: 24px;
   }
 }
+@media (max-width: 1439px) {
+  .faq__title {
+    margin-left: calc((1440px - 100vw) * 0.0014880952);
+  }
+}
 @media (max-width: 767px) {
   .faq__title {
     font-size: calc(36px - (768px - 100vw) * 0.0178571429);
@@ -1593,6 +1598,16 @@
 .faq__item:not([open]):not(:active):hover {
   box-shadow: 0 4px 20px rgba(124, 195, 225, 0.6);
 }
+@media (max-width: 1439px) {
+  .faq__item:not([open]):not(:active):hover {
+    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) rgba(124, 195, 225, 0.6);
+  }
+}
+@media (max-width: 768px) {
+  .faq__item:not([open]):not(:active):hover {
+    box-shadow: 0 2px 10px rgba(124, 195, 225, 0.6);
+  }
+}
 .faq__item:not([open]):active {
   transition: linear 25ms;
   box-shadow: none;
@@ -1610,6 +1625,7 @@
 @media (max-width: 830px) {
   .faq__question {
     min-height: calc(64px - (830px - 100vw) * 0.2580645161);
+    padding: 4px calc(60px + (830px - 100vw) * 0.0161290323) 6px calc(30px + (830px - 100vw) * 0.0161290323);
   }
 }
 @media (max-width: 767px) {
@@ -1617,7 +1633,7 @@
     min-height: calc(48px + (768px - 100vw) * 0.0714285714);
     font-size: calc(16px - (768px - 100vw) * 0.0044642857);
     line-height: calc(19.2px - (768px - 100vw) * 0.0053571429);
-    padding: calc(4px + (768px - 100vw) * 0.0044642857) calc(60px + (768px - 100vw) * 0.0267857143) calc(5px + (768px - 100vw) * 0.0066964286) calc(30px + (768px - 100vw) * 0.0133928571);
+    padding: calc(4px + (768px - 100vw) * 0.0044642857) calc(61px + (768px - 100vw) * 0.0267857143) calc(5px + (768px - 100vw) * 0.0066964286) calc(31px + (768px - 100vw) * 0.0133928571);
   }
 }
 @media (max-width: 320px) {
@@ -1644,7 +1660,7 @@
 }
 @media (max-width: 1439px) {
   .faq__question:before {
-    right: calc(31px + (1440px - 100vw) * 0.0044642857);
+    right: calc(31px + (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -1670,9 +1686,9 @@
   background: #F7F7F7;
   padding: 15px 30px 30px;
 }
-@media (max-width: 1439px) {
+@media (max-width: 830px) {
   .faq__answer {
-    padding: calc(15px - (1440px - 100vw) * 0.0074404762) calc(30px - (1440px - 100vw) * 0.0089285714) calc(30px - (1440px - 100vw) * 0.0148809524);
+    padding: calc(15px - (830px - 100vw) * 0.0806451613) calc(30px + (830px - 100vw) * 0.0161290323) calc(30px - (830px - 100vw) * 0.1612903226);
   }
 }
 @media (max-width: 767px) {

@@ -147,9 +147,6 @@ li {
 .button_blue:hover:not(:active):not(:disabled) {
   box-shadow: 0 4px 15px rgba(0, 141, 205, 0.45);
 }
-.button_blue:active:not(:disabled) {
-  background: #94D1EC;
-}
 @media (max-width: 1439px) {
   .button_blue:hover:not(:active):not(:disabled) {
     box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) rgba(0, 141, 205, 0.45);
@@ -160,15 +157,15 @@ li {
     box-shadow: 0 2px 10px rgba(0, 141, 205, 0.45);
   }
 }
+.button_blue:active:not(:disabled) {
+  background: #94D1EC;
+}
 .button_orange {
   color: #363636;
   background: #FFCC00;
 }
 .button_orange:hover:not(:active):not(:disabled) {
   box-shadow: 0 4px 20px rgba(255, 204, 0, 0.55);
-}
-.button_orange:active:not(:disabled) {
-  background: #FCE39C;
 }
 @media (max-width: 1439px) {
   .button_orange:hover:not(:active):not(:disabled) {
@@ -179,6 +176,9 @@ li {
   .button_orange:hover:not(:active):not(:disabled) {
     box-shadow: 0 2px 10px rgba(255, 204, 0, 0.55);
   }
+}
+.button_orange:active:not(:disabled) {
+  background: #FCE39C;
 }
 
 .input {
