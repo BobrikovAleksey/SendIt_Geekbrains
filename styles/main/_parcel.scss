@@ -12,12 +12,26 @@
     align-items: center;
     padding-top: 44px;
     padding-bottom: 48px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      min-height: calc(180px - (#{$SizeDesktop} - 100vw) * #{56 / ($SizeDesktopN - $SizeTabletN)});
+      padding-top: calc(44px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)});
+      padding-bottom: calc(48px - (#{$SizeDesktop} - 100vw) * #{26 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
   &__title {
+    width: 760px;
     text-transform: none;
-    padding: 0 48px 2px 0;
+    padding-bottom: 2px;
+
+    @media (max-width: $SizeDesktop - 1px) {
+      width: calc(760px - (#{$SizeDesktop} - 100vw) * #{380 / ($SizeDesktopN - $SizeTabletN)});
+      font-size: calc(36px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      line-height: calc(43px - (#{$SizeDesktop} - 100vw) * #{9 / ($SizeDesktopN - $SizeTabletN)});
+      padding-bottom: calc(2px + (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
+    }
   }
 
 
