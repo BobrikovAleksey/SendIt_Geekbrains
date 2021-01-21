@@ -1311,8 +1311,8 @@
 }
 @media (max-width: 1439px) {
   .guarantee__icon_form {
-    width: calc(75px - (1440px - 100vw) * 0.0431547619);
-    margin: calc(6px - (1440px - 100vw) * 0.0089285714) calc(2px - (1440px - 100vw) * 0.0029761905) 0 0;
+    width: calc(75px - (1440px - 100vw) * 0.0416666667);
+    margin: calc(6px - (1440px - 100vw) * 0.0089285714) calc(4px - (1440px - 100vw) * 0.0044642857) 0 0;
   }
 }
 @media (max-width: 767px) {
@@ -1356,6 +1356,7 @@
 @media (max-width: 1439px) {
   .guarantee__icon_delivery {
     width: calc(67px - (1440px - 100vw) * 0.0267857143);
+    margin: 0 calc(2px - (1440px - 100vw) * 0.0029761905) 1px 0;
   }
 }
 @media (max-width: 767px) {
@@ -1385,23 +1386,21 @@
   .guarantee__caption h3 {
     font-size: calc(30px - (1440px - 100vw) * 0.0148809524);
     line-height: calc(36px - (1440px - 100vw) * 0.0178571429);
-    margin-left: -1px;
   }
 }
 @media (max-width: 767px) {
   .guarantee__caption h3 {
     height: calc(160px - (768px - 100vw) * 0.21875);
     font-size: calc(30px - (768px - 100vw) * 0.03125);
-    line-height: calc(36px - (768px - 100vw) * 0.0241071429);
+    line-height: calc(36px - (768px - 100vw) * 0.0245535714);
     padding: calc(28px - (768px - 100vw) * 0.0379464286) 0 0 calc(183px - (768px - 100vw) * 0.25);
-    margin-left: 0;
   }
 }
 @media (max-width: 320px) {
   .guarantee__caption h3 {
     height: 62px;
     font-size: 16px;
-    line-height: 19.2px;
+    line-height: 19px;
     padding: 11px 0 0 71px;
   }
 }
@@ -1417,9 +1416,9 @@
   .guarantee__caption p {
     height: calc(98px - (1440px - 100vw) * 0.0178571429);
     font-size: calc(16px - (1440px - 100vw) * 0.005952381);
-    line-height: calc(19.2px - (1440px - 100vw) * 0.0071428571);
+    line-height: calc(19px - (1440px - 100vw) * 0.0074404762);
     -webkit-line-clamp: 6;
-    margin-top: calc(11px - (1440px - 100vw) * 0.0029761905);
+    margin: calc(11px - (1440px - 100vw) * 0.0029761905) 0 0 calc((1440px - 100vw) * 0.0014880952);
   }
 }
 @media (max-width: 767px) {
@@ -1446,13 +1445,8 @@
 }
 @media (max-width: 1439px) {
   .guarantee__button {
+    padding: 9px calc(26px - (1440px - 100vw) * 0.0208333333) 8px;
     margin-top: calc(16px + (1440px - 100vw) * 0.0104166667);
-  }
-}
-@media (max-width: 830px) {
-  .guarantee__button {
-    justify-content: flex-end;
-    padding: 9px 20px 8px;
   }
 }
 @media (max-width: 767px) {

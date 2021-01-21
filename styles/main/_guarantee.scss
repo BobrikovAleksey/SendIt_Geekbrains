@@ -136,9 +136,9 @@
       margin: 6px 4px 0 0;
 
       @media (max-width: $SizeDesktop - 1px) {
-        width: calc(75px - (#{$SizeDesktop} - 100vw) * #{29 / ($SizeDesktopN - $SizeTabletN)});
+        width: calc(75px - (#{$SizeDesktop} - 100vw) * #{28 / ($SizeDesktopN - $SizeTabletN)});
         margin: calc(6px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)})
-                calc(2px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}) 0 0;
+                calc(4px - (#{$SizeDesktop} - 100vw) * #{3 / ($SizeDesktopN - $SizeTabletN)}) 0 0;
       }
 
       @media (max-width: $SizeTablet - 1px) {
@@ -182,6 +182,7 @@
 
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(67px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
+        margin: 0 calc(2px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}) 1px 0;
       }
 
       @media (max-width: $SizeTablet - 1px) {
@@ -210,22 +211,20 @@
       @media (max-width: $SizeDesktop - 1px) {
         font-size: calc(30px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)});
         line-height: calc(36px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
-        margin-left: -1px;
       }
 
       @media (max-width: $SizeTablet - 1px) {
         height: calc(160px - (#{$SizeTablet} - 100vw) * #{98 / ($SizeTabletN - $SizePhoneN)});
         font-size: calc(30px - (#{$SizeTablet} - 100vw) * #{14 / ($SizeTabletN - $SizePhoneN)});
-        line-height: calc(36px - (#{$SizeTablet} - 100vw) * #{10.8 / ($SizeTabletN - $SizePhoneN)});
+        line-height: calc(36px - (#{$SizeTablet} - 100vw) * #{11 / ($SizeTabletN - $SizePhoneN)});
         padding: calc(28px - (#{$SizeTablet} - 100vw) * #{17 / ($SizeTabletN - $SizePhoneN)})
                  0 0 calc(183px - (#{$SizeTablet} - 100vw) * #{112 / ($SizeTabletN - $SizePhoneN)});
-        margin-left: 0;
       }
 
       @media (max-width: $SizePhone) {
         height: 62px;
         font-size: 16px;
-        line-height: 19.2px;
+        line-height: 19px;
         padding: 11px 0 0 71px;
       }
     }
@@ -241,9 +240,10 @@
       @media (max-width: $SizeDesktop - 1px) {
         height: calc(98px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
         font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
-        line-height: calc(19.2px - (#{$SizeDesktop} - 100vw) * #{4.8 / ($SizeDesktopN - $SizeTabletN)});
+        line-height: calc(19px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)});
         -webkit-line-clamp: 6;
-        margin-top: calc(11px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+        margin: calc(11px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
+                0 0 calc((#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
       }
 
       @media (max-width: $SizeTablet - 1px) {
@@ -270,12 +270,8 @@
     margin-top: 16px;
 
     @media (max-width: $SizeDesktop - 1px) {
+      padding: 9px calc(26px - (#{$SizeDesktop} - 100vw) * #{14 / ($SizeDesktopN - $SizeTabletN)}) 8px;
       margin-top: calc(16px + (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
-    }
-
-    @media (max-width: $Breakpoint-830) {
-      justify-content: flex-end;
-      padding: 9px 20px 8px;
     }
 
     @media (max-width: $SizeTablet - 1px) {
