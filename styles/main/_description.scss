@@ -431,9 +431,9 @@
 
     @media (max-width: $SizeTablet - 1px) {
       width: 100%;
-      font-size: calc(14px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
-      line-height: calc(17px - (#{$SizeTablet} - 100vw) * #{3 / ($SizeTabletN - $SizePhoneN)});
-      margin-top: calc(16px - (#{$SizeTablet} - 100vw) * #{10 / ($SizeTabletN - $SizePhoneN)});
+      font-size: calc(16px - (#{$SizeTablet} - 100vw) * #{4 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(19px - (#{$SizeTablet} - 100vw) * #{5 / ($SizeTabletN - $SizePhoneN)});
+      margin-top: calc(26px - (#{$SizeTablet} - 100vw) * #{16 / ($SizeTabletN - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
