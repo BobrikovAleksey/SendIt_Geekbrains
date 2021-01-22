@@ -15,9 +15,24 @@
     @media (max-width: $SizeDesktop - 1px) {
       min-height: calc(457px - (#{$SizeDesktop} - 100vw) * #{143 / ($SizeDesktopN - $SizeTabletN)});
       padding: calc(62px - (#{$SizeDesktop} - 100vw) * #{43 / ($SizeDesktopN - $SizeTabletN)})
-               calc(112px - (#{$SizeDesktop} - 100vw) * #{78 / ($SizeDesktopN - $SizeTabletN)})
+               calc(112px + (100% - 100vw) - (#{$SizeDesktop} - 100vw) * #{78 / ($SizeDesktopN - $SizeTabletN)})
                calc(48px - (#{$SizeDesktop} - 100vw) * #{16 / ($SizeDesktopN - $SizeTabletN)})
                calc(111px - (#{$SizeDesktop} - 100vw) * #{77 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      min-height: 371px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: calc(31px - (#{$SizeTablet} - 100vw) * #{14 / ($SizeTabletN - $SizePhoneN)})
+               max(#{$ContainerPaddingSm}, calc(#{$ContainerPaddingMd} + (100% - 100vw) - (#{$SizeTablet} - 100vw) * #{($ContainerPaddingMdN - $ContainerPaddingSmN) / ($SizeTabletN - $SizePhoneN)}))
+               calc(32px - (#{$SizeTablet} - 100vw) * #{16 / ($SizeTabletN - $SizePhoneN)})
+               calc(#{$ContainerPaddingMd} - (#{$SizeTablet} - 100vw) * #{($ContainerPaddingMdN - $ContainerPaddingSmN) / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      padding: 17px $ContainerPaddingSm 16px;
     }
   }
 
@@ -26,13 +41,12 @@
     width: 660px;
     height: 267px;
     background: url("../images/cloud.png") no-repeat;
-    background-size: 660px auto;
+    background-size: contain;
     position: relative;
 
     @media (max-width: $SizeDesktop - 1px) {
       width: calc(660px - (#{$SizeDesktop} - 100vw) * #{262 / ($SizeDesktopN - $SizeTabletN)});
       height: calc(267px - (#{$SizeDesktop} - 100vw) * #{105 / ($SizeDesktopN - $SizeTabletN)});
-      background-size: calc(660px - (#{$SizeDesktop} - 100vw) * #{262 / ($SizeDesktopN - $SizeTabletN)}) auto;
     }
 
     @media (min-width: $SizeTablet) and (max-width: $SizeDesktop - 1px) {
@@ -40,7 +54,17 @@
       margin: auto;
       top: 0;
       bottom: 6px;
-      left: calc(111px - (#{$SizeDesktop} - 100vw) * #{77 / ($SizeDesktopN - $SizeTabletN)});
+      right: calc(111px + (100% - 100vw) - (#{$SizeDesktop} - 100vw) * #{77 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: calc(660px - (#{$SizeTablet} - 100vw) * #{382 / ($SizeTabletN - $SizePhoneN)});
+      height: calc(267px - (#{$SizeTablet} - 100vw) * #{154 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      width: 278px;
+      height: 113px;
     }
   }
 
@@ -58,11 +82,27 @@
       left: 139px;
 
       @media (max-width: $SizeDesktop - 1px) {
-        width: calc(82px - (#{$SizeDesktop} - 100vw) * #{31 / ($SizeDesktopN - $SizeTabletN)});
+        width: calc(82px - (#{$SizeDesktop} - 100vw) * #{33 / ($SizeDesktopN - $SizeTabletN)});
         height: calc(53px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)});
-        background-size: calc(82px - (#{$SizeDesktop} - 100vw) * #{32.55 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        background-size: calc(82px - (#{$SizeDesktop} - 100vw) * #{33 / ($SizeDesktopN - $SizeTabletN)}) auto;
         top: calc(50px - (#{$SizeDesktop} - 100vw) * #{19 / ($SizeDesktopN - $SizeTabletN)});
         left: calc(139px - (#{$SizeDesktop} - 100vw) * #{56 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(82px - (#{$SizeTablet} - 100vw) * #{47 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(53px - (#{$SizeTablet} - 100vw) * #{31 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(82px - (#{$SizeTablet} - 100vw) * #{47 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(50px - (#{$SizeTablet} - 100vw) * #{29 / ($SizeTabletN - $SizePhoneN)});
+        left: calc(139px - (#{$SizeTablet} - 100vw) * #{81 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 35px;
+        height: 22px;
+        background-size: 35px auto;
+        top: 21px;
+        left: 58px;
       }
     }
 
@@ -82,6 +122,22 @@
         top: calc(126px - (#{$SizeDesktop} - 100vw) * #{49 / ($SizeDesktopN - $SizeTabletN)});
         left: calc(131px - (#{$SizeDesktop} - 100vw) * #{52 / ($SizeDesktopN - $SizeTabletN)});
       }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(88px - (#{$SizeTablet} - 100vw) * #{51 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(57px - (#{$SizeTablet} - 100vw) * #{33 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(88px - (#{$SizeTablet} - 100vw) * #{51 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(126px - (#{$SizeTablet} - 100vw) * #{73 / ($SizeTabletN - $SizePhoneN)});
+        left: calc(131px - (#{$SizeTablet} - 100vw) * #{76 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 37px;
+        height: 24px;
+        background-size: 37px auto;
+        top: 53px;
+        left: 55px;
+      }
     }
 
 
@@ -100,6 +156,22 @@
         top: calc(79px - (#{$SizeDesktop} - 100vw) * #{31 / ($SizeDesktopN - $SizeTabletN)});
         right: calc(31px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
       }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(88px - (#{$SizeTablet} - 100vw) * #{51 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(57px - (#{$SizeTablet} - 100vw) * #{33 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(88px - (#{$SizeTablet} - 100vw) * #{51 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(79px - (#{$SizeTablet} - 100vw) * #{46 / ($SizeTabletN - $SizePhoneN)});
+        right: calc(31px - (#{$SizeTablet} - 100vw) * #{18 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 37px;
+        height: 24px;
+        background-size: 37px auto;
+        top: 33px;
+        right: 13px;
+      }
     }
 
 
@@ -114,9 +186,25 @@
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(107px - (#{$SizeDesktop} - 100vw) * #{42 / ($SizeDesktopN - $SizeTabletN)});
         height: calc(68px - (#{$SizeDesktop} - 100vw) * #{27 / ($SizeDesktopN - $SizeTabletN)});
-        background-size: calc(107px - (#{$SizeDesktop} - 100vw) * #{42.48 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        background-size: calc(107px - (#{$SizeDesktop} - 100vw) * #{42 / ($SizeDesktopN - $SizeTabletN)}) auto;
         top: calc(84px - (#{$SizeDesktop} - 100vw) * #{33 / ($SizeDesktopN - $SizeTabletN)});
         left: calc(14px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(107px - (#{$SizeTablet} - 100vw) * #{62 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(68px - (#{$SizeTablet} - 100vw) * #{39 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(107px - (#{$SizeTablet} - 100vw) * #{62 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(84px - (#{$SizeTablet} - 100vw) * #{49 / ($SizeTabletN - $SizePhoneN)});
+        left: calc(14px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 45px;
+        height: 29px;
+        background-size: 45px auto;
+        top: 35px;
+        left: 6px;
       }
     }
 
@@ -132,9 +220,25 @@
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(110px - (#{$SizeDesktop} - 100vw) * #{44 / ($SizeDesktopN - $SizeTabletN)});
         height: calc(72px - (#{$SizeDesktop} - 100vw) * #{29 / ($SizeDesktopN - $SizeTabletN)});
-        background-size: calc(110px - (#{$SizeDesktop} - 100vw) * #{43.67 / ($SizeDesktopN - $SizeTabletN)}) auto;
+        background-size: calc(110px - (#{$SizeDesktop} - 100vw) * #{44 / ($SizeDesktopN - $SizeTabletN)}) auto;
         top: calc(168px - (#{$SizeDesktop} - 100vw) * #{66 / ($SizeDesktopN - $SizeTabletN)});
         left: calc(34px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(110px - (#{$SizeTablet} - 100vw) * #{63 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(72px - (#{$SizeTablet} - 100vw) * #{42 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(110px - (#{$SizeTablet} - 100vw) * #{63 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(168px - (#{$SizeTablet} - 100vw) * #{97 / ($SizeTabletN - $SizePhoneN)});
+        left: calc(34px - (#{$SizeTablet} - 100vw) * #{20 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 47px;
+        height: 30px;
+        background-size: 47px auto;
+        top: 71px;
+        left: 14px;
       }
     }
 
@@ -154,6 +258,22 @@
         top: calc(171px - (#{$SizeDesktop} - 100vw) * #{68 / ($SizeDesktopN - $SizeTabletN)});
         right: calc(36px - (#{$SizeDesktop} - 100vw) * #{15 / ($SizeDesktopN - $SizeTabletN)});
       }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(88px - (#{$SizeTablet} - 100vw) * #{51 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(56px - (#{$SizeTablet} - 100vw) * #{32 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(88px - (#{$SizeTablet} - 100vw) * #{51 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(171px - (#{$SizeTablet} - 100vw) * #{99 / ($SizeTabletN - $SizePhoneN)});
+        right: calc(36px - (#{$SizeTablet} - 100vw) * #{21 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 37px;
+        height: 24px;
+        background-size: 37px auto;
+        top: 72px;
+        right: 15px;
+      }
     }
 
 
@@ -171,6 +291,22 @@
         background-size: calc(82px - (#{$SizeDesktop} - 100vw) * #{32.55 / ($SizeDesktopN - $SizeTabletN)}) auto;
         top: calc(34px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
         right: calc(166px - (#{$SizeDesktop} - 100vw) * #{66 / ($SizeDesktopN - $SizeTabletN)});
+      }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(82px - (#{$SizeTablet} - 100vw) * #{47 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(52px - (#{$SizeTablet} - 100vw) * #{30 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(82px - (#{$SizeTablet} - 100vw) * #{47 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(34px - (#{$SizeTablet} - 100vw) * #{20 / ($SizeTabletN - $SizePhoneN)});
+        right: calc(166px - (#{$SizeTablet} - 100vw) * #{96 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 35px;
+        height: 22px;
+        background-size: 35px auto;
+        top: 14px;
+        right: 70px;
       }
     }
 
@@ -191,6 +327,22 @@
         top: calc(125px - (#{$SizeDesktop} - 100vw) * #{49 / ($SizeDesktopN - $SizeTabletN)});
         right: calc(137px - (#{$SizeDesktop} - 100vw) * #{55 / ($SizeDesktopN - $SizeTabletN)});
       }
+
+      @media (max-width: $SizeTablet - 1px) {
+        width: calc(70px - (#{$SizeTablet} - 100vw) * #{41 / ($SizeTabletN - $SizePhoneN)});
+        height: calc(46px - (#{$SizeTablet} - 100vw) * #{27 / ($SizeTabletN - $SizePhoneN)});
+        background-size: calc(70px - (#{$SizeTablet} - 100vw) * #{41 / ($SizeTabletN - $SizePhoneN)}) auto;
+        top: calc(125px - (#{$SizeTablet} - 100vw) * #{73 / ($SizeTabletN - $SizePhoneN)});
+        right: calc(137px - (#{$SizeTablet} - 100vw) * #{79 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 29px;
+        height: 19px;
+        background-size: 29px auto;
+        top: 52px;
+        right: 58px;
+      }
     }
   }
 
@@ -203,10 +355,24 @@
     left: 240px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(200px - (#{$SizeDesktop} - 100vw) * #{79.39 / ($SizeDesktopN - $SizeTabletN)});
-      height: calc(266px - (#{$SizeDesktop} - 100vw) * #{105.59 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc(200px - (#{$SizeDesktop} - 100vw) * #{79 / ($SizeDesktopN - $SizeTabletN)});
+      height: calc(266px - (#{$SizeDesktop} - 100vw) * #{106 / ($SizeDesktopN - $SizeTabletN)});
       top: calc(70px - (#{$SizeDesktop} - 100vw) * #{27 / ($SizeDesktopN - $SizeTabletN)});
       left: calc(240px - (#{$SizeDesktop} - 100vw) * #{95 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: calc(200px - (#{$SizeTablet} - 100vw) * #{116 / ($SizeTabletN - $SizePhoneN)});
+      height: calc(266px - (#{$SizeTablet} - 100vw) * #{154 / ($SizeTabletN - $SizePhoneN)});
+      top: calc(70px - (#{$SizeTablet} - 100vw) * #{41 / ($SizeTabletN - $SizePhoneN)});
+      left: calc(240px - (#{$SizeTablet} - 100vw) * #{139 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      width: 84px;
+      height: 112px;
+      top: 29px;
+      left: 101px;
     }
   }
 
@@ -219,6 +385,17 @@
       width: calc(460px + (#{$SizeDesktop} - 100vw) * #{240 / ($SizeDesktopN - $SizeTabletN)});
       padding: calc(22px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)}) 0 0;
     }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: calc(660px - (#{$SizeTablet} - 100vw) * #{382 / ($SizeTabletN - $SizePhoneN)});
+      padding: 0;
+      margin-top: calc(88px - (#{$SizeTablet} - 100vw) * #{36 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      width: 278px;
+      margin-top: 52px;
+    }
   }
 
 
@@ -227,6 +404,17 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       width: calc(460px + (#{$SizeDesktop} - 100vw) * #{90 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: 100%;
+      font-size: calc(36px - (#{$SizeTablet} - 100vw) * #{18 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(43px - (#{$SizeTablet} - 100vw) * #{21 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 
@@ -240,6 +428,19 @@
       line-height: calc(19px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
       margin-top: calc(26px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
     }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: 100%;
+      font-size: calc(14px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(17px - (#{$SizeTablet} - 100vw) * #{3 / ($SizeTabletN - $SizePhoneN)});
+      margin-top: calc(16px - (#{$SizeTablet} - 100vw) * #{10 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 10px;
+    }
   }
 
 
@@ -248,6 +449,14 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       margin-top: calc(33px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      margin-top: calc(28px - (#{$SizeTablet} - 100vw) * #{6 / ($SizeTabletN - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 22px;
     }
   }
 }
