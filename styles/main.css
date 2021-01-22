@@ -654,9 +654,9 @@
 @media (max-width: 767px) {
   .description__text {
     width: 100%;
-    font-size: calc(14px - (768px - 100vw) * 0.0044642857);
-    line-height: calc(17px - (768px - 100vw) * 0.0066964286);
-    margin-top: calc(16px - (768px - 100vw) * 0.0223214286);
+    font-size: calc(16px - (768px - 100vw) * 0.0089285714);
+    line-height: calc(19px - (768px - 100vw) * 0.0111607143);
+    margin-top: calc(26px - (768px - 100vw) * 0.0357142857);
   }
 }
 @media (max-width: 320px) {
@@ -960,6 +960,28 @@
     padding-bottom: calc(48px - (1440px - 100vw) * 0.0386904762);
   }
 }
+@media (max-width: 767px) {
+  .parcel__container {
+    min-height: 124px;
+    padding-top: calc(22px - (768px - 100vw) * 0.0066964286);
+    padding-bottom: calc(26px - (768px - 100vw) * 0.0223214286);
+  }
+}
+@media (max-width: 630px) {
+  .parcel__container {
+    min-height: calc(141px + (630px - 100vw) * 0.064516129);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 320px) {
+  .parcel__container {
+    min-height: 161px;
+    padding-top: 19px;
+    padding-bottom: 16px;
+  }
+}
 .parcel__title {
   width: 760px;
   text-transform: none;
@@ -973,6 +995,44 @@
     padding-bottom: calc(2px + (1440px - 100vw) * 0.005952381);
   }
 }
+@media (max-width: 768px) {
+  .parcel__title {
+    padding-bottom: 6px;
+    font-size: calc(28px - (768px - 100vw) * 0.0089285714);
+    line-height: calc(34px - (768px - 100vw) * 0.0111607143);
+  }
+}
+@media (max-width: 630px) {
+  .parcel__title {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 320px) {
+  .parcel__title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.parcel__button {
+  margin-left: 40px;
+}
+@media (max-width: 768px) {
+  .parcel__button {
+    margin-left: calc(40px - (768px - 100vw) * 0.0579710145);
+  }
+}
+@media (max-width: 630px) {
+  .parcel__button {
+    margin: calc(17px - (630px - 100vw) * 0.0129032258) 0 0;
+  }
+}
+@media (max-width: 320px) {
+  .parcel__button {
+    margin-top: 13px;
+  }
+}
+
 .callback {
   background: #008DCD;
 }

@@ -20,14 +20,14 @@
       height: calc(22px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
     }
 
-    @media (max-width: $SizeTablet) {
-      width: 14px;
-      height: 14px;
+    @media (max-width: $Breakpoint-730) {
+      width: calc(22px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)});
+      height: calc(22px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)});
     }
 
-    @media (max-width: $Breakpoint-730) {
-      width: calc(20px - (#{$Breakpoint-730} - 100vw) * #{6 / ($Breakpoint-730N - $SizePhoneN)});
-      height: calc(20px - (#{$Breakpoint-730} - 100vw) * #{6 / ($Breakpoint-730N - $SizePhoneN)});
+    @media (max-width: $SizeTablet), (max-width: $SizePhone) {
+      width: 14px;
+      height: 14px;
     }
   }
 
