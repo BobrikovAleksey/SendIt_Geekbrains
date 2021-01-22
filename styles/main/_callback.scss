@@ -18,10 +18,24 @@
       padding-bottom: calc(36px - (#{$SizeDesktop} - 100vw) * #{24 / ($SizeDesktopN - $SizeTabletN)});
     }
 
+    @media (max-width: $SizeTablet - 1px) {
+      min-height: 171px;
+      padding-top: 26px;
+      padding-bottom: 12px;
+    }
+
     @media (max-width: $Breakpoint-630) {
-      min-height: 283px;
+      min-height: calc(171px - (#{$Breakpoint-630} - 100vw) * #{112 / ($Breakpoint-630N - $SizePhoneN)});
       flex-direction: column;
       justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: calc(36px - (#{$Breakpoint-630} - 100vw) * #{9 / ($Breakpoint-630N - $SizePhoneN)});
+      padding-bottom: calc(12px - (#{$Breakpoint-630} - 100vw) * #{6 / ($Breakpoint-630N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      min-height: 283px;
+      padding-top: 27px;
       padding-bottom: 6px;
     }
   }
@@ -29,21 +43,12 @@
 
   &__caption {
     width: 760px;
+    max-width: 60%;
     padding-top: 1px;
 
-    @media (max-width: $SizeDesktop - 1px) {
-      width: calc(760px - (#{$SizeDesktop} - 100vw) * #{460 / ($SizeDesktopN - $SizeTabletN)});
-      font-size: calc(48px - (#{$SizeDesktop} - 100vw) * #{20 / ($SizeDesktopN - $SizeTabletN)});
-      line-height: calc(58px - (#{$SizeDesktop} - 100vw) * #{24 / ($SizeDesktopN - $SizeTabletN)});
-    }
-
     @media (max-width: $Breakpoint-630) {
-      width: calc(#{$InputWidthLg} - (#{$Breakpoint-630} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($Breakpoint-630N - $SizePhoneN)});
-      margin: 0 auto;
-    }
-
-    @media (max-width: $SizePhone) {
-      width: $InputWidthMd;
+      max-width: 100%;
+      padding-top: 0;
     }
   }
 
@@ -78,28 +83,44 @@
 
     @media (max-width: $SizeTablet) {
       font-size: 14px;
-      line-height: 13.4px;
+      line-height: 13px;
       margin-top: 15px;
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      font-size: calc(20px - (#{$Breakpoint-630} - 100vw) * #{6 / ($Breakpoint-630N - $SizePhoneN)});
+      line-height: calc(19px - (#{$Breakpoint-630} - 100vw) * #{6 / ($Breakpoint-630N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
+      font-size: 14px;
+      line-height: 13px;
     }
   }
 
 
   &__form {
     width: $InputWidthLg;
-    padding-top: 4px;
+    margin: 4px 0 0 40px;
 
     @media (max-width: $SizeDesktop - 1px) {
       width: calc(#{$InputWidthLg} - (#{$SizeDesktop} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($SizeDesktopN - $SizeTabletN)});
-      padding-top: calc(4px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+      margin: calc(4px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)}) 0 0 40px;
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: $InputWidthMd;
+      margin: 5px 0 0 calc(40px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $Breakpoint-630N)});
     }
 
     @media (max-width: $Breakpoint-630) {
       width: calc(#{$InputWidthLg} - (#{$Breakpoint-630} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($Breakpoint-630N - $SizePhoneN)});
-      margin: 11px auto 0;
+      margin: calc(20px - (#{$Breakpoint-630} - 100vw) * #{4 / ($Breakpoint-630N - $SizePhoneN)}) 0 0;
     }
 
     @media (max-width: $SizePhone) {
       width: $InputWidthMd;
+      margin-top: 16px;
     }
   }
 
@@ -108,13 +129,20 @@
     width: inherit;
   }
 
-
   &__button {
     width: inherit;
     margin-top: 9px;
 
     @media (max-width: $SizeDesktop - 1px) {
       padding: 9px calc(26px + (#{$Breakpoint-1220} - 100vw) * #{14 / ($Breakpoint-1220N - $SizeTabletN)}) 8px;
+    }
+
+    @media (max-width: $SizeTablet) {
+      padding: 9px 40px 8px;
+    }
+
+    @media (max-width: $SizePhone) {
+      width: $InputWidthMd;
     }
   }
 
@@ -126,11 +154,11 @@
       margin-top: calc(15px - (#{$Breakpoint-1220} - 100vw) * #{7 / ($Breakpoint-1220N - $SizeTabletN)});
     }
 
-    @media (max-width: $Breakpoint-630) {
-      margin: 6px 0 0 8px;
+    @media (max-width: $SizeTablet) {
+      margin-top: 8px;
     }
 
-    @media (max-width: $SizePhone) {
+    @media (max-width: $Breakpoint-630) {
       margin: 6px 0 0 8px;
     }
   }
