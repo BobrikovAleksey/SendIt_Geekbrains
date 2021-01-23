@@ -11,11 +11,13 @@
   margin: 0;
 }
 
+
 body {
   user-select: none;
   font-family: "Myriad Pro Regular", serif;
   color: black;
 }
+
 
 h1, h2, h3 {
   color: $DarkGray;
@@ -33,25 +35,31 @@ h3 {
   @include H3;
 }
 
+
 p {
   @include P;
 }
+
 
 a {
   @include A;
 }
 
+
 details > summary {
   list-style: none
 }
+
 
 details summary::-webkit-details-marker {
   display: none;
 }
 
+
 li {
   list-style-type: none;
 }
+
 
 .link {
   color: $DarkBlue;

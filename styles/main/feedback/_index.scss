@@ -12,19 +12,25 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       min-height: calc(547px - (#{$SizeDesktop} - 100vw) * #{146 / ($SizeDesktopN - $SizeTabletN)});
-      padding-top: calc(63px - (#{$SizeDesktop} - 100vw) * #{26 / ($SizeDesktopN - $SizeTabletN)});
+      padding-top: calc(63px - (#{$SizeDesktop} - 100vw) * #{25 / ($SizeDesktopN - $SizeTabletN)});
       padding-bottom: calc(48px - (#{$SizeDesktop} - 100vw) * #{16 / ($SizeDesktopN - $SizeTabletN)});
+    }
+
+    @media (max-width: $SizeTablet) {
+      min-height: 401px;
+      padding-top: 38px;
+      padding-bottom: 32px;
     }
 
     @media (max-width: $Breakpoint-730) {
       min-height: calc(401px - (#{$Breakpoint-730} - 100vw) * #{77 / ($Breakpoint-730N - $SizePhoneN)});
-      padding-top: calc(32px - (#{$Breakpoint-730} - 100vw) * #{19 / ($Breakpoint-730N - $SizePhoneN)});
-      padding-bottom: calc(24px - (#{$Breakpoint-730} - 100vw) * #{12 / ($Breakpoint-730N - $SizePhoneN)});
+      padding-top: calc(38px - (#{$Breakpoint-730} - 100vw) * #{26 / ($Breakpoint-730N - $SizePhoneN)});
+      padding-bottom: calc(32px - (#{$Breakpoint-730} - 100vw) * #{20 / ($Breakpoint-730N - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
       min-height: 324px;
-      padding-top: 13px;
+      padding-top: 12px;
       padding-bottom: 12px;
     }
   }
@@ -32,8 +38,13 @@
 
   &__title {
     @media (max-width: $Breakpoint-730) {
+      font-size: calc(36px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)});
+      line-height: calc(43px - (#{$Breakpoint-730} - 100vw) * #{9 / ($Breakpoint-730N - $SizePhoneN)});
+    }
+
+    @media (max-width: $SizePhone) {
       font-size: 28px;
-      line-height: 33.6px;
+      line-height: 34px;
     }
   }
 
@@ -45,18 +56,23 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       width: calc(960px - (#{$SizeDesktop} - 100vw) * #{380 / ($SizeDesktopN - $SizeTabletN)});
-      margin: calc(54px - (#{$SizeDesktop} - 100vw) * #{31 / ($SizeDesktopN - $SizeTabletN)}) auto 0;
+      margin: calc(54px - (#{$SizeDesktop} - 100vw) * #{32 / ($SizeDesktopN - $SizeTabletN)}) auto 0;
+    }
+
+    @media (max-width: $SizeTablet) {
+      width: 580px;
+      margin: 22px auto 0;
     }
 
     @media (max-width: $Breakpoint-730) {
       width: calc(460px - (#{$Breakpoint-730} - 100vw) * #{230 / ($Breakpoint-730N - $SizePhoneN)});
-      margin: calc(16px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)}) auto 0;
+      margin: calc(16px - (#{$Breakpoint-730} - 100vw) * #{9 / ($Breakpoint-730N - $SizePhoneN)}) auto 0;
     }
 
     @media (max-width: $SizePhone) {
-      width: 278px;
+      width: $InputWidthSm;
       padding: 0 24px;
-      margin: 8px auto 0;
+      margin: 7px auto 0;
     }
   }
 }
@@ -98,6 +114,10 @@
       left: calc(-95px + (#{$SizeDesktop} - 100vw) * #{38 / ($SizeDesktopN - $SizeTabletN)});
     }
 
+    @media (max-width: $SizeTablet) {
+      left: calc(-57px + (#{$SizeTablet} - 100vw) * #{19 / ($SizeTabletN - $Breakpoint-730N)});
+    }
+
     @media (max-width: $Breakpoint-730) {
       left: calc(-95px + (#{$Breakpoint-730} - 100vw) * #{73 / ($Breakpoint-730N - $SizePhoneN)});
     }
@@ -115,8 +135,12 @@
       right: calc(-95px + (#{$SizeDesktop} - 100vw) * #{37 / ($SizeDesktopN - $SizeTabletN)});
     }
 
+    @media (max-width: $SizeTablet) {
+      right: calc(-58px + (#{$SizeTablet} - 100vw) * #{19 / ($SizeTabletN - $Breakpoint-730N)});
+    }
+
     @media (max-width: $Breakpoint-730) {
-      right: calc(-95px + (#{$Breakpoint-730} - 100vw) * #{73 / ($Breakpoint-730N - $SizePhoneN)});
+      right: calc(-96px + (#{$Breakpoint-730} - 100vw) * #{74 / ($Breakpoint-730N - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
