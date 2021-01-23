@@ -1577,14 +1577,14 @@
 @media (max-width: 767px) {
   .advantage__container {
     min-height: calc(314px + (768px - 100vw) * 0.1986607143);
-    padding-top: calc(31px - (768px - 100vw) * 0.0267857143);
+    padding-top: calc(31px - (768px - 100vw) * 0.0290178571);
     padding-bottom: calc(32px - (768px - 100vw) * 0.0357142857);
   }
 }
 @media (max-width: 320px) {
   .advantage__container {
     min-height: 403px;
-    padding-top: 19px;
+    padding-top: 18px;
     padding-bottom: 16px;
   }
 }
@@ -1596,14 +1596,14 @@
 @media (max-width: 767px) {
   .advantage__title {
     font-size: calc(36px - (768px - 100vw) * 0.0178571429);
-    line-height: calc(43.2px - (768px - 100vw) * 0.0214285714);
+    line-height: calc(43px - (768px - 100vw) * 0.0200892857);
     margin-left: calc(1px - (768px - 100vw) * 0.0066964286);
   }
 }
 @media (max-width: 320px) {
   .advantage__title {
     font-size: 28px;
-    line-height: 33.6px;
+    line-height: 34px;
     margin-left: -2px;
   }
 }
@@ -1622,13 +1622,13 @@
 @media (max-width: 767px) {
   .advantage__content {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: calc(40px - (768px - 100vw) * 0.0558035714) calc(20px - (768px - 100vw) * 0.0223214286);
-    margin-top: calc(32px - (768px - 100vw) * 0.0401785714);
+    grid-gap: calc(40px - (768px - 100vw) * 0.0357142857) calc(20px - (768px - 100vw) * 0.0223214286);
+    margin-top: calc(31px - (768px - 100vw) * 0.0290178571);
   }
 }
 @media (max-width: 320px) {
   .advantage__content {
-    grid-gap: 25px 10px;
+    grid-gap: 24px 10px;
     margin-top: 18px;
   }
 }
@@ -1677,6 +1677,9 @@
     height: 86px;
   }
 }
+.advantage__icon img {
+  height: auto;
+}
 .advantage__icon_free {
   width: 84px;
   margin: 3px 0 0 5px;
@@ -1684,19 +1687,19 @@
 @media (max-width: 1439px) {
   .advantage__icon_free {
     width: calc(84px - (1440px - 100vw) * 0.0416666667);
-    margin: calc(3px - (1440px - 100vw) * 0.0014880952) 0 calc((1440px - 100vw) * 0.0029761905) calc(6px - (1440px - 100vw) * 0.0029761905);
+    margin: calc(3px - (1440px - 100vw) * 0.0014880952) 0 calc((1440px - 100vw) * 0.0029761905) calc(5px - (1440px - 100vw) * 0.0014880952);
   }
 }
 @media (max-width: 767px) {
   .advantage__icon_free {
     width: calc(84px - (768px - 100vw) * 0.0803571429);
-    margin: 4px 0 0 calc(6px - (768px - 100vw) * 0.0044642857);
+    margin: calc(3px - (768px - 100vw) * 0.0022321429) 0 0 calc(5px - (768px - 100vw) * 0.0022321429);
   }
 }
 @media (max-width: 320px) {
   .advantage__icon_free {
     width: 48px;
-    margin: 4px 0 0 4px;
+    margin: 2px 0 0 4px;
   }
 }
 .advantage__icon_checklist {
@@ -1706,19 +1709,19 @@
 @media (max-width: 1439px) {
   .advantage__icon_checklist {
     width: calc(62px - (1440px - 100vw) * 0.0327380952);
-    margin: 0 0 calc((768px - 100vw) * 0.0022321429) calc(6px - (1440px - 100vw) * 0.0029761905);
+    margin: 0 0 calc((1440px - 100vw) * 0.0014880952) calc(6px - (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
   .advantage__icon_checklist {
     width: calc(62px - (768px - 100vw) * 0.0602678571);
-    margin: calc((768px - 100vw) * 0.0044642857) 0 0 calc(6px - (768px - 100vw) * 0.0044642857);
+    margin: 0 0 0 calc(6px - (768px - 100vw) * 0.0089285714);
   }
 }
 @media (max-width: 320px) {
   .advantage__icon_checklist {
     width: 35px;
-    margin: 2px 0 0 2px;
+    margin: 0 0 0 2px;
   }
 }
 .advantage__icon_reward {
@@ -1732,13 +1735,11 @@
 @media (max-width: 767px) {
   .advantage__icon_reward {
     width: calc(66px - (768px - 100vw) * 0.0669642857);
-    margin: calc((768px - 100vw) * 0.0044642857) 0 calc(2px - (768px - 100vw) * 0.0044642857);
   }
 }
 @media (max-width: 320px) {
   .advantage__icon_reward {
     width: 36px;
-    margin: 2px 0 0;
   }
 }
 .advantage__icon_hand {
@@ -1754,13 +1755,13 @@
 @media (max-width: 767px) {
   .advantage__icon_hand {
     width: calc(68px - (768px - 100vw) * 0.0691964286);
-    margin-top: calc(4px - (768px - 100vw) * 0.0089285714);
+    margin-top: calc(3px - (768px - 100vw) * 0.0022321429);
   }
 }
 @media (max-width: 320px) {
   .advantage__icon_hand {
     width: 37px;
-    margin-top: 0;
+    margin-top: 2px;
   }
 }
 .advantage__icon_support {
@@ -1800,6 +1801,7 @@
 @media (max-width: 320px) {
   .advantage__icon_scan {
     width: 40px;
+    margin: 6px 0 0 4px;
   }
 }
 .advantage__caption {
@@ -1821,7 +1823,7 @@
 @media (max-width: 767px) {
   .advantage__caption {
     font-size: calc(18px - (768px - 100vw) * 0.0178571429);
-    line-height: calc(21.6px - (768px - 100vw) * 0.0214285714);
+    line-height: calc(22px - (768px - 100vw) * 0.0223214286);
     margin-top: calc(13px - (768px - 100vw) * 0.0111607143);
   }
 }

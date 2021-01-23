@@ -18,13 +18,13 @@
 
     @media (max-width: $SizeTablet - 1px) {
       min-height: calc(314px + (#{$SizeTablet} - 100vw) * #{89 / ($SizeTabletN - $SizePhoneN)});
-      padding-top: calc(31px - (#{$SizeTablet} - 100vw) * #{12 / ($SizeTabletN - $SizePhoneN)});
+      padding-top: calc(31px - (#{$SizeTablet} - 100vw) * #{13 / ($SizeTabletN - $SizePhoneN)});
       padding-bottom: calc(32px - (#{$SizeTablet} - 100vw) * #{16 / ($SizeTabletN - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
       min-height: 403px;
-      padding-top: 19px;
+      padding-top: 18px;
       padding-bottom: 16px;
     }
   }
@@ -37,13 +37,13 @@
 
     @media (max-width: $SizeTablet - 1px) {
       font-size: calc(36px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
-      line-height: calc(43.2px - (#{$SizeTablet} - 100vw) * #{9.6 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(43px - (#{$SizeTablet} - 100vw) * #{9 / ($SizeTabletN - $SizePhoneN)});
       margin-left: calc(1px - (#{$SizeTablet} - 100vw) * #{3 / ($SizeTabletN - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
       font-size: 28px;
-      line-height: 33.6px;
+      line-height: 34px;
       margin-left: -2px;
     }
   }
@@ -62,13 +62,13 @@
 
     @media (max-width: $SizeTablet - 1px) {
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: calc(40px - (#{$SizeTablet} - 100vw) * #{25 / ($SizeTabletN - $SizePhoneN)})
+      grid-gap: calc(40px - (#{$SizeTablet} - 100vw) * #{16 / ($SizeTabletN - $SizePhoneN)})
                 calc(20px - (#{$SizeTablet} - 100vw) * #{10 / ($SizeTabletN - $SizePhoneN)});
-      margin-top: calc(32px - (#{$SizeTablet} - 100vw) * #{18 / ($SizeTabletN - $SizePhoneN)});
+      margin-top: calc(31px - (#{$SizeTablet} - 100vw) * #{13 / ($SizeTabletN - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
-      grid-gap: 25px 10px;
+      grid-gap: 24px 10px;
       margin-top: 18px;
     }
   }
@@ -115,6 +115,10 @@
       height: 86px;
     }
 
+    img {
+      height: auto;
+    }
+
 
     &_free {
       width: 84px;
@@ -124,17 +128,18 @@
         width: calc(84px - (#{$SizeDesktop} - 100vw) * #{28 / ($SizeDesktopN - $SizeTabletN)});
         margin: calc(3px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)})
                 0 calc((#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
-                calc(6px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+                calc(5px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
       }
 
       @media (max-width: $SizeTablet - 1px) {
         width: calc(84px - (#{$SizeTablet} - 100vw) * #{36 / ($SizeTabletN - $SizePhoneN)});
-        margin: 4px 0 0 calc(6px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+        margin: calc(3px - (#{$SizeTablet} - 100vw) * #{1 / ($SizeTabletN - $SizePhoneN)})
+                0 0 calc(5px - (#{$SizeTablet} - 100vw) * #{1 / ($SizeTabletN - $SizePhoneN)});
       }
 
       @media (max-width: $SizePhone) {
         width: 48px;
-        margin: 4px 0 0 4px;
+        margin: 2px 0 0 4px;
       }
     }
 
@@ -145,19 +150,18 @@
 
       @media (max-width: $SizeDesktop - 1px) {
         width: calc(62px - (#{$SizeDesktop} - 100vw) * #{22 / ($SizeDesktopN - $SizeTabletN)});
-        margin: 0 0 calc((#{$SizeTablet} - 100vw) * #{1 / ($SizeTabletN - $SizePhoneN)})
+        margin: 0 0 calc((#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)})
                 calc(6px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
       }
 
       @media (max-width: $SizeTablet - 1px) {
         width: calc(62px - (#{$SizeTablet} - 100vw) * #{27 / ($SizeTabletN - $SizePhoneN)});
-        margin: calc((#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)})
-                0 0 calc(6px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+        margin: 0 0 0 calc(6px - (#{$SizeTablet} - 100vw) * #{4 / ($SizeTabletN - $SizePhoneN)});
       }
 
       @media (max-width: $SizePhone) {
         width: 35px;
-        margin: 2px 0 0 2px;
+        margin: 0 0 0 2px;
       }
     }
 
@@ -171,13 +175,10 @@
 
       @media (max-width: $SizeTablet - 1px) {
         width: calc(66px - (#{$SizeTablet} - 100vw) * #{30 / ($SizeTabletN - $SizePhoneN)});
-        margin: calc((#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)})
-                0 calc(2px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
       }
 
       @media (max-width: $SizePhone) {
         width: 36px;
-        margin: 2px 0 0;
       }
     }
 
@@ -193,12 +194,12 @@
 
       @media (max-width: $SizeTablet - 1px) {
         width: calc(68px - (#{$SizeTablet} - 100vw) * #{31 / ($SizeTabletN - $SizePhoneN)});
-        margin-top: calc(4px - (#{$SizeTablet} - 100vw) * #{4 / ($SizeTabletN - $SizePhoneN)});
+        margin-top: calc(3px - (#{$SizeTablet} - 100vw) * #{1 / ($SizeTabletN - $SizePhoneN)});
       }
 
       @media (max-width: $SizePhone) {
         width: 37px;
-        margin-top: 0;
+        margin-top: 2px;
       }
     }
 
@@ -238,6 +239,7 @@
 
       @media (max-width: $SizePhone) {
         width: 40px;
+        margin: 6px 0 0 4px;
       }
     }
   }
@@ -260,7 +262,7 @@
 
     @media (max-width: $SizeTablet - 1px) {
       font-size: calc(18px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
-      line-height: calc(21.6px - (#{$SizeTablet} - 100vw) * #{9.6 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(22px - (#{$SizeTablet} - 100vw) * #{10 / ($SizeTabletN - $SizePhoneN)});
       margin-top: calc(13px - (#{$SizeTablet} - 100vw) * #{5 / ($SizeTabletN - $SizePhoneN)});
     }
 
