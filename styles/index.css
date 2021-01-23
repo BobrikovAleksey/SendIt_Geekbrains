@@ -270,10 +270,16 @@ li {
   .checkbox .checkbox__check {
     width: calc(16px + (1440px - 100vw) * 0.0014880952);
   }
+  .checkbox .checkbox__check:before, .checkbox .checkbox__check:after {
+    margin-top: calc((1440px - 100vw) * -0.0014880952);
+  }
 }
 @media (max-width: 630px) {
   .checkbox .checkbox__check {
     width: calc(16px + (630px - 100vw) * 0.0096774194);
+  }
+  .checkbox .checkbox__check:before, .checkbox .checkbox__check:after {
+    margin-top: -1px;
   }
 }
 @media (max-width: 320px) {
