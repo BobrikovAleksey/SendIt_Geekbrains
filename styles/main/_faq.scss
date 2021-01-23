@@ -15,13 +15,13 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      padding-top: calc(35px - (#{$SizeTablet} - 100vw) * #{13 / ($SizeTabletN - $SizePhoneN)});
-      padding-bottom: calc(42px - (#{$SizeTablet} - 100vw) * #{18 / ($SizeTabletN - $SizePhoneN)});
+      padding-top: calc(35px - (#{$SizeTablet} - 100vw) * #{14 / ($SizeTabletN - $SizePhoneN)});
+      padding-bottom: calc(42px - (#{$SizeTablet} - 100vw) * #{17 / ($SizeTabletN - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
-      padding-top: 22px;
-      padding-bottom: 24px;
+      padding-top: 21px;
+      padding-bottom: 25px;
     }
   }
 
@@ -33,12 +33,13 @@
 
     @media (max-width: $SizeTablet - 1px) {
       font-size: calc(36px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
-      line-height: calc(43.2px - (#{$SizeTablet} - 100vw) * #{9.6 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(43px - (#{$SizeTablet} - 100vw) * #{9 / ($SizeTabletN - $SizePhoneN)});
+      margin-left: 1px;
     }
 
     @media (max-width: $SizePhone) {
       font-size: 28px;
-      line-height: 33.6px;
+      line-height: 34px;
     }
   }
 
@@ -56,11 +57,11 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      margin-top: calc(19px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+      margin-top: calc(19px - (#{$SizeTablet} - 100vw) * #{3 / ($SizeTabletN - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
-      margin-top: 17px;
+      margin-top: 16px;
     }
   }
 
@@ -187,13 +188,15 @@
       @media (max-width: $SizeTablet - 1px) {
         width: calc(10px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
         height: calc(10px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+        top: calc((#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
         right: calc(33px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)});
       }
 
       @media (max-width: $SizePhone) {
         width: 8px;
         height: 8px;
-        right: 26px;
+        top: 2px;
+        right: 25px;
       }
     }
 
@@ -201,6 +204,14 @@
       transform: rotate(135deg);
       top: 9px;
       bottom: 0;
+
+      @media (max-width: $SizeTablet - 1px) {
+        bottom: calc((#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+      }
+
+      @media (max-width: $SizePhone) {
+        bottom: 2px;
+      }
     }
   }
 
@@ -217,13 +228,13 @@
 
     @media (max-width: $SizeTablet - 1px) {
       font-size: calc(16px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
-      line-height: calc(19.2px - (#{$SizeTablet} - 100vw) * #{2.4 / ($SizeTabletN - $SizePhoneN)});
+      line-height: calc(19px - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
       padding: 10px 24px 20px;
     }
 
     @media (max-width: $SizePhone) {
       font-size: 14px;
-      line-height: 16.8px;
+      line-height: 17px;
     }
   }
 }

@@ -2169,14 +2169,14 @@
 }
 @media (max-width: 767px) {
   .faq__container {
-    padding-top: calc(35px - (768px - 100vw) * 0.0290178571);
-    padding-bottom: calc(42px - (768px - 100vw) * 0.0401785714);
+    padding-top: calc(35px - (768px - 100vw) * 0.03125);
+    padding-bottom: calc(42px - (768px - 100vw) * 0.0379464286);
   }
 }
 @media (max-width: 320px) {
   .faq__container {
-    padding-top: 22px;
-    padding-bottom: 24px;
+    padding-top: 21px;
+    padding-bottom: 25px;
   }
 }
 @media (max-width: 1439px) {
@@ -2187,13 +2187,14 @@
 @media (max-width: 767px) {
   .faq__title {
     font-size: calc(36px - (768px - 100vw) * 0.0178571429);
-    line-height: calc(43.2px - (768px - 100vw) * 0.0214285714);
+    line-height: calc(43px - (768px - 100vw) * 0.0200892857);
+    margin-left: 1px;
   }
 }
 @media (max-width: 320px) {
   .faq__title {
     font-size: 28px;
-    line-height: 33.6px;
+    line-height: 34px;
   }
 }
 .faq__content {
@@ -2212,12 +2213,12 @@
 }
 @media (max-width: 767px) {
   .faq__content {
-    margin-top: calc(19px - (768px - 100vw) * 0.0044642857);
+    margin-top: calc(19px - (768px - 100vw) * 0.0066964286);
   }
 }
 @media (max-width: 320px) {
   .faq__content {
-    margin-top: 17px;
+    margin-top: 16px;
   }
 }
 .faq__column {
@@ -2338,6 +2339,7 @@
   .faq__question:before {
     width: calc(10px - (768px - 100vw) * 0.0044642857);
     height: calc(10px - (768px - 100vw) * 0.0044642857);
+    top: calc((768px - 100vw) * 0.0044642857);
     right: calc(33px - (768px - 100vw) * 0.0178571429);
   }
 }
@@ -2345,13 +2347,24 @@
   .faq__question:before {
     width: 8px;
     height: 8px;
-    right: 26px;
+    top: 2px;
+    right: 25px;
   }
 }
 .faq__item[open] > .faq__question:before {
   transform: rotate(135deg);
   top: 9px;
   bottom: 0;
+}
+@media (max-width: 767px) {
+  .faq__item[open] > .faq__question:before {
+    bottom: calc((768px - 100vw) * 0.0044642857);
+  }
+}
+@media (max-width: 320px) {
+  .faq__item[open] > .faq__question:before {
+    bottom: 2px;
+  }
 }
 .faq__answer {
   background: #F7F7F7;
@@ -2365,14 +2378,14 @@
 @media (max-width: 767px) {
   .faq__answer {
     font-size: calc(16px - (768px - 100vw) * 0.0044642857);
-    line-height: calc(19.2px - (768px - 100vw) * 0.0053571429);
+    line-height: calc(19px - (768px - 100vw) * 0.0044642857);
     padding: 10px 24px 20px;
   }
 }
 @media (max-width: 320px) {
   .faq__answer {
     font-size: 14px;
-    line-height: 16.8px;
+    line-height: 17px;
   }
 }
 
