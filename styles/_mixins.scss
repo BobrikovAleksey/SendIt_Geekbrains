@@ -1,7 +1,6 @@
 @import "vars";
 
 
-
 // Hide / Show
 
 @mixin hide() {
@@ -86,6 +85,14 @@
 
 
 
+// Images
+
+@mixin delivery($name, $pos-y: center, $pos-x: center) {
+  background: url("../images/delivery/" + $name + "-main.png") $pos-y $pos-x no-repeat;
+}
+
+
+
 // Shadow
 
 @mixin box-shadow($color, $blur, $shift-y: 0, $shift-x: 0, $stretch: 0) {
@@ -113,6 +120,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+
+// Padding / Margin
+
+@mixin padding-horizontal($left: auto, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin padding-vertical($top: auto, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin margin-horizontal($left: auto, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin margin-vertical($top: auto, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
 }
 
 

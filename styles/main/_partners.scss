@@ -1,4 +1,4 @@
-@import "../vars", "../mixins";
+@import "../vars", "../mixins", "../functions";
 
 
 .partners {
@@ -6,29 +6,25 @@
 
 
   &__container {
+    @include flex-center-center;
+    @include padding-vertical(48px, 36px);
     min-height: 172px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 48px;
-    padding-bottom: 36px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      min-height: calc(172px - (#{$SizeDesktop} - 100vw) * #{60 / ($SizeDesktopN - $SizeTabletN)});
-      padding-top: calc(48px - (#{$SizeDesktop} - 100vw) * #{34 / ($SizeDesktopN - $SizeTabletN)});
-      padding-bottom: calc(36px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
+      @include padding-vertical(calc-size(14, 48, $SizeTabletN, $SizeDesktopN),
+                                calc-size(18, 36, $SizeTabletN, $SizeDesktopN));
+      min-height: calc-size(112, 172, $SizeTabletN, $SizeDesktopN);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      min-height: calc(112px + (#{$SizeTablet} - 100vw) * #{12 / ($SizeTabletN - $SizePhoneN)});
-      padding-top: calc(14px - (#{$SizeTablet} - 100vw) * #{7 / ($SizeTabletN - $SizePhoneN)});
-      padding-bottom: calc(14px - (#{$SizeTablet} - 100vw) * #{4 / ($SizeTabletN - $SizePhoneN)});
+      @include padding-vertical(calc-size(7, 14, $SizePhoneN, $SizeTabletN),
+                                calc-size(10, 14, $SizePhoneN, $SizeTabletN));
+      min-height: calc-size(124, 112, $SizePhoneN, $SizeTabletN);
     }
 
     @media (max-width: $SizePhone) {
+      @include padding-vertical(12px, 8px);
       min-height: 124px;
-      padding-top: 7px;
-      padding-bottom: 4px;
     }
   }
 
@@ -40,23 +36,21 @@
     margin-left: 24px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(983px - (#{$SizeDesktop} - 100vw) * #{385 / ($SizeDesktopN - $SizeTabletN)});
-      margin-left: calc(24px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size(598, 983, $SizeTabletN, $SizeDesktopN);
+      margin-left: calc-size(17, 24, $SizeTabletN, $SizeDesktopN);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      width: calc(475px - (#{$SizeTablet} - 100vw) * #{56 / ($SizeTabletN - $Breakpoint-630N)});
-      margin-left: calc(17px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size(419, 475, $Breakpoint-630N, $SizeTabletN);
+      margin-left: 3px;
     }
 
     @media (max-width: $Breakpoint-630) {
-      width: calc(310px - (#{$Breakpoint-630} - 100vw) * #{92 / ($Breakpoint-630N - $SizePhoneN)});
-      margin-left: calc(10px - (#{$SizeDesktop} - 100vw) * #{9 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size(236, 308, $SizePhoneN, $Breakpoint-630N);
     }
 
     @media (max-width: $SizePhone) {
       width: 236px;
-      margin-left: 3px;
     }
   }
 
@@ -68,18 +62,18 @@
     position: relative;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(127px - (#{$SizeDesktop} - 100vw) * #{51 / ($SizeDesktopN - $SizeTabletN)});
-      height: calc(68px - (#{$SizeDesktop} - 100vw) * #{20 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size(76, 127, $SizeTabletN, $SizeDesktopN);
+      height: calc-size(48, 68, $SizeTabletN, $SizeDesktopN);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      width: calc(127px - (#{$SizeTablet} - 100vw) * #{16 / ($SizeTabletN - $Breakpoint-630N)});
-      height: calc(68px - (#{$SizeTablet} - 100vw) * #{6 / ($SizeTabletN - $Breakpoint-630N)});
+      width: calc-size(111, 127, $Breakpoint-630N, $SizeTabletN);
+      height: calc-size(62, 68, $Breakpoint-630N, $SizeTabletN);
     }
 
     @media (max-width: $Breakpoint-630) {
-      width: calc(112px - (#{$Breakpoint-630} - 100vw) * #{36 / ($Breakpoint-630N - $SizePhoneN)});
-      height: calc(62px - (#{$Breakpoint-630} - 100vw) * #{14 / ($Breakpoint-630N - $SizePhoneN)});
+      width: calc-size(85, 111, $SizePhoneN, $Breakpoint-630N);
+      height: calc-size(48, 62, $SizePhoneN, $Breakpoint-630N);
     }
 
     @media (max-width: $SizePhone) {
@@ -89,54 +83,97 @@
 
 
     &_bringo {
-      background: url("../images/delivery/bringo-main.png") 0 3px no-repeat;
+      @include delivery("bringo", 0, 3px);
     }
 
     &_cdek {
-      background: url("../images/delivery/cdek-main.png") 0 2px no-repeat;
+      @include delivery("cdek", 0, 2px);
     }
 
     &_city-express {
-      background: url("../images/delivery/city-express-main.png") 0 2px no-repeat;
+      @include delivery("city-express", 0, 2px);
     }
 
     &_dpd {
-      background: url("../images/delivery/dpd-main.png") 0 -3px no-repeat;
+      @include delivery("dpd", 0, -3px);
 
       @media (max-width: $SizeDesktop - 1px) {
-        background-position: 0 calc(-3px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+        background-position: 0 calc-size(-2, -3, $SizeTabletN, $SizeDesktopN);
+      }
+
+      @media (max-width: $SizeTablet) {
+        background-position: 0 -2px;
+      }
+
+      @media (max-width: $Breakpoint-630) {
+        background-position: 0 calc-size(0, -2, $SizePhoneN, $Breakpoint-630N);
       }
     }
 
     &_pony-express {
-      background: url("../images/delivery/pony-express-main.png") -1px 4px no-repeat;
+      @include delivery("pony-express", -1px, 4px);
 
       @media (max-width: $SizeDesktop - 1px) {
-        background-position: -1px calc(4px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+        background-position: -1px calc-size(3, 4, $SizeTabletN, $SizeDesktopN);
+      }
+
+      @media (max-width: $SizeTablet) {
+        background-position: -1px 3px;
+      }
+
+      @media (max-width: $Breakpoint-630) {
+        background-position: calc-size(0, -1, $SizePhoneN, $Breakpoint-630N)
+                             calc-size(0, 3, $SizePhoneN, $Breakpoint-630N);
       }
     }
 
     &_spsr {
-      background: url("../images/delivery/spsr-main.png") -1px 5px no-repeat;
+      @include delivery("spsr", -1px, 5px);
 
       @media (max-width: $SizeDesktop - 1px) {
-        background-position: -1px calc(5px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+        background-position: -1px calc-size(3, 5, $SizeTabletN, $SizeDesktopN);
+      }
+
+      @media (max-width: $SizeTablet) {
+        background-position: -1px 3px;
+      }
+
+      @media (max-width: $Breakpoint-630) {
+        background-position: calc-size(0, -1, $SizePhoneN, $Breakpoint-630N)
+                             calc-size(0, 3, $SizePhoneN, $Breakpoint-630N);
       }
     }
 
     &_tnt {
-      background: url("../images/delivery/tnt-main.png") -1px 3px no-repeat;
+      @include delivery("tnt", -1px, 3px);
 
       @media (max-width: $SizeDesktop - 1px) {
-        background-position: -1px calc(3px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+        background-position: -1px calc-size(2, 3, $SizeTabletN, $SizeDesktopN);
+      }
+
+      @media (max-width: $SizeTablet) {
+        background-position: -1px 2px;
+      }
+
+      @media (max-width: $Breakpoint-630) {
+        background-position: calc-size(0, -1, $SizePhoneN, $Breakpoint-630N)
+                             calc-size(0, 2, $SizePhoneN, $Breakpoint-630N);
       }
     }
 
     &_ups {
-      background: url("../images/delivery/ups-main.png") -1px 1px no-repeat;
+      @include delivery("ups", -1px, 1px);
 
       @media (max-width: $SizeDesktop - 1px) {
-        background-position: -1px calc(1px - (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+        background-position: -1px calc-size(0, 1, $SizeTabletN, $SizeDesktopN);
+      }
+
+      @media (max-width: $SizeTablet) {
+        background-position: -1px 0;
+      }
+
+      @media (max-width: $Breakpoint-630) {
+        background-position: calc-size(0, -1, $SizePhoneN, $Breakpoint-630N) 0;
       }
     }
 
@@ -144,19 +181,26 @@
     background-size: 94px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      background-size: calc(94px - (#{$SizeDesktop} - 100vw) * #{28 / ($SizeDesktopN - $SizeTabletN)}) auto;
+      background-size: calc-size(66, 94, $SizeTabletN, $SizeDesktopN) auto;
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      background-size: calc(94px - (#{$SizeTablet} - 100vw) * #{8 / ($SizeTabletN - $SizePhoneN)}) auto;
+      background-size: calc-size(86, 94, $SizePhoneN, $SizeTabletN) auto;
     }
 
     @media (max-width: $Breakpoint-630) {
-      background-size: calc(86px - (#{$Breakpoint-630} - 100vw) * #{20 / ($Breakpoint-630N - $SizePhoneN)}) auto;
+      background-size: calc-size(66, 86, $SizePhoneN, $Breakpoint-630N) auto;
     }
 
     @media (max-width: $SizePhone) {
       background-size: 66px;
+    }
+
+
+    img {
+      @media (max-width: $SizePhone) {
+        background-position: 0;
+      }
     }
   }
 }
@@ -177,18 +221,11 @@
     margin: auto;
 
     @media (max-width: $SizeDesktop - 1px) {
-      bottom: calc(11px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      bottom: calc-size(3, 11, $SizeTabletN, $SizeDesktopN);
     }
 
-    @media (max-width: $SizeTablet - 1px) {
-      width: calc(19px + (#{$SizeTablet} - 100vw) * #{9 / ($SizeTabletN - $SizePhoneN)});
-      height: calc(19px + (#{$SizeTablet} - 100vw) * #{9 / ($SizeTabletN - $SizePhoneN)});
-      bottom: 10px;
-    }
-
-    @media (max-width: $SizePhone) {
-      width: 10px;
-      height: 10px;
+    @media (max-width: $SizeTablet) {
+      bottom: 9px;
     }
   }
 
@@ -196,11 +233,11 @@
     left: -94px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      left: calc(-94px + (#{$SizeDesktop} - 100vw) * #{36 / ($SizeDesktopN - $SizeTabletN)});
+      left: calc-size(-58, -94, $SizeTabletN, $SizeDesktopN);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      left: calc(-58px + (#{$SizeTablet} - 100vw) * #{38 / ($SizeTabletN - $SizePhoneN)});
+      left: calc-size(-20, -58, $SizePhoneN, $SizeTabletN);
     }
 
     @media (max-width: $SizePhone) {
@@ -212,11 +249,11 @@
     right: -72px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      right: calc(-72px + (#{$SizeDesktop} - 100vw) * #{32 / ($SizeDesktopN - $SizeTabletN)});
+      right: calc-size(-40, -72, $SizeTabletN, $SizeDesktopN);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      right: calc(-39px + (#{$SizeTablet} - 100vw) * #{22 / ($SizeTabletN - $SizePhoneN)});
+      right: calc-size(-17, -40, $SizePhoneN, $SizeTabletN);
     }
 
     @media (max-width: $SizePhone) {
