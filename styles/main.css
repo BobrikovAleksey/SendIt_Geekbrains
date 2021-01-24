@@ -946,30 +946,30 @@
   background: #F4F4F4;
 }
 .parcel__container {
-  min-height: 180px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding-top: 44px;
   padding-bottom: 48px;
+  min-height: 180px;
 }
 @media (max-width: 1439px) {
   .parcel__container {
-    min-height: calc(180px - (1440px - 100vw) * 0.0833333333);
     padding-top: calc(44px - (1440px - 100vw) * 0.0327380952);
     padding-bottom: calc(48px - (1440px - 100vw) * 0.0386904762);
+    min-height: calc(180px - (1440px - 100vw) * 0.0833333333);
   }
 }
 @media (max-width: 767px) {
   .parcel__container {
-    min-height: 124px;
     padding-top: calc(22px - (768px - 100vw) * 0.0066964286);
     padding-bottom: calc(26px - (768px - 100vw) * 0.0223214286);
+    min-height: 124px;
   }
 }
 @media (max-width: 630px) {
   .parcel__container {
-    min-height: calc(141px + (630px - 100vw) * 0.064516129);
+    min-height: calc(141px - (630px - 100vw) * -0.064516129);
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -977,9 +977,9 @@
 }
 @media (max-width: 320px) {
   .parcel__container {
-    min-height: 161px;
     padding-top: 19px;
     padding-bottom: 16px;
+    min-height: 161px;
   }
 }
 .parcel__title {
@@ -992,14 +992,14 @@
     width: calc(760px - (1440px - 100vw) * 0.5654761905);
     font-size: calc(36px - (1440px - 100vw) * 0.0119047619);
     line-height: calc(43px - (1440px - 100vw) * 0.0133928571);
-    padding-bottom: calc(2px + (1440px - 100vw) * 0.005952381);
+    padding-bottom: calc(2px - (1440px - 100vw) * -0.005952381);
   }
 }
 @media (max-width: 768px) {
   .parcel__title {
-    padding-bottom: 6px;
     font-size: calc(28px - (768px - 100vw) * 0.0089285714);
     line-height: calc(34px - (768px - 100vw) * 0.0111607143);
+    padding-bottom: 6px;
   }
 }
 @media (max-width: 630px) {
@@ -2394,8 +2394,8 @@
 }
 .partners__container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding-top: 48px;
   padding-bottom: 36px;
   min-height: 172px;

@@ -110,16 +110,19 @@
   align-items: center;
 }
 
+@mixin flex-between-center() {
+  @include flex-vcenter;
+  justify-content: space-between;
+}
+
 @mixin flex-center-center() {
-  display: flex;
+  @include flex-vcenter;
   justify-content: center;
-  align-items: center;
 }
 
 @mixin flex-column-center() {
-  display: flex;
+  @include flex-vcenter;
   flex-direction: column;
-  align-items: center;
 }
 
 
