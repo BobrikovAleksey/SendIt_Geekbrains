@@ -10,6 +10,13 @@
   }
 }
 
+@function calc-size-tablet-desktop($size-min, $size-max, $inc: false) {
+  @return calc-size($size-min, $size-max, $SizeTabletN, $SizeDesktopN, $inc);
+}
+
+@function calc-size-phone-tablet($size-min, $size-max, $inc: false) {
+  @return calc-size($size-min, $size-max, $SizePhoneN, $SizeTabletN, $inc);
+}
 
 @function calc-size-with-scroll($size-min, $size-max, $display-width-min, $display-width-max, $min-size-px: 0, $inc: false) {
   @if $inc {
@@ -19,4 +26,12 @@
     @return max(#{$min-size-px},
                 calc(#{$size-max + px} + 100% - 100vw - (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
   }
+}
+
+@function calc-size-with-scroll-tablet-desktop($size-min, $size-max, $min-size-px: $ContainerPaddingSm, $inc: false) {
+  @return calc-size-with-scroll($size-min, $size-max, $SizeTabletN, $SizeDesktopN, $min-size-px, $inc);
+}
+
+@function calc-size-with-scroll-phone-tablet($size-min, $size-max, $min-size-px: $ContainerPaddingSm, $inc: false) {
+  @return calc-size-with-scroll($size-min, $size-max, $SizePhoneN, $SizeTabletN, $min-size-px, $inc);
 }

@@ -87,6 +87,10 @@
 
 // Images
 
+@mixin background-image($file-name, $pos-y: 0, $pos-x: 0) {
+  background: url("../images/" + $file-name) $pos-y $pos-x no-repeat;
+}
+
 @mixin delivery($name, $pos-y: center, $pos-x: center) {
   background: url("../images/delivery/" + $name + "-main.png") $pos-y $pos-x no-repeat;
 }
@@ -104,6 +108,11 @@
 // Display
 
 // flex
+
+@mixin flex-hbetween() {
+  display: flex;
+  justify-content: space-between;
+}
 
 @mixin flex-vcenter() {
   display: flex;
@@ -128,6 +137,42 @@
 @mixin flex-column-center() {
   @include flex-vcenter;
   flex-direction: column;
+}
+
+
+
+// Position
+
+@mixin position-top-left($top: 0, $left: 0) {
+  top: $top;
+  left: $left;
+}
+
+@mixin position-top-right($top: 0, $right: 0) {
+  top: $top;
+  right: $right;
+}
+
+@mixin position-top-bottom-left($top: 0, $bottom: 0, $left: 0) {
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-top-bottom-right($top: 0, $bottom: 0, $right: 0) {
+  top: $top;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin position-bottom-left($bottom: 0, $left: 0) {
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-bottom-right($bottom: 0, $right: 0) {
+  bottom: $bottom;
+  right: $right;
 }
 
 
@@ -182,30 +227,6 @@
 
 // pudding
 
-@mixin calc-padding-top($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    padding-top: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    padding-top: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-@mixin calc-padding-bottom($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    padding-bottom: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    padding-bottom: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-@mixin calc-padding-right($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    padding-right: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    padding-right: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
 @mixin calc-padding-left($min, $max, $size-start, $size-end, $sign: false) {
   @if $sign {
     padding-left: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
@@ -240,29 +261,5 @@
     margin-top: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
   } @else {
     margin-top: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-@mixin calc-margin-bottom($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    margin-bottom: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    margin-bottom: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-@mixin calc-margin-right($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    margin-right: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    margin-right: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-@mixin calc-margin-left($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    margin-left: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    margin-left: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
   }
 }
