@@ -48,7 +48,7 @@
     color: white;
     background: $Blue;
 
-    @media (hover: hover) {
+    @media (hover) {
       &:hover:not(:active):not(:disabled) {
         @include box-shadow(rgba($Blue, 0.45), 15px, 4px);
 
@@ -74,7 +74,7 @@
     color: $DarkGray;
     background: $Orange;
 
-    @media (hover: hover) {
+    @media (hover) {
       &:hover:not(:active):not(:disabled) {
         @include box-shadow(rgba($Orange, 0.55), 20px, 4px);
 

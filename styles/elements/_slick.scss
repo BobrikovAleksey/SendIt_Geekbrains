@@ -12,7 +12,7 @@
     border-left: 2px solid $LightGray;
     position: absolute;
 
-    @media (hover: hover) {
+    @media (hover) {
       &:hover, &:active, &:focus {
         border-color: $Blue;
       }
