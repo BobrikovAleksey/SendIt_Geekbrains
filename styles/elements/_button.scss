@@ -2,40 +2,41 @@
 
 
 .button {
+  @include cursor;
+  @include font-family("bold");
+  @include font-size(16px, 19px);
+  @include flex-center-center;
   transition: linear 250ms;
-  cursor: pointer;
   width: $InputWidthLg;
   height: $InputHeightLg;
-  font-family: "Myriad Pro Bold", serif;
   text-transform: uppercase;
-  font-size: 16px;
-  line-height: 19px;
   text-align: center;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 9px 26px 8px;
+
   &:active:not(:disabled) {
     transition: linear 25ms;
   }
+
   &:disabled {
-    color: #B3B3B3;
-    background: none;
-    border: 1px solid #B3B3B3;
+    color: $Gray;
+    background: white;
+    border: 1px solid $Gray;
   }
 
   @media (max-width: $SizeDesktop - 1px) {
-    width: calc(#{$InputWidthLg} - (#{$SizeDesktop} - 100vw) * #{($InputWidthLgN - $InputWidthMdN) / ($SizeDesktopN - $SizeTabletN)});
+    @include calc-width($InputWidthMdN, $InputWidthLgN, $SizeTabletN, $SizeDesktopN);
   }
 
   @media (max-width: $Breakpoint-830) {
+    @include cursor("md");
     text-align: right;
     justify-content: flex-end;
   }
 
   @media (max-width: $SizeTablet - 1px) {
-    width: calc(#{$InputWidthMd} - (#{$SizeTablet} - 100vw) * #{2 / ($SizeTabletN - $SizePhoneN)});
+    @include cursor("sm");
+    @include calc-width($InputWidthMdN - 2, $InputWidthMdN, $SizePhoneN, $SizeTabletN);
   }
 
   @media (max-width: $SizePhone - 1px) {
@@ -47,22 +48,24 @@
     color: white;
     background: $Blue;
 
-    &:hover:not(:active):not(:disabled) {
-      box-shadow: 0 4px 15px rgba($Blue, 0.45);
+    @media (hover: hover) {
+      &:hover:not(:active):not(:disabled) {
+        @include box-shadow(rgba($Blue, 0.45), 15px, 4px);
 
-      @media (max-width: $SizeDesktop - 1px) {
-        box-shadow: 0 calc(4px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
-                    calc(20px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)})
-                    rgba($Blue, 0.45);
+        @media (max-width: $SizeDesktop - 1px) {
+          @include box-shadow(rgba($Blue, 0.45),
+                              calc(15px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)}),
+                              calc(4px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}));
+        }
+
+        @media (max-width: $SizeTablet) {
+          @include box-shadow(rgba($Blue, 0.45), 8px, 2px);
+        }
       }
 
-      @media (max-width: $SizeTablet) {
-        box-shadow: 0 2px 10px rgba($Blue, 0.45);
+      &:active:not(:disabled) {
+        background: $LightBlue;
       }
-    }
-
-    &:active:not(:disabled) {
-      background: $LightBlue;
     }
   }
 
@@ -71,22 +74,24 @@
     color: $DarkGray;
     background: $Orange;
 
-    &:hover:not(:active):not(:disabled) {
-      box-shadow: 0 4px 20px rgba($Orange, 0.55);
+    @media (hover: hover) {
+      &:hover:not(:active):not(:disabled) {
+        @include box-shadow(rgba($Orange, 0.55), 20px, 4px);
 
-      @media (max-width: $SizeDesktop - 1px) {
-        box-shadow: 0 calc(4px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
-                    calc(20px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)})
-                    rgba($Orange, 0.55);
+        @media (max-width: $SizeDesktop - 1px) {
+          @include box-shadow(rgba($Orange, 0.55),
+                              calc(20px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)}),
+                              calc(4px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}));
+        }
+
+        @media (max-width: $SizeTablet) {
+          @include box-shadow(rgba($Orange, 0.55), 10px, 2px);
+        }
       }
 
-      @media (max-width: $SizeTablet) {
-        box-shadow: 0 2px 10px rgba($Orange, 0.55);
+      &:active:not(:disabled) {
+        background: $LightOrange;
       }
-    }
-
-    &:active:not(:disabled) {
-      background: $LightOrange;
     }
   }
 }

@@ -20,7 +20,7 @@ body {
 
 
 h1, h2, h3 {
-  color: $DarkGray;
+  color: black;
 }
 
 h1 {
@@ -61,21 +61,8 @@ li {
 }
 
 
-.link {
-  color: $DarkBlue;
-  border-bottom: 1px solid $DarkBlue;
-  &:hover:not(:active) {
-    border-bottom: none;
-  }
-  &:active {
-    color: #003675;
-    border-bottom: 1px solid #003675;
-  }
-}
-
-
-@import "elements/button";
 @import "elements/input-text";
+@import "elements/button";
 @import "elements/checkbox";
 @import "elements/slick";
 @import "elements/container";

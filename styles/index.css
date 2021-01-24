@@ -40,7 +40,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: #363636;
+  color: black;
 }
 
 h1 {
@@ -94,104 +94,6 @@ li {
   list-style-type: none;
 }
 
-.link {
-  color: #0055B8;
-  border-bottom: 1px solid #0055B8;
-}
-.link:hover:not(:active) {
-  border-bottom: none;
-}
-.link:active {
-  color: #003675;
-  border-bottom: 1px solid #003675;
-}
-
-.button {
-  transition: linear 250ms;
-  cursor: pointer;
-  width: 360px;
-  height: 48px;
-  font-family: "Myriad Pro Bold", serif;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 26px 8px;
-}
-.button:active:not(:disabled) {
-  transition: linear 25ms;
-}
-.button:disabled {
-  color: #B3B3B3;
-  background: none;
-  border: 1px solid #B3B3B3;
-}
-@media (max-width: 1439px) {
-  .button {
-    width: calc(360px - (1440px - 100vw) * 0.119047619);
-  }
-}
-@media (max-width: 830px) {
-  .button {
-    text-align: right;
-    justify-content: flex-end;
-  }
-}
-@media (max-width: 767px) {
-  .button {
-    width: calc(280px - (768px - 100vw) * 0.0044642857);
-  }
-}
-@media (max-width: 319px) {
-  .button {
-    width: 278px;
-  }
-}
-.button_blue {
-  color: white;
-  background: #008DCD;
-}
-.button_blue:hover:not(:active):not(:disabled) {
-  box-shadow: 0 4px 15px rgba(0, 141, 205, 0.45);
-}
-@media (max-width: 1439px) {
-  .button_blue:hover:not(:active):not(:disabled) {
-    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) rgba(0, 141, 205, 0.45);
-  }
-}
-@media (max-width: 768px) {
-  .button_blue:hover:not(:active):not(:disabled) {
-    box-shadow: 0 2px 10px rgba(0, 141, 205, 0.45);
-  }
-}
-.button_blue:active:not(:disabled) {
-  background: #94D1EC;
-}
-.button_orange {
-  color: #363636;
-  background: #FFCC00;
-}
-.button_orange:hover:not(:active):not(:disabled) {
-  box-shadow: 0 4px 20px rgba(255, 204, 0, 0.55);
-}
-@media (max-width: 1439px) {
-  .button_orange:hover:not(:active):not(:disabled) {
-    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) rgba(255, 204, 0, 0.55);
-  }
-}
-@media (max-width: 768px) {
-  .button_orange:hover:not(:active):not(:disabled) {
-    box-shadow: 0 2px 10px rgba(255, 204, 0, 0.55);
-  }
-}
-.button_orange:active:not(:disabled) {
-  background: #FCE39C;
-}
-
 .input {
   font-family: "Myriad Pro Regular", serif;
   font-size: 16px;
@@ -227,14 +129,119 @@ li {
   }
 }
 
-.checkbox {
-  cursor: pointer;
-  width: fit-content;
-  height: fit-content;
+.button {
+  cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  font-family: "Myriad Pro Bold", serif;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: linear 250ms;
+  width: 360px;
+  height: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 30px;
+  padding: 9px 26px 8px;
+}
+.button:active:not(:disabled) {
+  transition: linear 25ms;
+}
+.button:disabled {
+  color: #B3B3B3;
+  background: white;
+  border: 1px solid #B3B3B3;
+}
+@media (max-width: 1439px) {
+  .button {
+    width: calc(360px - (1440px - 100vw) * 0.119047619);
+  }
+}
+@media (max-width: 830px) {
+  .button {
+    cursor: url("../images/cursors/cursor-lg.png"), pointer;
+    text-align: right;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  .button {
+    cursor: url("../images/cursors/cursor-sm.png"), pointer;
+    width: calc(280px - (768px - 100vw) * 0.0044642857);
+  }
+}
+@media (max-width: 319px) {
+  .button {
+    width: 278px;
+  }
+}
+.button_blue {
   color: white;
+  background: #008DCD;
+}
+@media (hover: hover) {
+  .button_blue:hover:not(:active):not(:disabled) {
+    box-shadow: 0 4px 15px 0 rgba(0, 141, 205, 0.45);
+  }
+}
+@media (hover: hover) and (max-width: 1439px) {
+  .button_blue:hover:not(:active):not(:disabled) {
+    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(15px - (1440px - 100vw) * 0.0104166667) 0 rgba(0, 141, 205, 0.45);
+  }
+}
+@media (hover: hover) and (max-width: 768px) {
+  .button_blue:hover:not(:active):not(:disabled) {
+    box-shadow: 0 2px 8px 0 rgba(0, 141, 205, 0.45);
+  }
+}
+@media (hover: hover) {
+  .button_blue:active:not(:disabled) {
+    background: #94D1EC;
+  }
+}
+.button_orange {
+  color: #363636;
+  background: #FFCC00;
+}
+@media (hover: hover) {
+  .button_orange:hover:not(:active):not(:disabled) {
+    box-shadow: 0 4px 20px 0 rgba(255, 204, 0, 0.55);
+  }
+}
+@media (hover: hover) and (max-width: 1439px) {
+  .button_orange:hover:not(:active):not(:disabled) {
+    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) 0 rgba(255, 204, 0, 0.55);
+  }
+}
+@media (hover: hover) and (max-width: 768px) {
+  .button_orange:hover:not(:active):not(:disabled) {
+    box-shadow: 0 2px 10px 0 rgba(255, 204, 0, 0.55);
+  }
+}
+@media (hover: hover) {
+  .button_orange:active:not(:disabled) {
+    background: #FCE39C;
+  }
+}
+
+.checkbox {
+  cursor: url("../images/cursors/cursor-lg.png"), pointer;
   font-size: 10px;
   line-height: 12px;
+  width: fit-content;
+  color: white;
   display: flex;
+}
+@media (max-width: 830px) {
+  .checkbox {
+    cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  }
+}
+@media (max-width: 767px) {
+  .checkbox {
+    cursor: url("../images/cursors/cursor-sm.png"), pointer;
+  }
 }
 .checkbox .checkbox__input {
   visibility: hidden;
@@ -249,34 +256,34 @@ li {
   position: static;
 }
 .checkbox .checkbox__check {
-  width: 16px;
   font-family: "FontAwesome", serif;
   font-size: 13px;
   line-height: 13px;
   display: flex;
   align-items: center;
+  width: 16px;
 }
 .checkbox .checkbox__check:before {
-  content: "";
   visibility: visible;
   position: static;
+  content: "";
 }
 .checkbox .checkbox__check:after {
-  content: "";
   visibility: hidden;
   position: absolute;
+  content: "";
 }
 @media (max-width: 1439px) {
   .checkbox .checkbox__check {
-    width: calc(16px + (1440px - 100vw) * 0.0014880952);
+    width: calc(16px - (1440px - 100vw) * -0.0014880952);
   }
   .checkbox .checkbox__check:before, .checkbox .checkbox__check:after {
-    margin-top: calc((1440px - 100vw) * -0.0014880952);
+    margin-top: calc(0px + (1440px - 100vw) * -0.0014880952);
   }
 }
 @media (max-width: 630px) {
   .checkbox .checkbox__check {
-    width: calc(16px + (630px - 100vw) * 0.0096774194);
+    width: calc(16px - (630px - 100vw) * -0.0096774194);
   }
   .checkbox .checkbox__check:before, .checkbox .checkbox__check:after {
     margin-top: -1px;
@@ -289,7 +296,7 @@ li {
 }
 
 .slick-arrow {
-  cursor: pointer;
+  cursor: url("../images/cursors/cursor-lg.png"), pointer;
   overflow: hidden;
   width: 22px;
   height: 22px;
@@ -298,8 +305,10 @@ li {
   border-left: 2px solid #C4C4C4;
   position: absolute;
 }
-.slick-arrow:hover, .slick-arrow:active, .slick-arrow:focus {
-  border-color: #008DCD;
+@media (hover: hover) {
+  .slick-arrow:hover, .slick-arrow:active, .slick-arrow:focus {
+    border-color: #008DCD;
+  }
 }
 @media (max-width: 1439px) {
   .slick-arrow {
@@ -307,10 +316,20 @@ li {
     height: calc(22px - (1440px - 100vw) * 0.0119047619);
   }
 }
+@media (max-width: 830px) {
+  .slick-arrow {
+    cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  }
+}
 @media (max-width: 730px) {
   .slick-arrow {
     width: calc(22px - (730px - 100vw) * 0.0195121951);
     height: calc(22px - (730px - 100vw) * 0.0195121951);
+  }
+}
+@media (max-width: 767px) {
+  .slick-arrow {
+    cursor: url("../images/cursors/cursor-sm.png"), pointer;
   }
 }
 @media (max-width: 768px), (max-width: 320px) {
@@ -334,12 +353,14 @@ li {
 }
 @media (max-width: 1439px) {
   .container {
-    padding: 0 calc(140px + 100% - 100vw - (1440px - 100vw) * 0.1577380952) 0 calc(140px - (1440px - 100vw) * 0.1577380952);
+    padding-right: max(21px, calc(140px + 100% - 100vw - (1440px - 100vw) * 0.1577380952));
+    padding-left: calc(140px - (1440px - 100vw) * 0.1577380952);
   }
 }
 @media (max-width: 767px) {
   .container {
-    padding: 0 max(21px, calc(34px + 100% - 100vw - (768px - 100vw) * 0.0290178571)) 0 calc(34px - (768px - 100vw) * 0.0290178571);
+    padding-right: max(21px, calc(34px + 100% - 100vw - (768px - 100vw) * 0.0290178571));
+    padding-left: calc(34px - (768px - 100vw) * 0.0290178571);
   }
 }
 @media (max-width: 320pxcalc(100vw - 100%)) {

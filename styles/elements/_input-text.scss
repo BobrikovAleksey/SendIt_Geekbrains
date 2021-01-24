@@ -14,7 +14,7 @@
   }
 
   @media (max-width: $Breakpoint-1220) {
-    padding: 1px calc(20px - (#{$Breakpoint-1220} - 100vw) * #{4 / ($Breakpoint-1220N - $SizeTabletN)}) 0;
+    @include calc-padding-horizontal(16, 20, $SizeTabletN, $Breakpoint-1220N, 1px, 0);
   }
 
   @media (max-width: $SizeTablet) {
@@ -22,7 +22,7 @@
   }
 
   @media (max-width: $Breakpoint-630) {
-    padding: 0 calc(20px + (#{$Breakpoint-630} - 100vw) * #{3 / ($Breakpoint-630N - $SizePhoneN)}) 1px;
+    @include calc-padding-horizontal(17, 20, $SizePhoneN, $Breakpoint-630N, 0, 1px, true);
   }
 
   @media (max-width: $SizePhone) {

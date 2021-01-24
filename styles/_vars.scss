@@ -1,4 +1,4 @@
-// S I Z E S
+// Sizes
 
 // breakpoints
 $SizePhoneN: 320;
@@ -16,6 +16,7 @@ $Breakpoint-730: 730px;
 $Breakpoint-630N: 630;
 $Breakpoint-630: 630px;
 
+
 // background
 $WidthPhoneBG: 790px;
 $WidthPhoneBGN: 790;
@@ -29,6 +30,7 @@ $WidthDesktopBG: 1440px;
 $WidthDesktopBGN: 1440;
 $HeightDesktopBG: 523px;
 $HeightDesktopBGN: 523;
+
 
 // padding
 $ContainerPaddingLgN: 140;
@@ -52,30 +54,40 @@ $InputHeightMdN: 48;
 $InputHeightMd: 48px;
 
 
-// P A L E T T E
 
-// blue
+// Palette
+
+// aquamarine
 $Aquamarine: #7CC3E1;
 $LightAquamarine: rgba(#7CC3E1, 0.6);
-$Blue: #008DCD;
-$LightBlue: #94D1EC;
-$Lavender: #D2ECF7;
-$DarkBlue: #0055B8;
+
 
 // gray
+$Black: #495C6C;
 $Gray: #B3B3B3;
+$LightGray: #C4C4C4;
 $VeryLightGray: #E9E9E9;
 $PearlLightGray: #9E9E9E;
-$LightGray: #C4C4C4;
 $VeryDarkGray: #363636;
+$DarkGray: $VeryDarkGray;   // удалить
+
+
+// lavender
+$Lavender: #D2ECF7;
+
+
+// blue
+$Blue: #008DCD;
+$LightBlue: #94D1EC;
+$DarkBlue: #0055B8;
+$VeryDarkBlue: #003675;
+
+
+// orange
+$Orange: #FFCC00;
+$LightOrange: #FCE39C;
+
 
 // silver
 $Silver: #F4F4F4;
 $VeryLightSilver: #F7F7F7;
-
-
-
-$Black: #495C6C;
-$DarkGray: #363636;
-$Orange: #FFCC00;
-$LightOrange: #FCE39C;

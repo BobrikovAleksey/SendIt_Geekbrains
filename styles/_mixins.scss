@@ -1,31 +1,90 @@
 @import "vars";
 
 
+// Cursor
+
+@mixin cursor($size: "lg") {
+  @if $size == "sm" or $size == "small" {
+    cursor: url("../images/cursors/cursor-sm.png"), pointer;
+  } @else if $size == "md" or $size == "medium" {
+    cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  } @else if $size == "lg" or $size == "large" {
+    cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  } @else {
+    cursor: pointer;
+  }
+}
+
+
+
+// Hide / Show
+
+@mixin hide() {
+  visibility: hidden;
+  position: absolute;
+}
+
+
+@mixin show($position: static) {
+  visibility: visible;
+  position: $position;
+}
+
+
+
+// Font
+
+@mixin font-awesome() {
+  font-family: "FontAwesome", serif;
+}
+
+
+@mixin font-family($weight: 400) {
+  @if $weight == 300 or $weight == "semilight" {
+    font-family: "Myriad Pro Semilight", serif;
+  } @else if $weight == 600 or $weight == "semibold" {
+    font-family: "Myriad Pro Semibold", serif;
+  } @else if $weight == 700 or $weight == "bold" {
+    font-family: "Myriad Pro Bold", serif;
+  } @else if $weight == 900 or $weight == "black" {
+    font-family: "Myriad Pro Black", serif;
+  } @else {
+    font-family: "Myriad Pro Regular", serif;
+  }
+}
+
+
+@mixin font-size($size: 14px, $height: normal) {
+  font-size: $size;
+  line-height: $height;
+}
+
+
 @mixin H1() {
   font-family: "Myriad Pro Black", serif;
   text-transform: uppercase;
-  font-size: 48px;
-  line-height: 58px;
+  @include font-size(48px, 58px);
 }
+
 
 @mixin H2() {
   font-family: "Myriad Pro Bold", serif;
   text-transform: uppercase;
-  font-size: 36px;
-  line-height: 43px;
+  @include font-size(36px, 43px);
 }
+
 
 @mixin H3() {
   font-family: "Myriad Pro Semibold", serif;
-  font-size: 30px;
-  line-height: 36px;
+  @include font-size(30px, 36px);
 }
+
 
 @mixin P() {
   font-family: "Myriad Pro Regular", serif;
-  font-size: 16px;
-  line-height: 19px;
+  @include font-size(16px, 19px);
 }
+
 
 @mixin A() {
   @include P;
@@ -36,6 +95,150 @@
   }
 
   &:active {
-    color: #003675;
+    color: $VeryDarkBlue;
+  }
+}
+
+
+
+// Shadow
+
+@mixin box-shadow($color, $blur, $shift-y: 0, $shift-x: 0, $stretch: 0) {
+  box-shadow: $shift-x $shift-y $blur $stretch $color;
+}
+
+
+
+// Display
+
+// flex
+
+@mixin flex-vcenter() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column-center() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+// Calc size
+
+// width
+
+@mixin calc-width($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    width: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    width: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+
+// height
+
+@mixin calc-height($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    height: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    height: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+
+// pudding
+
+@mixin calc-padding-top($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    padding-top: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    padding-top: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-padding-bottom($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    padding-bottom: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    padding-bottom: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-padding-right($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    padding-right: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    padding-right: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-padding-left($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    padding-left: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    padding-left: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-padding-horizontal($min, $max, $size-start, $size-end, $top: 0, $bottom: $top, $sign: false) {
+  @if $sign {
+    padding: $top calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}) $bottom;
+  } @else {
+    padding: $top calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}) $bottom;
+  }
+}
+
+@mixin calc-padding-right-with-scroll($min, $max, $size-start, $size-end, $size-max: 0, $sign: false) {
+  @if $sign {
+    padding-right: max(#{$size-max},
+                  calc(#{$max + px} + 100% - 100vw + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}));
+  } @else {
+    padding-right: max(#{$size-max},
+                  calc(#{$max + px} + 100% - 100vw - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}));
+  }
+}
+
+
+// margin
+
+@mixin calc-margin-top($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    margin-top: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    margin-top: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-margin-bottom($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    margin-bottom: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    margin-bottom: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-margin-right($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    margin-right: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    margin-right: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  }
+}
+
+@mixin calc-margin-left($min, $max, $size-start, $size-end, $sign: false) {
+  @if $sign {
+    margin-left: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
+  } @else {
+    margin-left: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
   }
 }

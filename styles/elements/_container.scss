@@ -8,13 +8,13 @@
   margin: 0 auto;
 
   @media (max-width: $SizeDesktop - 1px) {
-    padding: 0 calc(#{$ContainerPaddingLg} + 100% - 100vw - (#{$SizeDesktop} - 100vw) * #{($ContainerPaddingLgN - $ContainerPaddingMdN) / ($SizeDesktopN - $SizeTabletN)})
-             0 calc(#{$ContainerPaddingLg} - (#{$SizeDesktop} - 100vw) * #{($ContainerPaddingLgN - $ContainerPaddingMdN) / ($SizeDesktopN - $SizeTabletN)});
+    @include calc-padding-right-with-scroll($ContainerPaddingMdN, $ContainerPaddingLgN, $SizeTabletN, $SizeDesktopN, $ContainerPaddingSm);
+    @include calc-padding-left($ContainerPaddingMdN, $ContainerPaddingLgN, $SizeTabletN, $SizeDesktopN);
   }
 
   @media (max-width: $SizeTablet - 1px) {
-    padding: 0 max(#{$ContainerPaddingSm}, calc(#{$ContainerPaddingMd} + 100% - 100vw - (#{$SizeTablet} - 100vw) * #{($ContainerPaddingMdN - $ContainerPaddingSmN) / ($SizeTabletN - $SizePhoneN)}))
-             0 calc(#{$ContainerPaddingMd} - (#{$SizeTablet} - 100vw) * #{($ContainerPaddingMdN - $ContainerPaddingSmN) / ($SizeTabletN - $SizePhoneN)});
+    @include calc-padding-right-with-scroll($ContainerPaddingSmN, $ContainerPaddingMdN, $SizePhoneN, $SizeTabletN, $ContainerPaddingSm);
+    @include calc-padding-left($ContainerPaddingSmN, $ContainerPaddingMdN, $SizePhoneN, $SizeTabletN);
   }
 
   @media (max-width: $SizePhone + calc(100vw - 100%)) {

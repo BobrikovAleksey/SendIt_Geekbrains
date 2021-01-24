@@ -3,7 +3,7 @@
 
 .slick {
   &-arrow {
-    cursor: pointer;
+    @include cursor;
     overflow: hidden;
     width: 22px;
     height: 22px;
@@ -11,18 +11,29 @@
     border-bottom: 2px solid $LightGray;
     border-left: 2px solid $LightGray;
     position: absolute;
-    &:hover, &:active, &:focus {
-      border-color: $Blue;
+
+    @media (hover: hover) {
+      &:hover, &:active, &:focus {
+        border-color: $Blue;
+      }
     }
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(22px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
-      height: calc(22px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      @include calc-width(14, 22, $SizeTabletN, $SizeDesktopN);
+      @include calc-height(14, 22, $SizeTabletN, $SizeDesktopN);
+    }
+
+    @media (max-width: $Breakpoint-830) {
+      @include cursor("md");
     }
 
     @media (max-width: $Breakpoint-730) {
-      width: calc(22px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)});
-      height: calc(22px - (#{$Breakpoint-730} - 100vw) * #{8 / ($Breakpoint-730N - $SizePhoneN)});
+      @include calc-width(14, 22, $SizePhoneN, $Breakpoint-730N);
+      @include calc-height(14, 22, $SizePhoneN, $Breakpoint-730N);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      @include cursor("sm");
     }
 
     @media (max-width: $SizeTablet), (max-width: $SizePhone) {

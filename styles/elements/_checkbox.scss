@@ -2,59 +2,58 @@
 
 
 .checkbox {
-  cursor: pointer;
+  @include cursor;
+  @include font-size(10px, 12px);
   width: fit-content;
-  height: fit-content;
   color: white;
-  font-size: 10px;
-  line-height: 12px;
   display: flex;
+
+  @media (max-width: $Breakpoint-830) {
+    @include cursor("md");
+  }
+
+  @media (max-width: $SizeTablet - 1px) {
+    @include cursor("sm");
+  }
 
 
   .checkbox__input {
-    visibility: hidden;
-    position: absolute;
+    @include hide;
 
     &:checked + .checkbox__check {
       &:before {
-        visibility: hidden;
-        position: absolute;
+        @include hide;
       }
       &:after {
-        visibility: visible;
-        position: static;
+        @include show;
       }
     }
   }
 
 
   .checkbox__check {
+    @include font-awesome;
+    @include font-size(13px, 13px);
+    @include flex-vcenter;
     width: 16px;
-    font-family: "FontAwesome", serif;
-    font-size: 13px;
-    line-height: 13px;
-    display: flex;
-    align-items: center;
     &:before {
+      @include show;
       content:"\f096";
-      visibility: visible;
-      position: static;
     }
     &:after {
+      @include hide;
       content:"\f046";
-      visibility: hidden;
-      position: absolute;
     }
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(16px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+      @include calc-width(17, 16, $SizeTabletN, $SizeDesktopN);
       &:before, &:after{
-        margin-top: calc((#{$SizeDesktop} - 100vw) * #{-1 / ($SizeDesktopN - $SizeTabletN)});
+        @include calc-margin-top(1, 0, $SizeTabletN, $SizeDesktopN, true);
       }
     }
 
     @media (max-width: $Breakpoint-630) {
-      width: calc(16px + (#{$Breakpoint-630} - 100vw) * #{3 / ($Breakpoint-630N - $SizePhoneN)});
+      @include calc-width(19, 16, $SizePhoneN, $Breakpoint-630N);
       &:before, &:after{
         margin-top: -1px;
       }
