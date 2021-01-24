@@ -130,13 +130,13 @@ li {
 }
 
 .button {
-  cursor: url("../images/cursors/cursor-lg.png"), pointer;
   font-family: "Myriad Pro Bold", serif;
   font-size: 16px;
   line-height: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   transition: linear 250ms;
   width: 360px;
   height: 48px;
@@ -160,14 +160,12 @@ li {
 }
 @media (max-width: 830px) {
   .button {
-    cursor: url("../images/cursors/cursor-lg.png"), pointer;
     text-align: right;
     justify-content: flex-end;
   }
 }
 @media (max-width: 767px) {
   .button {
-    cursor: url("../images/cursors/cursor-sm.png"), pointer;
     width: calc(280px - (768px - 100vw) * 0.0044642857);
   }
 }
@@ -180,22 +178,22 @@ li {
   color: white;
   background: #008DCD;
 }
-@media (hover) {
+@media (pointer: fine) {
   .button_blue:hover:not(:active):not(:disabled) {
     box-shadow: 0 4px 15px 0 rgba(0, 141, 205, 0.45);
   }
 }
-@media (hover) and (max-width: 1439px) {
+@media (pointer: fine) and (max-width: 1439px) {
   .button_blue:hover:not(:active):not(:disabled) {
     box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(15px - (1440px - 100vw) * 0.0104166667) 0 rgba(0, 141, 205, 0.45);
   }
 }
-@media (hover) and (max-width: 768px) {
+@media (pointer: fine) and (max-width: 768px) {
   .button_blue:hover:not(:active):not(:disabled) {
     box-shadow: 0 2px 8px 0 rgba(0, 141, 205, 0.45);
   }
 }
-@media (hover) {
+@media (pointer: fine) {
   .button_blue:active:not(:disabled) {
     background: #94D1EC;
   }
@@ -204,44 +202,34 @@ li {
   color: #363636;
   background: #FFCC00;
 }
-@media (hover) {
+@media (pointer: fine) {
   .button_orange:hover:not(:active):not(:disabled) {
     box-shadow: 0 4px 20px 0 rgba(255, 204, 0, 0.55);
   }
 }
-@media (hover) and (max-width: 1439px) {
+@media (pointer: fine) and (max-width: 1439px) {
   .button_orange:hover:not(:active):not(:disabled) {
     box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) 0 rgba(255, 204, 0, 0.55);
   }
 }
-@media (hover) and (max-width: 768px) {
+@media (pointer: fine) and (max-width: 768px) {
   .button_orange:hover:not(:active):not(:disabled) {
     box-shadow: 0 2px 10px 0 rgba(255, 204, 0, 0.55);
   }
 }
-@media (hover) {
+@media (pointer: fine) {
   .button_orange:active:not(:disabled) {
     background: #FCE39C;
   }
 }
 
 .checkbox {
-  cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  cursor: pointer;
   font-size: 10px;
   line-height: 12px;
   width: fit-content;
   color: white;
   display: flex;
-}
-@media (max-width: 830px) {
-  .checkbox {
-    cursor: url("../images/cursors/cursor-lg.png"), pointer;
-  }
-}
-@media (max-width: 767px) {
-  .checkbox {
-    cursor: url("../images/cursors/cursor-sm.png"), pointer;
-  }
 }
 .checkbox .checkbox__input {
   visibility: hidden;
@@ -296,7 +284,7 @@ li {
 }
 
 .slick-arrow {
-  cursor: url("../images/cursors/cursor-lg.png"), pointer;
+  cursor: pointer;
   overflow: hidden;
   width: 22px;
   height: 22px;
@@ -305,7 +293,7 @@ li {
   border-left: 2px solid #C4C4C4;
   position: absolute;
 }
-@media (hover) {
+@media (pointer: fine) {
   .slick-arrow:hover, .slick-arrow:active, .slick-arrow:focus {
     border-color: #008DCD;
   }
@@ -316,20 +304,10 @@ li {
     height: calc(22px - (1440px - 100vw) * 0.0119047619);
   }
 }
-@media (max-width: 830px) {
-  .slick-arrow {
-    cursor: url("../images/cursors/cursor-lg.png"), pointer;
-  }
-}
 @media (max-width: 730px) {
   .slick-arrow {
     width: calc(22px - (730px - 100vw) * 0.0195121951);
     height: calc(22px - (730px - 100vw) * 0.0195121951);
-  }
-}
-@media (max-width: 767px) {
-  .slick-arrow {
-    cursor: url("../images/cursors/cursor-sm.png"), pointer;
   }
 }
 @media (max-width: 768px), (max-width: 320px) {

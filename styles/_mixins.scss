@@ -1,21 +1,6 @@
 @import "vars";
 
 
-// Cursor
-
-@mixin cursor($size: "lg") {
-  @if $size == "sm" or $size == "small" {
-    cursor: url("../images/cursors/cursor-sm.png"), pointer;
-  } @else if $size == "md" or $size == "medium" {
-    cursor: url("../images/cursors/cursor-lg.png"), pointer;
-  } @else if $size == "lg" or $size == "large" {
-    cursor: url("../images/cursors/cursor-lg.png"), pointer;
-  } @else {
-    cursor: pointer;
-  }
-}
-
-
 
 // Hide / Show
 

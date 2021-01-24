@@ -2,19 +2,11 @@
 
 
 .checkbox {
-  @include cursor;
+  cursor: pointer;
   @include font-size(10px, 12px);
   width: fit-content;
   color: white;
   display: flex;
-
-  @media (max-width: $Breakpoint-830) {
-    @include cursor("md");
-  }
-
-  @media (max-width: $SizeTablet - 1px) {
-    @include cursor("sm");
-  }
 
 
   .checkbox__input {

@@ -2,10 +2,10 @@
 
 
 .button {
-  @include cursor;
   @include font-family("bold");
   @include font-size(16px, 19px);
   @include flex-center-center;
+  cursor: pointer;
   transition: linear 250ms;
   width: $InputWidthLg;
   height: $InputHeightLg;
@@ -29,13 +29,11 @@
   }
 
   @media (max-width: $Breakpoint-830) {
-    @include cursor("md");
     text-align: right;
     justify-content: flex-end;
   }
 
   @media (max-width: $SizeTablet - 1px) {
-    @include cursor("sm");
     @include calc-width($InputWidthMdN - 2, $InputWidthMdN, $SizePhoneN, $SizeTabletN);
   }
 
@@ -48,7 +46,7 @@
     color: white;
     background: $Blue;
 
-    @media (hover) {
+    @media (pointer: fine) {
       &:hover:not(:active):not(:disabled) {
         @include box-shadow(rgba($Blue, 0.45), 15px, 4px);
 
@@ -74,7 +72,7 @@
     color: $DarkGray;
     background: $Orange;
 
-    @media (hover) {
+    @media (pointer: fine) {
       &:hover:not(:active):not(:disabled) {
         @include box-shadow(rgba($Orange, 0.55), 20px, 4px);
 

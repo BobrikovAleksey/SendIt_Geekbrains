@@ -3,7 +3,7 @@
 
 .slick {
   &-arrow {
-    @include cursor;
+    cursor: pointer;
     overflow: hidden;
     width: 22px;
     height: 22px;
@@ -12,7 +12,7 @@
     border-left: 2px solid $LightGray;
     position: absolute;
 
-    @media (hover) {
+    @media (pointer: fine) {
       &:hover, &:active, &:focus {
         border-color: $Blue;
       }
@@ -23,17 +23,9 @@
       @include calc-height(14, 22, $SizeTabletN, $SizeDesktopN);
     }
 
-    @media (max-width: $Breakpoint-830) {
-      @include cursor("md");
-    }
-
     @media (max-width: $Breakpoint-730) {
       @include calc-width(14, 22, $SizePhoneN, $Breakpoint-730N);
       @include calc-height(14, 22, $SizePhoneN, $Breakpoint-730N);
-    }
-
-    @media (max-width: $SizeTablet - 1px) {
-      @include cursor("sm");
     }
 
     @media (max-width: $SizeTablet), (max-width: $SizePhone) {
