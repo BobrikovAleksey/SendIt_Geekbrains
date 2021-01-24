@@ -1,0 +1,22 @@
+@import "vars";
+
+// calc sizes
+
+@function calc-size($size-min, $size-max, $display-width-min, $display-width-max, $inc: false) {
+  @if $inc {
+    @return calc(#{$size-max + px} + (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)});
+  } @else {
+    @return calc(#{$size-max + px} - (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)});
+  }
+}
+
+
+@function calc-size-with-scroll($size-min, $size-max, $display-width-min, $display-width-max, $min-size-px: 0, $inc: false) {
+  @if $inc {
+    @return max(#{$min-size-px},
+                calc(#{$size-max + px} + 100% - 100vw + (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
+  } @else {
+    @return max(#{$min-size-px},
+                calc(#{$size-max + px} + 100% - 100vw - (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
+  }
+}

@@ -696,13 +696,13 @@
 }
 @media (max-width: 1439px) {
   .scenario__container {
-    grid-gap: calc(47px - (1440px - 100vw) * 0.037202381) calc(120px - (1440px - 100vw) * 0.0729166667);
+    grid: calc(47px - (1440px - 100vw) * 0.037202381) calc(120px - (1440px - 100vw) * 0.0729166667);
     padding: calc(64px - (1440px - 100vw) * 0.0416666667) calc(182px - (1440px - 100vw) * 0.1919642857) calc(69px - (1440px - 100vw) * 0.0074404762) calc(198px - (1440px - 100vw) * 0.1845238095);
   }
 }
 @media (max-width: 767px) {
   .scenario__container {
-    padding: calc(36px - (768px - 100vw) * 0.0144927536) max(21px, calc(53px + (100% - 100vw) - (768px - 100vw) * 0.231884058)) calc(64px - (768px - 100vw) * 0.0289855072) calc(74px - (768px - 100vw) * 0.384057971);
+    padding: calc(36px - (768px - 100vw) * 0.0144927536) max(21px, calc(53px + 100% - 100vw - (768px - 100vw) * 0.231884058)) calc(64px - (768px - 100vw) * 0.0289855072) calc(74px - (768px - 100vw) * 0.384057971);
   }
 }
 @media (max-width: 630px) {
@@ -922,7 +922,7 @@
     min-height: calc(60px - (1440px - 100vw) * 0.0238095238);
     font-size: calc(20px - (1440px - 100vw) * 0.005952381);
     line-height: calc(24px - (1440px - 100vw) * 0.0074404762);
-    margin-top: calc(9px + (1440px - 100vw) * 0.0029761905);
+    margin-top: calc(9px - (1440px - 100vw) * -0.0029761905);
   }
 }
 @media (max-width: 630px) {
