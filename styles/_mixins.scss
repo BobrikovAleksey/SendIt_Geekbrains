@@ -120,6 +120,11 @@
   justify-content: center;
 }
 
+@mixin flex-column() {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin flex-column-center() {
   @include flex-vcenter;
   flex-direction: column;
