@@ -2181,7 +2181,7 @@
 }
 @media (max-width: 1439px) {
   .faq__title {
-    margin-left: calc((1440px - 100vw) * 0.0014880952);
+    margin-left: calc(0px - (1440px - 100vw) * -0.0014880952);
   }
 }
 @media (max-width: 767px) {
@@ -2222,10 +2222,10 @@
   }
 }
 .faq__column {
-  width: 100%;
-  max-width: 558px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 558px;
 }
 @media (max-width: 830px) {
   .faq__column {
@@ -2260,59 +2260,63 @@
 }
 @media (max-width: 767px) {
   .faq__item {
-    border-radius: calc(24px + (768px - 100vw) * 0.0178571429);
+    border-radius: calc(24px - (768px - 100vw) * -0.0178571429);
     margin-top: 10px;
   }
 }
 .faq__item:first-of-type {
   margin-top: 0;
 }
-.faq__item:not([open]):not(:active):hover {
-  box-shadow: 0 4px 20px rgba(124, 195, 225, 0.6);
-}
-@media (max-width: 1439px) {
+@media (pointer: fine) {
   .faq__item:not([open]):not(:active):hover {
-    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) rgba(124, 195, 225, 0.6);
+    box-shadow: 0 4px 20px 0 rgba(124, 195, 225, 0.6);
   }
 }
-@media (max-width: 768px) {
+@media (pointer: fine) and (max-width: 1439px) {
   .faq__item:not([open]):not(:active):hover {
-    box-shadow: 0 2px 10px rgba(124, 195, 225, 0.6);
+    box-shadow: 0 calc(4px - (1440px - 100vw) * 0.0029761905) calc(20px - (1440px - 100vw) * 0.0148809524) 0 rgba(124, 195, 225, 0.6);
   }
 }
-.faq__item:not([open]):active {
-  transition: linear 25ms;
-  box-shadow: none;
+@media (pointer: fine) and (max-width: 768px) {
+  .faq__item:not([open]):not(:active):hover {
+    box-shadow: 0 2px 10px 0 rgba(124, 195, 225, 0.6);
+  }
+}
+@media (pointer: fine) {
+  .faq__item:not([open]):active {
+    transition: linear 25ms;
+    box-shadow: none;
+  }
 }
 .faq__question {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   width: 100%;
   min-height: 64px;
   background: white;
-  display: flex;
-  align-items: center;
   padding: 4px 60px 6px 30px;
   position: relative;
 }
 @media (max-width: 830px) {
   .faq__question {
     min-height: calc(64px - (830px - 100vw) * 0.2580645161);
-    padding: 4px calc(60px + (830px - 100vw) * 0.0161290323) 6px calc(30px + (830px - 100vw) * 0.0161290323);
+    padding: 4px calc(60px - (830px - 100vw) * -0.0161290323) 6px calc(30px - (830px - 100vw) * -0.0161290323);
   }
 }
 @media (max-width: 767px) {
   .faq__question {
-    min-height: calc(48px + (768px - 100vw) * 0.0714285714);
+    min-height: calc(48px - (768px - 100vw) * -0.0714285714);
     font-size: calc(16px - (768px - 100vw) * 0.0044642857);
-    line-height: calc(19.2px - (768px - 100vw) * 0.0053571429);
-    padding: calc(4px + (768px - 100vw) * 0.0044642857) calc(61px + (768px - 100vw) * 0.0267857143) calc(5px + (768px - 100vw) * 0.0066964286) calc(31px + (768px - 100vw) * 0.0133928571);
+    line-height: calc(19px - (768px - 100vw) * 0.0044642857);
+    padding: calc(4px - (768px - 100vw) * -0.0044642857) calc(61px - (768px - 100vw) * 0.0290178571) calc(5px - (768px - 100vw) * -0.0066964286) calc(31px - (768px - 100vw) * 0.015625);
   }
 }
 @media (max-width: 320px) {
   .faq__question {
     min-height: 80px;
     font-size: 14px;
-    line-height: 16.8px;
+    line-height: 17px;
     padding: 6px 48px 8px 24px;
   }
 }
@@ -2332,14 +2336,14 @@
 }
 @media (max-width: 1439px) {
   .faq__question:before {
-    right: calc(31px + (1440px - 100vw) * 0.0029761905);
+    right: calc(31px - (1440px - 100vw) * -0.0029761905);
   }
 }
 @media (max-width: 767px) {
   .faq__question:before {
     width: calc(10px - (768px - 100vw) * 0.0044642857);
     height: calc(10px - (768px - 100vw) * 0.0044642857);
-    top: calc((768px - 100vw) * 0.0044642857);
+    top: calc(0px - (768px - 100vw) * -0.0044642857);
     right: calc(33px - (768px - 100vw) * 0.0178571429);
   }
 }
@@ -2358,7 +2362,7 @@
 }
 @media (max-width: 767px) {
   .faq__item[open] > .faq__question:before {
-    bottom: calc((768px - 100vw) * 0.0044642857);
+    bottom: calc(0px - (768px - 100vw) * -0.0044642857);
   }
 }
 @media (max-width: 320px) {
@@ -2372,7 +2376,7 @@
 }
 @media (max-width: 830px) {
   .faq__answer {
-    padding: calc(15px - (830px - 100vw) * 0.0806451613) calc(30px + (830px - 100vw) * 0.0161290323) calc(30px - (830px - 100vw) * 0.1612903226);
+    padding: calc(15px - (830px - 100vw) * 0.0806451613) calc(30px - (830px - 100vw) * -0.0161290323) calc(30px - (830px - 100vw) * 0.1612903226);
   }
 }
 @media (max-width: 767px) {
