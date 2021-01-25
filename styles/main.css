@@ -1076,12 +1076,10 @@
 }
 .callback__caption {
   width: 760px;
-  max-width: 60%;
   padding-top: 1px;
 }
 @media (max-width: 630px) {
   .callback__caption {
-    max-width: 100%;
     padding-top: 0;
   }
 }
@@ -1102,9 +1100,9 @@
 }
 .callback__text {
   font-family: "Myriad Pro Semibold", serif;
-  color: white;
   font-size: 24px;
   line-height: 23px;
+  color: white;
   margin-top: 12px;
 }
 @media (max-width: 1439px) {
@@ -1114,10 +1112,16 @@
     margin-top: calc(17px - (1440px - 100vw) * 0.0029761905);
   }
 }
+@media (max-width: 1220px) {
+  .callback__text {
+    max-width: 75%;
+  }
+}
 @media (max-width: 768px) {
   .callback__text {
     font-size: 14px;
     line-height: 13px;
+    max-width: 100%;
     margin-top: 15px;
   }
 }
@@ -1140,7 +1144,7 @@
 @media (max-width: 1439px) {
   .callback__form {
     width: calc(360px - (1440px - 100vw) * 0.119047619);
-    margin: calc(4px + (1440px - 100vw) * 0.0014880952) 0 0 40px;
+    margin: calc(4px - (1440px - 100vw) * -0.0014880952) 0 0 40px;
   }
 }
 @media (max-width: 767px) {
@@ -1170,7 +1174,7 @@
 }
 @media (max-width: 1439px) {
   .callback__button {
-    padding: 9px calc(26px + (1220px - 100vw) * 0.0309734513) 8px;
+    padding: 9px calc(26px - (1440px - 100vw) * -0.0208333333) 8px;
   }
 }
 @media (max-width: 768px) {
@@ -1188,7 +1192,7 @@
 }
 @media (max-width: 1439px) {
   .callback__consent {
-    margin-top: calc(15px - (1220px - 100vw) * 0.0154867257);
+    margin-top: calc(15px - (1440px - 100vw) * 0.0104166667);
   }
 }
 @media (max-width: 768px) {
