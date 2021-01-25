@@ -1251,7 +1251,7 @@
 @media (max-width: 1439px) {
   .parcel__container {
     padding-top: calc(44px - (1440px - 100vw) * 0.0327380952);
-    padding-bottom: calc(48px - (1440px - 100vw) * 0.0386904762);
+    padding-bottom: calc(48px - (1440px - 100vw) * 0.0327380952);
     min-height: calc(180px - (1440px - 100vw) * 0.0833333333);
   }
 }
@@ -1284,17 +1284,16 @@
 }
 @media (max-width: 1439px) {
   .parcel__title {
-    width: calc(760px - (1440px - 100vw) * 0.5654761905);
     font-size: calc(36px - (1440px - 100vw) * 0.0119047619);
     line-height: calc(43px - (1440px - 100vw) * 0.0133928571);
-    padding-bottom: calc(2px - (1440px - 100vw) * -0.005952381);
+    width: calc(760px - (1440px - 100vw) * 0.5654761905);
   }
 }
 @media (max-width: 768px) {
   .parcel__title {
     font-size: calc(28px - (768px - 100vw) * 0.0089285714);
     line-height: calc(34px - (768px - 100vw) * 0.0111607143);
-    padding-bottom: 6px;
+    padding-bottom: 2px;
   }
 }
 @media (max-width: 630px) {
@@ -1312,14 +1311,19 @@
 .parcel__button {
   margin-left: 40px;
 }
+@media (max-width: 1439px) {
+  .parcel__button {
+    margin: calc(0px - (1440px - 100vw) * -0.005952381) 0 0 calc(40px - (1440px - 100vw) * 0.0119047619);
+  }
+}
 @media (max-width: 768px) {
   .parcel__button {
-    margin-left: calc(40px - (768px - 100vw) * 0.0579710145);
+    margin: 4px 0 0 calc(40px - (768px - 100vw) * 0.0579710145);
   }
 }
 @media (max-width: 630px) {
   .parcel__button {
-    margin: calc(17px - (630px - 100vw) * 0.0129032258) 0 0;
+    margin: calc(18px - (630px - 100vw) * 0.0161290323) 0 0;
   }
 }
 @media (max-width: 320px) {

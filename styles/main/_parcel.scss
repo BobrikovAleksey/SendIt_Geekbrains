@@ -11,19 +11,17 @@
     min-height: 180px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      @include padding-vertical(calc-size(22, 44, $SizeTabletN, $SizeDesktopN),
-                                calc-size(22, 48, $SizeTabletN, $SizeDesktopN));
-      min-height: calc-size(124, 180, $SizeTabletN, $SizeDesktopN);
+      @include padding-vertical(calc-size-tablet-desktop(22, 44), calc-size-tablet-desktop(26, 48));
+      min-height: calc-size-tablet-desktop(124, 180);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      @include padding-vertical(calc-size(19, 22, $SizePhoneN, $SizeTabletN),
-                                calc-size(16, 26, $SizePhoneN, $SizeTabletN));
+      @include padding-vertical(calc-size-phone-tablet(19, 22), calc-size-phone-tablet(16, 26));
       min-height: 124px;
     }
 
     @media (max-width: $Breakpoint-630) {
-      min-height: calc-size(161, 141, $SizePhoneN, $Breakpoint-630N);
+      min-height: calc-size-phone-630px(161, 141);
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -42,16 +40,13 @@
     padding-bottom: 2px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc-size(380, 760, $SizeTabletN, $SizeDesktopN);
-      font-size: calc-size(28, 36, $SizeTabletN, $SizeDesktopN);
-      line-height: calc-size(34, 43, $SizeTabletN, $SizeDesktopN);
-      padding-bottom: calc-size(6, 2, $SizeTabletN, $SizeDesktopN);
+      @include font-size(calc-size-tablet-desktop(28, 36), calc-size-tablet-desktop(34, 43));
+      width: calc-size-tablet-desktop(380, 760);
     }
 
     @media (max-width: $SizeTablet) {
-      font-size: calc-size(24, 28, $SizePhoneN, $SizeTabletN);
-      line-height: calc-size(29, 34, $SizePhoneN, $SizeTabletN);
-      padding-bottom: 6px;
+      @include font-size(calc-size-phone-tablet(24, 28), calc-size-phone-tablet(29, 34));
+      padding-bottom: 2px;
     }
 
     @media (max-width: $Breakpoint-630) {
@@ -60,8 +55,7 @@
     }
 
     @media (max-width: $SizePhone) {
-      font-size: 24px;
-      line-height: 29px;
+      @include font-size(24px, 29px);
     }
   }
 
@@ -69,12 +63,16 @@
   &__button {
     margin-left: 40px;
 
+    @media (max-width: $SizeDesktop - 1px) {
+      margin: calc-size-tablet-desktop(4, 0) 0 0 calc-size-tablet-desktop(32, 40);
+    }
+
     @media (max-width: $SizeTablet) {
-      margin-left: calc-size(32, 40, $Breakpoint-630N, $SizeTabletN);
+      margin: 4px 0 0 calc-size-630px-tablet(32, 40);
     }
 
     @media (max-width: $Breakpoint-630) {
-      margin: calc-size(13, 17, $SizePhoneN, $Breakpoint-630N) 0 0;
+      margin: calc-size-phone-630px(13, 18) 0 0;
     }
 
     @media (max-width: $SizePhone) {
