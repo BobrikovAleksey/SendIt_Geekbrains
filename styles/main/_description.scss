@@ -5,6 +5,7 @@
   background: $VeryLightSilver;
 
 
+  //noinspection CssOverwrittenProperties
   &__container {
     @include flex-hbetween;
     min-height: 457px;
@@ -13,15 +14,20 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       min-height: calc-size-tablet-desktop(314, 457);
+      padding: calc-size-tablet-desktop(19, 62) calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 28)
+               calc-size-tablet-desktop(32, 48) calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29);
       padding: calc-size-tablet-desktop(19, 62)
                calc-size-with-scroll-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 28)
-               calc-size-tablet-desktop(32, 48)
-               calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29);
+               calc-size-tablet-desktop(32, 48) calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      @include flex-column-center;
       min-height: 371px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: calc-size-phone-tablet(17, 31) calc-size-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN)
+               calc-size-phone-tablet(16, 32);
       padding: calc-size-phone-tablet(17, 31)
                calc-size-with-scroll-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN)
                calc-size-phone-tablet(16, 32) calc-size-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN);
@@ -46,6 +52,7 @@
     }
 
     @media (min-width: $SizeTablet) and (max-width: $SizeDesktop - 1px) {
+      right: calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29);
       @include position-top-right-bottom(0, calc-size-with-scroll-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29), 6px);
       position: absolute;
       margin: auto;
@@ -344,13 +351,14 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      width: calc-size-phone-tablet(278, 660);
+      width: auto;
+      min-width: 278px;
+      max-width: 660px;
       padding: 0;
       margin-top: calc-size-phone-tablet(52, 88);
     }
 
     @media (max-width: $SizePhone) {
-      width: 278px;
       margin-top: 52px;
     }
   }

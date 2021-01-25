@@ -680,17 +680,19 @@ li {
 }
 @media (max-width: 1439px) {
   .container {
+    padding-right: calc(140px - (1440px - 100vw) * 0.1577380952);
     padding-left: calc(140px - (1440px - 100vw) * 0.1577380952);
-    padding-right: max(21px, calc(140px + 100% - 100vw - (1440px - 100vw) * 0.1577380952));
+    padding-right: max(calc(21px - 100vw + 320px), calc(140px + 100% - 100vw - (1440px - 100vw) * 0.1577380952));
   }
 }
 @media (max-width: 767px) {
   .container {
+    padding-right: calc(34px - (768px - 100vw) * 0.0290178571);
     padding-left: calc(34px - (768px - 100vw) * 0.0290178571);
-    padding-right: max(21px, calc(34px + 100% - 100vw - (768px - 100vw) * 0.0290178571));
+    padding-right: max(calc(21px - 100vw + 320px), calc(34px + 100% - 100vw - (768px - 100vw) * 0.0290178571));
   }
 }
-@media (max-width: 320pxcalc(100vw - 100%)) {
+@media (max-width: 320px) {
   .container {
     padding: 0 21px;
   }

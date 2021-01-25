@@ -8,16 +8,18 @@
   margin: 0 auto;
 
   @media (max-width: $SizeDesktop - 1px) {
+    padding-right: calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN);
     @include padding-horizontal(calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN),
                                 calc-size-with-scroll-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN, $ContainerPaddingSm));
   }
 
   @media (max-width: $SizeTablet - 1px) {
+    padding-right: calc-size-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN);
     @include padding-horizontal(calc-size-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN),
                                 calc-size-with-scroll-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN, $ContainerPaddingSm));
   }
 
-  @media (max-width: $SizePhone + calc(100vw - 100%)) {
+  @media (max-width: $SizePhone) {
     padding: 0 $ContainerPaddingSm;
   }
 }

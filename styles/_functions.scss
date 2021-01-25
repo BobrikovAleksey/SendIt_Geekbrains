@@ -32,9 +32,11 @@
 
 @function calc-size-with-scroll($size-min, $size-max, $display-width-min, $display-width-max, $min-size-px: 0, $inc: false) {
   @if $inc {
-    @return max(#{$min-size-px}, calc(#{$size-max + px} + 100% - 100vw + (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
+    @return max(calc(#{$min-size-px} - 100vw + 320px),
+                calc(#{$size-max + px} + 100% - 100vw + (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
   } @else {
-    @return max(#{$min-size-px}, calc(#{$size-max + px} + 100% - 100vw - (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
+    @return max(calc(#{$min-size-px} - 100vw + 320px),
+                calc(#{$size-max + px} + 100% - 100vw - (#{$display-width-max + px} - 100vw) * #{($size-max - $size-min) / ($display-width-max - $display-width-min)}));
   }
 }
 
