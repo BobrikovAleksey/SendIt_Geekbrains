@@ -1,7 +1,9 @@
-@import "vars";
+@import "vars", "functions";
 
 
-// Hide / Show
+/************************************************
+ *             H I D E  /  S H O W              *
+ ************************************************/
 
 @mixin hide() {
   visibility: hidden;
@@ -15,13 +17,15 @@
 }
 
 
+/************************************************
+ *                  F O N T S                   *
+ ************************************************/
 
-// Font
+// font family
 
 @mixin font-awesome() {
   font-family: "FontAwesome", serif;
 }
-
 
 @mixin font-family($weight: 400) {
   @if $weight == 300 or $weight == "light" {
@@ -37,55 +41,51 @@
   }
 }
 
+// font sizes
 
 @mixin font-size($size: 14px, $height: normal) {
   font-size: $size;
   line-height: $height;
 }
 
-
 @mixin H1() {
-  font-family: "Myriad Pro Black", serif;
-  text-transform: uppercase;
+  @include font-family("black");
   @include font-size(48px, 58px);
+  text-transform: uppercase;
 }
-
 
 @mixin H2() {
-  font-family: "Myriad Pro Bold", serif;
-  text-transform: uppercase;
+  @include font-family("bold");
   @include font-size(36px, 43px);
+  text-transform: uppercase;
 }
 
-
 @mixin H3() {
-  font-family: "Myriad Pro Semibold", serif;
+  @include font-family("semibold");
   @include font-size(30px, 36px);
 }
 
-
 @mixin P() {
-  font-family: "Myriad Pro Regular", serif;
+  @include font-family("regular");
   @include font-size(16px, 19px);
 }
-
 
 @mixin A() {
   @include P;
   color: $DarkBlue;
+  text-decoration: none;
 
-  &, &:hover, &:active {
-    text-decoration: none;
-  }
-
-  &:active {
-    color: $VeryDarkBlue;
+  @media (pointer: fine) {
+    &:active {
+      color: $VeryDarkBlue;
+    }
   }
 }
 
 
-
-// Images
+/************************************************
+ *                 I M A G E S                  *
+ ************************************************/
 
 @mixin background-image($file-name, $pos-y: 0, $pos-x: 0) {
   background: url("../images/" + $file-name) $pos-y $pos-x no-repeat;
@@ -96,16 +96,18 @@
 }
 
 
-
-// Shadow
+/************************************************
+ *                 S H A D O W                  *
+ ************************************************/
 
 @mixin box-shadow($color, $blur, $shift-y: 0, $shift-x: 0, $stretch: 0) {
   box-shadow: $shift-x $shift-y $blur $stretch $color;
 }
 
 
-
-// Display
+/************************************************
+ *                D I S P L A Y                 *
+ ************************************************/
 
 // flex
 
@@ -125,13 +127,13 @@
 }
 
 @mixin flex-between-center() {
-  @include flex-vcenter;
-  justify-content: space-between;
+  @include flex-hbetween;
+  align-items: center;
 }
 
 @mixin flex-center-center() {
-  @include flex-vcenter;
-  justify-content: center;
+  @include flex-hcenter;
+  align-items: center;
 }
 
 @mixin flex-column() {
@@ -140,13 +142,14 @@
 }
 
 @mixin flex-column-center() {
-  @include flex-vcenter;
-  flex-direction: column;
+  @include flex-column;
+  align-items: center;
 }
 
 
-
-// Position
+/************************************************
+ *               P O S I T I O N                *
+ ************************************************/
 
 @mixin position-top-left($top: 0, $left: 0) {
   top: $top;
@@ -158,13 +161,13 @@
   right: $right;
 }
 
-@mixin position-top-bottom-left($top: 0, $bottom: 0, $left: 0) {
+@mixin position-top-left-bottom($top: 0, $left: 0, $bottom: $top) {
   top: $top;
   bottom: $bottom;
   left: $left;
 }
 
-@mixin position-top-bottom-right($top: 0, $bottom: 0, $right: 0) {
+@mixin position-top-right-bottom($top: 0, $right: 0, $bottom: $top) {
   top: $top;
   bottom: $bottom;
   right: $right;
@@ -181,8 +184,9 @@
 }
 
 
-
-// Padding / Margin
+/************************************************
+ *        P A D D I N G  /  M A R G I N         *
+ ************************************************/
 
 @mixin padding-horizontal($left: auto, $right: $left) {
   padding-left: $left;
@@ -202,69 +206,4 @@
 @mixin margin-vertical($top: auto, $bottom: $top) {
   margin-top: $top;
   margin-bottom: $bottom;
-}
-
-
-
-// Calc size
-
-// width
-
-@mixin calc-width($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    width: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    width: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-
-// height
-
-@mixin calc-height($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    height: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    height: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-
-// pudding
-
-@mixin calc-padding-left($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    padding-left: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    padding-left: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
-}
-
-@mixin calc-padding-horizontal($min, $max, $size-start, $size-end, $top: 0, $bottom: $top, $sign: false) {
-  @if $sign {
-    padding: $top calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}) $bottom;
-  } @else {
-    padding: $top calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}) $bottom;
-  }
-}
-
-@mixin calc-padding-right-with-scroll($min, $max, $size-start, $size-end, $size-max: 0, $sign: false) {
-  @if $sign {
-    padding-right: max(#{$size-max},
-                  calc(#{$max + px} + 100% - 100vw + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}));
-  } @else {
-    padding-right: max(#{$size-max},
-                  calc(#{$max + px} + 100% - 100vw - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)}));
-  }
-}
-
-
-// margin
-
-@mixin calc-margin-top($min, $max, $size-start, $size-end, $sign: false) {
-  @if $sign {
-    margin-top: calc(#{$max + px} + (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  } @else {
-    margin-top: calc(#{$max + px} - (#{$size-end + px} - 100vw) * #{($max - $min) / ($size-end - $size-start)});
-  }
 }

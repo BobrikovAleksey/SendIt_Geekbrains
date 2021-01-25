@@ -46,7 +46,7 @@
     }
 
     @media (min-width: $SizeTablet) and (max-width: $SizeDesktop - 1px) {
-      @include position-top-bottom-right(0, 6px, calc-size-with-scroll-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29));
+      @include position-top-right-bottom(0, calc-size-with-scroll-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN - 29), 6px);
       position: absolute;
       margin: auto;
     }

@@ -1,89 +1,91 @@
-// Sizes
+/************************************************
+ *                  S I Z E S                   *
+ ************************************************/
 
 // breakpoints
+
 $SizePhoneN: 320;
 $SizePhone: 320px;
 $SizeTabletN: 768;
 $SizeTablet: 768px;
 $SizeDesktopN: 1440;
 $SizeDesktop: 1440px;
-$Breakpoint-1220N: 1220;
-$Breakpoint-1220: 1220px;
-$Breakpoint-830N: 830;
-$Breakpoint-830: 830px;
-$Breakpoint-730N: 730;
-$Breakpoint-730: 730px;
+
 $Breakpoint-630N: 630;
 $Breakpoint-630: 630px;
+$Breakpoint-730N: 730;
+$Breakpoint-730: 730px;
+$Breakpoint-830N: 830;
+$Breakpoint-830: 830px;
+$Breakpoint-1220N: 1220;
+$Breakpoint-1220: 1220px;
 
 
 // background
-$WidthPhoneBG: 790px;
-$WidthPhoneBGN: 790;
-$HeightPhoneBG: 288px;
-$HeightPhoneBGN: 288;
-$WidthTabletBG: 1138px;
-$WidthTabletBGN: 1138;
-$HeightTabletBG: 415px;
-$HeightTabletBGN: 415;
-$WidthDesktopBG: 1440px;
-$WidthDesktopBGN: 1440;
-$HeightDesktopBG: 523px;
-$HeightDesktopBGN: 523;
 
+$WidthPhoneBGN: 790;
+$WidthPhoneBG: 790px;
+$HeightPhoneBGN: 288;
+$HeightPhoneBG: 288px;
+$WidthTabletBGN: 1138;
+$WidthTabletBG: 1138px;
+$HeightTabletBGN: 415;
+$HeightTabletBG: 415px;
+$WidthDesktopBGN: 1440;
+$WidthDesktopBG: 1440px;
+$HeightDesktopBGN: 523;
+$HeightDesktopBG: 523px;
 
 // padding
-$ContainerPaddingLgN: 140;
-$ContainerPaddingLg: 140px;
-$ContainerPaddingMdN: 34;
-$ContainerPaddingMd: 34px;
+
 $ContainerPaddingSmN: 21;
 $ContainerPaddingSm: 21px;
-
+$ContainerPaddingMdN: 34;
+$ContainerPaddingMd: 34px;
+$ContainerPaddingLgN: 140;
+$ContainerPaddingLg: 140px;
 
 // input, button
-$InputWidthLgN: 360;
-$InputWidthLg: 360px;
-$InputHeightLgN: 50;
-$InputHeightLg: 50px;
-$InputWidthMdN: 280;
-$InputWidthMd: 280px;
-$InputHeightMdN: 48;
-$InputHeightMd: 48px;
+
 $InputWidthSmN: 278;
 $InputWidthSm: 278px;
 $InputHeightSmN: 40;
 $InputHeightSm: 40px;
+$InputWidthMdN: 280;
+$InputWidthMd: 280px;
+$InputHeightMdN: 48;
+$InputHeightMd: 48px;
+$InputWidthLgN: 360;
+$InputWidthLg: 360px;
+$InputHeightLgN: 50;
+$InputHeightLg: 50px;
 
 
-
-// Palette
+/************************************************
+ *                P A L E T T E                 *
+ ************************************************/
 
 // aquamarine
 $Aquamarine: #7CC3E1;
-$LightAquamarine: rgba(#7CC3E1, 0.6);
-
+$LightAquamarine: rgba($Aquamarine, 0.6);
 
 // gray
 $Black: #495C6C;
 $Gray: #B3B3B3;
-$LightGray: #C4C4C4;
 $VeryLightGray: #E9E9E9;
+$LightGray: #C4C4C4;
 $PearlLightGray: #9E9E9E;
 $VeryDarkGray: #363636;
 $DarkGray: $VeryDarkGray;   // удалить
 
-
 // lavender
 $Lavender: #D2ECF7;
-
 
 // blue
 $Blue: #008DCD;
 $LightBlue: #94D1EC;
 $DarkBlue: #0055B8;
 $VeryDarkBlue: #003675;
-
 
 // orange
 $Orange: #FFCC00;

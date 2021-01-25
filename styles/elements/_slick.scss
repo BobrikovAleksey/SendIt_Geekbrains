@@ -1,4 +1,4 @@
-@import "../mixins", "../vars";
+@import "../mixins", "../vars", "../functions";
 
 
 .slick {
@@ -19,13 +19,13 @@
     }
 
     @media (max-width: $SizeDesktop - 1px) {
-      @include calc-width(14, 22, $SizeTabletN, $SizeDesktopN);
-      @include calc-height(14, 22, $SizeTabletN, $SizeDesktopN);
+      width: calc-size-tablet-desktop(14, 22);
+      height: calc-size-tablet-desktop(14, 22);
     }
 
     @media (max-width: $Breakpoint-730) {
-      @include calc-width(14, 22, $SizePhoneN, $Breakpoint-730N);
-      @include calc-height(14, 22, $SizePhoneN, $Breakpoint-730N);
+      width: calc-size(14, 22, $SizePhoneN, $Breakpoint-730N);
+      height: calc-size(14, 22, $SizePhoneN, $Breakpoint-730N);
     }
 
     @media (max-width: $SizeTablet), (max-width: $SizePhone) {

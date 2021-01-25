@@ -1,20 +1,20 @@
-@import "../mixins", "../vars";
+@import "../mixins", "../vars", "../functions";
 
 
 .container {
-  max-width: $WidthDesktopBG;
+  max-width: 1440px;
   min-width: 320px;
   padding: 0 calc(#{$ContainerPaddingLg} + 100% - 100vw) 0 $ContainerPaddingLg;
   margin: 0 auto;
 
   @media (max-width: $SizeDesktop - 1px) {
-    @include calc-padding-right-with-scroll($ContainerPaddingMdN, $ContainerPaddingLgN, $SizeTabletN, $SizeDesktopN, $ContainerPaddingSm);
-    @include calc-padding-left($ContainerPaddingMdN, $ContainerPaddingLgN, $SizeTabletN, $SizeDesktopN);
+    @include padding-horizontal(calc-size-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN),
+                                calc-size-with-scroll-tablet-desktop($ContainerPaddingMdN, $ContainerPaddingLgN, $ContainerPaddingSm));
   }
 
   @media (max-width: $SizeTablet - 1px) {
-    @include calc-padding-right-with-scroll($ContainerPaddingSmN, $ContainerPaddingMdN, $SizePhoneN, $SizeTabletN, $ContainerPaddingSm);
-    @include calc-padding-left($ContainerPaddingSmN, $ContainerPaddingMdN, $SizePhoneN, $SizeTabletN);
+    @include padding-horizontal(calc-size-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN),
+                                calc-size-with-scroll-phone-tablet($ContainerPaddingSmN, $ContainerPaddingMdN, $ContainerPaddingSm));
   }
 
   @media (max-width: $SizePhone + calc(100vw - 100%)) {

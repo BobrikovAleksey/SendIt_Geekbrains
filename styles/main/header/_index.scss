@@ -26,11 +26,11 @@
     }
 
     @media (max-width: $Breakpoint-630) {
-      min-height: calc(#{$HeightTabletBG + 284px} - (#{$SizeTablet} - 100vw) * #{($HeightTabletBGN - $HeightPhoneBGN) / ($SizeTabletN - $SizePhoneN)} - (#{$Breakpoint-630} - 100vw) * #{57 / ($Breakpoint-630N - $SizePhoneN)});
+      min-height: calc(#{$HeightTabletBG + 274px} - (#{$SizeTablet} - 100vw) * #{($HeightTabletBGN - $HeightPhoneBGN) / ($SizeTabletN - $SizePhoneN)} - (#{$Breakpoint-630} - 100vw) * #{58 / ($Breakpoint-630N - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
-      min-height: #{$HeightPhoneBG + 227px};
+      min-height: #{$HeightPhoneBG + 216px};
       background-size: 790px;
       background-position: -412px -11px;
     }
@@ -93,11 +93,11 @@
     @media (max-width: $Breakpoint-630) {
       width: 80%;
       top: auto;
-      bottom: calc(44px - (#{$Breakpoint-630} - 100vw) * #{6 / ($Breakpoint-630N - $SizePhoneN)});
+      bottom: calc(33px - (#{$Breakpoint-630} - 100vw) * #{6 / ($Breakpoint-630N - $SizePhoneN)});
     }
 
     @media (max-width: $SizePhone) {
-      bottom: 38px;
+      bottom: 27px;
       left: $ContainerPaddingSm;
     }
   }

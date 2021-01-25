@@ -1,4 +1,4 @@
-@import "fonts", "mixins", "vars";
+@import "fonts", "mixins", "vars", "functions";
 
 
 * {
@@ -13,8 +13,8 @@
 
 
 body {
+  @include font-family("regular");
   user-select: none;
-  font-family: "Myriad Pro Regular", serif;
   color: black;
 }
 
@@ -43,6 +43,7 @@ p {
 
 a {
   @include A;
+  color: black;
 }
 
 
