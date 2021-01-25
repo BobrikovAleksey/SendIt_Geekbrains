@@ -927,17 +927,19 @@
 .scenario__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 47px 120px;
+  grid-gap: 47px 100px;
   padding: 64px 182px 69px 198px;
 }
 @media (max-width: 1439px) {
   .scenario__container {
-    grid: calc(47px - (1440px - 100vw) * 0.037202381) calc(120px - (1440px - 100vw) * 0.0729166667);
+    grid-gap: calc(47px - (1440px - 100vw) * 0.037202381) calc(100px - (1440px - 100vw) * 0.0595238095);
     padding: calc(64px - (1440px - 100vw) * 0.0416666667) calc(182px - (1440px - 100vw) * 0.1919642857) calc(69px - (1440px - 100vw) * 0.0074404762) calc(198px - (1440px - 100vw) * 0.1845238095);
+    padding: calc(64px - (1440px - 100vw) * 0.0416666667) max(calc(21px - 100vw + 320px), calc(182px + 100% - 100vw - (1440px - 100vw) * 0.1919642857)) calc(69px - (1440px - 100vw) * 0.0074404762) calc(198px - (1440px - 100vw) * 0.1845238095);
   }
 }
 @media (max-width: 767px) {
   .scenario__container {
+    padding: calc(36px - (768px - 100vw) * 0.0144927536) calc(53px - (768px - 100vw) * 0.231884058) calc(64px - (768px - 100vw) * 0.0289855072) calc(74px - (768px - 100vw) * 0.384057971);
     padding: calc(36px - (768px - 100vw) * 0.0144927536) max(calc(21px - 100vw + 320px), calc(53px + 100% - 100vw - (768px - 100vw) * 0.231884058)) calc(64px - (768px - 100vw) * 0.0289855072) calc(74px - (768px - 100vw) * 0.384057971);
   }
 }
@@ -946,7 +948,7 @@
     grid-template-columns: 1fr;
     grid-gap: calc(27px - (630px - 100vw) * 0.035483871);
     justify-items: center;
-    padding: calc(45px - (630px - 100vw) * 0.0580645161) 21px calc(48px - (630px - 100vw) * 0.1096774194);
+    padding: calc(34px - (630px - 100vw) * 0.0225806452) 21px calc(60px - (630px - 100vw) * 0.1483870968);
   }
 }
 @media (max-width: 320px) {
@@ -1025,14 +1027,14 @@
   .scenario__image_step-2 {
     width: calc(459px - (1440px - 100vw) * 0.2693452381);
     height: calc(299px - (1440px - 100vw) * 0.1755952381);
-    margin: calc(12px - (1440px - 100vw) * 0.0148809524) 0 0 1px;
+    margin-top: calc(12px - (1440px - 100vw) * 0.0148809524);
   }
 }
 @media (max-width: 630px) {
   .scenario__image_step-2 {
     width: calc(459px - (630px - 100vw) * 0.5870967742);
     height: calc(299px - (630px - 100vw) * 0.3806451613);
-    margin: calc(12px - (630px - 100vw) * 0.0225806452) 0 0 1px;
+    margin-top: calc(12px - (630px - 100vw) * 0.0225806452);
   }
 }
 @media (max-width: 320px) {
@@ -1058,7 +1060,7 @@
   .scenario__image_step-3 {
     width: calc(460px - (630px - 100vw) * 0.5903225806);
     height: calc(311px - (630px - 100vw) * 0.4);
-    margin: calc(17px - (630px - 100vw) * 0.0064516129) 0 0 1px;
+    margin-top: calc(17px - (630px - 100vw) * 0.0064516129);
   }
 }
 @media (max-width: 320px) {
@@ -1077,14 +1079,14 @@
   .scenario__image_step-4 {
     width: calc(461px - (1440px - 100vw) * 0.2708333333);
     height: calc(299px - (1440px - 100vw) * 0.1755952381);
-    margin: calc(14px - (1440px - 100vw) * 0.0178571429) 0 0 1px;
+    margin-top: calc(14px - (1440px - 100vw) * 0.0178571429);
   }
 }
 @media (max-width: 630px) {
   .scenario__image_step-4 {
     width: calc(461px - (630px - 100vw) * 0.5967741935);
     height: calc(299px - (630px - 100vw) * 0.3870967742);
-    margin: calc(14px - (630px - 100vw) * 0.0387096774) 0 0 1px;
+    margin-top: calc(14px - (630px - 100vw) * 0.0387096774);
   }
 }
 @media (max-width: 320px) {
@@ -1148,32 +1150,32 @@
   }
 }
 .scenario__text {
-  min-height: 60px;
   font-size: 20px;
   line-height: 24px;
+  min-height: 60px;
   margin-top: 9px;
 }
 @media (max-width: 1439px) {
   .scenario__text {
-    min-height: calc(60px - (1440px - 100vw) * 0.0238095238);
     font-size: calc(20px - (1440px - 100vw) * 0.005952381);
     line-height: calc(24px - (1440px - 100vw) * 0.0074404762);
+    min-height: calc(60px - (1440px - 100vw) * 0.0238095238);
     margin-top: calc(9px - (1440px - 100vw) * -0.0029761905);
   }
 }
 @media (max-width: 630px) {
   .scenario__text {
-    min-height: calc(60px - (630px - 100vw) * 0.0709677419);
     font-size: calc(20px - (630px - 100vw) * 0.0193548387);
     line-height: calc(24px - (630px - 100vw) * 0.0225806452);
+    min-height: calc(60px - (630px - 100vw) * 0.0709677419);
     margin-top: calc(5px - (630px - 100vw) * 0.0064516129);
   }
 }
 @media (max-width: 320px) {
   .scenario__text {
-    min-height: 38px;
     font-size: 14px;
     line-height: 17px;
+    min-height: 38px;
     margin-top: 3px;
   }
 }

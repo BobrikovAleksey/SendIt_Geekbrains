@@ -17,6 +17,10 @@
   @return calc-size($size-min, $size-max, $SizeTabletN, $SizeDesktopN, $inc);
 }
 
+@function calc-size-630px-tablet($size-min, $size-max, $inc: false) {
+  @return calc-size($size-min, $size-max, $Breakpoint-630N, $SizeTabletN, $inc);
+}
+
 @function calc-size-phone-tablet($size-min, $size-max, $inc: false) {
   @return calc-size($size-min, $size-max, $SizePhoneN, $SizeTabletN, $inc);
 }
@@ -42,6 +46,10 @@
 
 @function calc-size-with-scroll-tablet-desktop($size-min, $size-max, $min-size-px: $ContainerPaddingSm, $inc: false) {
   @return calc-size-with-scroll($size-min, $size-max, $SizeTabletN, $SizeDesktopN, $min-size-px, $inc);
+}
+
+@function calc-size-with-scroll-630px-tablet($size-min, $size-max, $min-size-px: $ContainerPaddingSm, $inc: false) {
+  @return calc-size-with-scroll($size-min, $size-max, $Breakpoint-630N, $SizeTabletN, $min-size-px, $inc);
 }
 
 @function calc-size-with-scroll-phone-tablet($size-min, $size-max, $min-size-px: $ContainerPaddingSm, $inc: false) {
