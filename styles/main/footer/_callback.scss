@@ -1,54 +1,90 @@
-@import "../../vars", "../../mixins";
+@import "../../vars", "../../mixins", "../../functions";
 
 
 .footer-callback {
+  @include flex-between-center;
   min-height: 110px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1px 12px 7px;
+  padding: 7px 12px;
 
   @media (max-width: $SizeDesktop - 1px) {
-    padding: calc(1px + (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
-             calc(12px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)})
-             calc(7px - (#{$SizeDesktop} - 100vw) * #{6 / ($SizeDesktopN - $SizeTabletN)});
+    padding: calc-size-tablet-desktop(8, 7) calc-size-tablet-desktop(0, 12);
+  }
+
+  @media (max-width: $SizeTablet - 1px) {
+    min-height: calc-size-phone-tablet(178, 110);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: calc-size-phone-tablet(18, 24) 0 calc-size-phone-tablet(12, 16);
+  }
+
+  @media (max-width: $SizePhone) {
+    min-height: 178px;
+    padding: 18px 0 12px;
   }
 
 
   &__title {
     text-transform: uppercase;
-    padding-right: 40px;
+    margin-bottom: 6px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      font-size: calc(30px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)});
-      line-height: calc(36px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
-      padding-right: calc(40px - (#{$SizeDesktop} - 100vw) * #{20 / ($SizeDesktopN - $SizeTabletN)});
+      @include font-size(calc-size-tablet-desktop(20, 30), calc-size-tablet-desktop(24, 36));
+      margin-bottom: calc-size-tablet-desktop(-2, 6);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-phone-tablet(18, 30), calc-size-phone-tablet(22, 36));
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $SizePhone) {
+      @include font-size(18px, 22px);
     }
   }
 
 
   &__form {
-    width: 754px;
-    height: fit-content;
-    display: flex;
-    justify-content: space-between;
+    @include flex-hbetween;
+    width: 100%;
+    max-width: #{($InputWidthLg + 2) * 2 + 30px};
     flex-wrap: wrap;
-    padding-top: 29px;
+    margin-top: 23px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(754px - (#{$SizeDesktop} - 100vw) * #{294 / ($SizeDesktopN - $SizeTabletN)});
-      padding-top: calc(29px - (#{$SizeDesktop} - 100vw) * #{8 / ($SizeDesktopN - $SizeTabletN)});
+      max-width: calc-size-tablet-desktop(220 * 2 + 20, ($InputWidthLgN + 2) * 2 + 30);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-top: calc-size-phone-tablet(10, 15);
+    }
+
+    @media (max-width: $SizePhone) {
+      width: 100%;
+      margin-top: 10px;
     }
   }
 
 
   &__phone, &__button {
-    width: 362px;
-    height: 50px;
+    width: #{$InputWidthLg + 2px};
+    height: $InputHeightLg;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(362px - (#{$SizeDesktop} - 100vw) * #{142 / ($SizeDesktopN - $SizeTabletN)});
-      height: calc(50px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size-tablet-desktop(220, $InputWidthLgN + 2);
+      height: calc-size-tablet-desktop($InputHeightMdN, $InputHeightLgN);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: 100%;
+      height: calc-size-phone-tablet($InputHeightSm, $InputHeightMd);
+    }
+
+    @media (max-width: $SizePhone) {
+      height: $InputHeightSm;
     }
   }
 
@@ -56,25 +92,45 @@
   &__phone {
     color: $VeryDarkGray;
     border-color: $VeryDarkGray;
-    padding: 0 29px 1px;
+    padding: 8px 29px;
     &::placeholder {
       color: $VeryDarkGray;
     }
 
     @media (max-width: $SizeDesktop - 1px) {
-      font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
-      line-height: calc(19px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
-      padding: calc((#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)})
-               calc(29px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)}) 1px;
+      @include font-size(calc-size-tablet-desktop(14, 16), calc-size-tablet-desktop(17, 19));
+      padding: 8px calc-size-tablet-desktop(17, 29);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-phone-tablet(14, 16), calc-size-phone-tablet(17, 19));
+      padding: 8px calc-size-tablet-desktop(23, 29);
+    }
+
+    @media (max-width: $SizePhone) {
+      @include font-size(14px, 17px);
+      padding: 8px 23px;
     }
   }
+
 
   &__button {
     justify-content: center;
     text-align: center;
 
     @media (max-width: $SizeDesktop - 1px) {
-      padding: calc(9px + (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}) 26px 8px;
+      padding: 8px 26px 7px;
+      margin-left: calc-size-tablet-desktop(20, 30);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      padding: 8px calc-size-phone-tablet(20, 26) 7px;
+      margin: calc-size-phone-tablet(10, 14) 0 0 20px;
+    }
+
+    @media (max-width: $SizePhone) {
+      padding: 8px 20px 7px;
+      margin-top: 10px;
     }
   }
 
@@ -84,7 +140,15 @@
     margin-top: 8px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      margin-top: calc(8px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc-size-tablet-desktop(7, 8);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      margin: calc-size-phone-tablet(12, 16) 0 0 calc-size-phone-tablet(5, 7);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin: 12px 0 0 5px;
     }
   }
 }

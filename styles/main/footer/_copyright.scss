@@ -1,18 +1,24 @@
-@import "../../vars", "../../mixins";
+@import "../../vars", "../../mixins", "../../functions";
 
 
 .footer-copyright {
+  @include flex-between-center;
   min-height: 62px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 12px 12px 22px;
 
   @media (max-width: $SizeDesktop - 1px) {
-    min-height: calc(62px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
-    padding: calc(12px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)})
-             calc(12px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)})
-             calc(22px - (#{$SizeDesktop} - 100vw) * #{10 / ($SizeDesktopN - $SizeTabletN)});
+    min-height: calc-size-tablet-desktop(44, 62);
+    padding: calc-size-tablet-desktop(8, 12) calc-size-tablet-desktop(0, 12) calc-size-tablet-desktop(12, 22);
+  }
+
+  @media (max-width: $SizeTablet - 1px) {
+    min-height: calc-size-tablet-desktop(40, 44);
+    padding: calc-size-tablet-desktop(8, 12) calc-size-tablet-desktop(0, 12) calc-size-tablet-desktop(12, 22);
+  }
+
+  @media (max-width: $SizePhone) {
+    min-height: 40px;
+    padding: calc-size-tablet-desktop(8, 12) calc-size-tablet-desktop(0, 12) calc-size-tablet-desktop(12, 22);
   }
 
 
@@ -20,8 +26,7 @@
     width: 40%;
 
     @media (max-width: $SizeDesktop - 1px) {
-      font-size: calc(16px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
-      line-height: calc(19px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)});
+      @include font-size(calc-size-tablet-desktop(12, 16), calc-size-tablet-desktop(14, 19));
     }
 
 
@@ -29,7 +34,7 @@
       margin: 0 69px;
 
       @media (max-width: $SizeDesktop - 1px) {
-        margin: 0 calc(69px - (#{$SizeDesktop} - 100vw) * #{45 / ($SizeDesktopN - $SizeTabletN)});
+        margin: 0 calc-size-tablet-desktop(24, 69);
       }
     }
 
@@ -56,44 +61,42 @@
 
 
   &__links {
+    @include flex-hcenter;
     width: 20%;
-    display: flex;
-    justify-content: center;
     margin-top: 6px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      margin-top: calc(6px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)});
+      margin-top: calc-size-tablet-desktop(4, 6);
     }
   }
 
 
   &__link {
+    @include flex-center-center;
     cursor: pointer;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: 29px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(20px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
-      height: calc(20px - (#{$SizeDesktop} - 100vw) * #{7 / ($SizeDesktopN - $SizeTabletN)});
-      margin-left: calc(29px - (#{$SizeDesktop} - 100vw) * #{13 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size-tablet-desktop(13, 20);
+      height: calc-size-tablet-desktop(13, 20);
+      margin-left: calc-size-tablet-desktop(16, 29);
     }
 
     &:first-of-type {
       margin-left: -1px;
 
       @media (max-width: $SizeDesktop - 1px) {
-        margin-left: calc(-1px + (#{$SizeDesktop} - 100vw) * #{1 / ($SizeDesktopN - $SizeTabletN)});
+        margin-left: calc-size-tablet-desktop(0, -1);
       }
     }
 
 
     img {
       width: inherit;
+      height: auto;
     }
   }
 }

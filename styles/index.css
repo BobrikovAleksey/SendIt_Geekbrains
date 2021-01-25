@@ -90,6 +90,11 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
+img {
+  width: auto;
+  height: auto;
+}
+
 li {
   list-style-type: none;
 }
@@ -99,10 +104,10 @@ li {
   font-size: 16px;
   line-height: 19px;
   width: 360px;
-  height: 48px;
+  height: 50px;
   color: white;
   border: 1px solid white;
-  border-radius: 30px;
+  border-radius: 31.25px;
   padding: 1px 20px 0;
 }
 .input::placeholder {
@@ -139,7 +144,7 @@ li {
   cursor: pointer;
   transition: linear 250ms;
   width: 360px;
-  height: 48px;
+  height: 50px;
   text-transform: uppercase;
   text-align: center;
   border-radius: 30px;

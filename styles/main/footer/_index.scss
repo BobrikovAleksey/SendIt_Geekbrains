@@ -14,7 +14,15 @@
     padding: 0 135px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      padding: 0 calc(135px - (#{$SizeDesktop} - 100vw) * #{101 / ($SizeDesktopN - $SizeTabletN)});
+      padding: 0 calc-size-with-scroll-tablet-desktop(34, 135, 21px) 0 calc-size-tablet-desktop(34, 135);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      padding: 0 calc-size-phone-tablet(15, 34);
+    }
+
+    @media (max-width: $SizePhone) {
+      padding: 0 15px;
     }
   }
 
@@ -24,8 +32,18 @@
     height: 48px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc(160px - (#{$SizeDesktop} - 100vw) * #{61 / ($SizeDesktopN - $SizeTabletN)});
-      height: calc(48px - (#{$SizeDesktop} - 100vw) * #{18 / ($SizeDesktopN - $SizeTabletN)});
+      width: calc-size-tablet-desktop(99, 160);
+      height: calc-size-tablet-desktop(30, 48);
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      width: calc-size-tablet-desktop(99, 160);
+      height: calc-size-tablet-desktop(30, 48);
+    }
+
+    @media (max-width: $SizePhone) {
+      width: calc-size-tablet-desktop(99, 160);
+      height: calc-size-tablet-desktop(30, 48);
     }
   }
 }
