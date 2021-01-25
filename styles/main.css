@@ -1284,15 +1284,15 @@
     font-size: calc(36px - (1440px - 100vw) * 0.0148809524);
     line-height: calc(43px - (1440px - 100vw) * 0.0178571429);
     letter-spacing: calc(1px - (1440px - 100vw) * 0.000297619);
-    margin-left: calc((1440px - 100vw) * 0.0014880952);
+    margin-left: calc(0px - (1440px - 100vw) * -0.0014880952);
   }
 }
 @media (max-width: 730px) {
   .review__name {
-    font-size: calc(32px - (730px - 100vw) * 0.0243902439);
+    font-size: calc(32px - (730px - 100vw) * 0.0146341463);
     line-height: calc(43px - (730px - 100vw) * 0.0292682927);
     letter-spacing: calc(1px - (730px - 100vw) * 0.0007317073);
-    margin-left: calc((730px - 100vw) * 0.0024390244);
+    margin-left: calc(0px - (730px - 100vw) * -0.0024390244);
   }
 }
 @media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
@@ -1325,7 +1325,7 @@
 @media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
   .review__title {
     font-size: 18px;
-    line-height: 21.6px;
+    line-height: 22px;
     margin-top: 2px;
   }
 }
@@ -1373,12 +1373,12 @@
 }
 @media (max-width: 1439px) {
   .review__where-to {
-    margin-top: calc(3px + (1440px - 100vw) * 0.0014880952);
+    margin-top: calc(3px - (1440px - 100vw) * -0.0014880952);
   }
 }
 @media (max-width: 730px) {
   .review__where-to {
-    margin-top: calc(3px + (730px - 100vw) * 0.0024390244);
+    margin-top: calc(3px - (730px - 100vw) * -0.0024390244);
   }
 }
 @media (max-width: 320px), (min-width: 731px) and (max-width: 768px) {
@@ -1419,36 +1419,36 @@
   background: white;
 }
 .feedback__container {
-  min-height: 547px;
   padding-top: 63px;
   padding-bottom: 48px;
+  min-height: 547px;
 }
 @media (max-width: 1439px) {
   .feedback__container {
-    min-height: calc(547px - (1440px - 100vw) * 0.2172619048);
     padding-top: calc(63px - (1440px - 100vw) * 0.037202381);
     padding-bottom: calc(48px - (1440px - 100vw) * 0.0238095238);
+    min-height: calc(547px - (1440px - 100vw) * 0.2172619048);
   }
 }
 @media (max-width: 768px) {
   .feedback__container {
-    min-height: 401px;
     padding-top: 38px;
     padding-bottom: 32px;
+    min-height: 401px;
   }
 }
 @media (max-width: 730px) {
   .feedback__container {
-    min-height: calc(401px - (730px - 100vw) * 0.187804878);
     padding-top: calc(38px - (730px - 100vw) * 0.0634146341);
     padding-bottom: calc(32px - (730px - 100vw) * 0.0487804878);
+    min-height: calc(401px - (730px - 100vw) * 0.187804878);
   }
 }
 @media (max-width: 320px) {
   .feedback__container {
-    min-height: 324px;
     padding-top: 12px;
     padding-bottom: 12px;
+    min-height: 324px;
   }
 }
 @media (max-width: 730px) {
@@ -1504,8 +1504,10 @@
 .feedback__reviews .slick-arrow {
   top: 122px;
 }
-.feedback__reviews .slick-arrow:hover, .feedback__reviews .slick-arrow:active, .feedback__reviews .slick-arrow:focus {
-  border-color: #008DCD;
+@media (pointer: fine) {
+  .feedback__reviews .slick-arrow:hover, .feedback__reviews .slick-arrow:active, .feedback__reviews .slick-arrow:focus {
+    border-color: #008DCD;
+  }
 }
 @media (max-width: 1439px) {
   .feedback__reviews .slick-arrow {
@@ -1522,17 +1524,17 @@
 }
 @media (max-width: 1439px) {
   .feedback__reviews .slick-prev {
-    left: calc(-95px + (1440px - 100vw) * 0.056547619);
+    left: calc(-95px - (1440px - 100vw) * -0.056547619);
   }
 }
 @media (max-width: 768px) {
   .feedback__reviews .slick-prev {
-    left: calc(-57px + (768px - 100vw) * 0.5);
+    left: calc(-57px - (768px - 100vw) * -0.5);
   }
 }
 @media (max-width: 730px) {
   .feedback__reviews .slick-prev {
-    left: calc(-95px + (730px - 100vw) * 0.1780487805);
+    left: calc(-95px - (730px - 100vw) * -0.1780487805);
   }
 }
 @media (max-width: 320px) {
@@ -1545,17 +1547,17 @@
 }
 @media (max-width: 1439px) {
   .feedback__reviews .slick-next {
-    right: calc(-95px + (1440px - 100vw) * 0.0550595238);
+    right: calc(-95px - (1440px - 100vw) * -0.0550595238);
   }
 }
 @media (max-width: 768px) {
   .feedback__reviews .slick-next {
-    right: calc(-58px + (768px - 100vw) * 0.5);
+    right: calc(-58px - (768px - 100vw) * -0.5);
   }
 }
 @media (max-width: 730px) {
   .feedback__reviews .slick-next {
-    right: calc(-96px + (730px - 100vw) * 0.1804878049);
+    right: calc(-96px - (730px - 100vw) * -0.1804878049);
   }
 }
 @media (max-width: 320px) {

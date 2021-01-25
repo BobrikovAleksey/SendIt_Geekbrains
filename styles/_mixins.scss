@@ -24,8 +24,8 @@
 
 
 @mixin font-family($weight: 400) {
-  @if $weight == 300 or $weight == "semilight" {
-    font-family: "Myriad Pro Semilight", serif;
+  @if $weight == 300 or $weight == "light" {
+    font-family: "Myriad Pro Light", serif;
   } @else if $weight == 600 or $weight == "semibold" {
     font-family: "Myriad Pro Semibold", serif;
   } @else if $weight == 700 or $weight == "bold" {
