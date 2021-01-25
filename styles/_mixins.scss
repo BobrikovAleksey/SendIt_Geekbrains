@@ -151,6 +151,11 @@
  *               P O S I T I O N                *
  ************************************************/
 
+@mixin position-top-bottom($top: 0, $bottom: $top) {
+  top: $top;
+  bottom: $bottom;
+}
+
 @mixin position-top-left($top: 0, $left: 0) {
   top: $top;
   left: $left;

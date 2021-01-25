@@ -4,7 +4,7 @@
 .container {
   max-width: 1440px;
   min-width: 320px;
-  padding: 0 calc(#{$ContainerPaddingLg} + 100% - 100vw) 0 $ContainerPaddingLg;
+  padding: 0 $ContainerPaddingLg;
   margin: 0 auto;
 
   @media (max-width: $SizeDesktop - 1px) {

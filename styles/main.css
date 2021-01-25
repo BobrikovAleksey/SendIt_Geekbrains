@@ -88,8 +88,23 @@
 /************************************************
  *        P A D D I N G  /  M A R G I N         *
  ************************************************/
-.main-menu {
-  display: none;
+/************************************************
+ *                  S I Z E S                   *
+ ************************************************/
+/************************************************
+ *                P A L E T T E                 *
+ ************************************************/
+/************************************************
+ *              C A L C  S I Z E S              *
+ ************************************************/
+/************************************************
+ *   C A L C  S I Z E S  W I T H  S C R O L L   *
+ ************************************************/
+@media (max-width: 767px) {
+  .main-menu {
+    visibility: hidden;
+    position: absolute;
+  }
 }
 .main-menu__list {
   display: flex;
@@ -99,26 +114,24 @@
 @media (max-width: 1439px) {
   .main-menu__list {
     padding: calc(8px - (1440px - 100vw) * 0.0029761905) 2px 0 0;
-    margin-right: calc((1440px - 100vw) * -0.0044642857);
+    margin-right: calc(0px - (1440px - 100vw) * 0.0044642857);
   }
 }
 .main-menu__item {
   margin-left: 60px;
   order: 7;
 }
-.main-menu__item:first-of-type {
-  order: 1;
-  margin-left: 0;
-}
 @media (max-width: 1439px) {
   .main-menu__item {
     margin-left: calc(60px - (1440px - 100vw) * 0.0401785714);
   }
-  .main-menu__item:first-of-type {
-    margin-left: 0;
+}
+@media (max-width: 767px) {
+  .main-menu__item {
+    margin-left: 33px;
   }
 }
-@media (min-width: 768px) and (max-width: 830px) {
+@media (max-width: 830px) {
   .main-menu__item:nth-of-type(4), .main-menu__item:nth-of-type(6) {
     order: 3;
   }
@@ -126,10 +139,14 @@
     order: 5;
   }
 }
+.main-menu__item:first-of-type {
+  order: 1;
+  margin-left: 0;
+}
 .main-menu__link {
-  color: white;
   font-size: 18px;
   line-height: 22px;
+  color: white;
 }
 @media (max-width: 1439px) {
   .main-menu__link {
@@ -139,11 +156,11 @@
 }
 
 .header__container {
-  overflow: hidden;
-  min-height: 523px;
-  background: url("../images/background.jpg") no-repeat 0 -2px;
+  background: url("../images/background.jpg") 0 -2px no-repeat;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
+  min-height: 523px;
   padding-top: 28px;
   position: relative;
 }
@@ -151,12 +168,12 @@
   .header__container {
     min-height: calc(523px - (1440px - 100vw) * 0.1607142857);
     background-size: calc(1440px - (1440px - 100vw) * 0.4494047619) auto;
-    background-position: calc((1440px - 100vw) * -0.3839285714) calc(-2px + (1440px - 100vw) * 0.0029761905);
+    background-position: calc(0px - (1440px - 100vw) * 0.3839285714) calc(-2px - (1440px - 100vw) * -0.0029761905);
   }
 }
 @media (max-width: 767px) {
   .header__container {
-    min-height: calc(415px - 5px - (768px - 100vw) * 0.2834821429);
+    min-height: calc(410px - (768px - 100vw) * 0.2834821429);
     background-size: calc(1138px - (768px - 100vw) * 0.7767857143) auto;
     background-position: calc(-258px - (768px - 100vw) * 0.34375) calc(-2px - (768px - 100vw) * 0.0200892857);
   }
@@ -182,7 +199,7 @@
   .header__logo {
     width: calc(160px - (1440px - 100vw) * 0.0892857143);
     height: calc(46px - (1440px - 100vw) * 0.025297619);
-    margin-top: calc(-1px + (1440px - 100vw) * 0.0029761905);
+    margin-top: calc(-1px - (1440px - 100vw) * -0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -198,20 +215,27 @@
   }
 }
 .header__menu-icon {
+  visibility: hidden;
+  position: absolute;
   cursor: pointer;
-  height: fit-content;
   padding: 4px 2px;
   margin: -5px -2px 0 0;
+}
+@media (max-width: 767px) {
+  .header__menu-icon {
+    visibility: visible;
+    position: static;
+  }
 }
 .header__menu-icon input[type=checkbox] {
   display: none;
 }
 .header__caption {
+  top: 153px;
+  left: 140px;
   width: 60%;
   min-width: 278px;
   position: absolute;
-  top: 153px;
-  left: 140px;
 }
 @media (max-width: 1439px) {
   .header__caption {
@@ -227,9 +251,9 @@
 }
 @media (max-width: 630px) {
   .header__caption {
-    width: 80%;
     top: auto;
     bottom: calc(33px - (630px - 100vw) * 0.0193548387);
+    width: 80%;
   }
 }
 @media (max-width: 320px) {

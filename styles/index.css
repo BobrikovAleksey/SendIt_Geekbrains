@@ -675,7 +675,7 @@ li {
 .container {
   max-width: 1440px;
   min-width: 320px;
-  padding: 0 calc(140px + 100% - 100vw) 0 140px;
+  padding: 0 140px;
   margin: 0 auto;
 }
 @media (max-width: 1439px) {

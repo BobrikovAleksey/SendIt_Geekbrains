@@ -1,17 +1,18 @@
-@import "../../vars", "../../mixins";
+@import "../../vars", "../../mixins", "../../functions";
 
 
 .main-menu {
-  display: none;
+  @media (max-width: $SizeTablet - 1px) {
+    @include hide;
+  }
 
   &__list {
-    display: flex;
-    align-items: center;
+    @include flex-vcenter;
     padding: 8px 2px 0 0;
 
     @media (max-width: $SizeDesktop - 1px) {
-      padding: calc(8px - (#{$SizeDesktop} - 100vw) * #{2 / ($SizeDesktopN - $SizeTabletN)}) 2px 0 0;
-      margin-right: calc((#{$SizeDesktop} - 100vw) * #{-3 / ($SizeDesktopN - $SizeTabletN)})
+      padding: calc-size-tablet-desktop(6, 8) 2px 0 0;
+      margin-right: calc-size-tablet-desktop(-3, 0);
     }
   }
 
@@ -19,37 +20,39 @@
   &__item {
     margin-left: 60px;
     order: 7;
-    &:first-of-type {
-      order: 1;
-      margin-left: 0;
-    }
 
     @media (max-width: $SizeDesktop - 1px) {
-      margin-left: calc(60px - (#{$SizeDesktop} - 100vw) * #{27 / ($SizeDesktopN - $SizeTabletN)});
-      &:first-of-type {
-        margin-left: 0;
-      }
+      margin-left: calc-size-tablet-desktop(33, 60);
     }
 
-    @media (min-width: $SizeTablet) and (max-width: $Breakpoint-830) {
+    @media (max-width: $SizeTablet - 1px) {
+      margin-left: 33px;
+    }
+
+    @media (max-width: $Breakpoint-830) {
       &:nth-of-type(4), &:nth-of-type(6) {
         order: 3;
       }
+
       &:nth-of-type(2), &:nth-of-type(5) {
         order: 5;
       }
+    }
+
+
+    &:first-of-type {
+      order: 1;
+      margin-left: 0;
     }
   }
 
 
   &__link {
+    @include font-size(18px, 22px);
     color: white;
-    font-size: 18px;
-    line-height: 22px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      font-size: calc(18px - (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)});
-      line-height: calc(22px - (#{$SizeDesktop} - 100vw) * #{5 / ($SizeDesktopN - $SizeTabletN)});
+      @include font-size(calc-size-tablet-desktop(14, 18), calc-size-tablet-desktop(17, 22));
     }
   }
 }
