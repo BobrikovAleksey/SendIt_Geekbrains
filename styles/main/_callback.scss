@@ -37,6 +37,7 @@
 
   &__caption {
     width: 760px;
+    max-width: 100%;
     padding-top: 1px;
 
     @media (max-width: $Breakpoint-630) {

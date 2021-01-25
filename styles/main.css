@@ -1076,6 +1076,7 @@
 }
 .callback__caption {
   width: 760px;
+  max-width: 100%;
   padding-top: 1px;
 }
 @media (max-width: 630px) {
@@ -1567,34 +1568,34 @@
   background: #F7F7F7;
 }
 .advantage__container {
-  min-height: 496px;
   padding-top: 95px;
   padding-bottom: 48px;
+  min-height: 496px;
 }
 @media (max-width: 1439px) {
   .advantage__container {
-    min-height: calc(496px - (1440px - 100vw) * 0.2708333333);
     padding-top: calc(95px - (1440px - 100vw) * 0.0952380952);
     padding-bottom: calc(48px - (1440px - 100vw) * 0.0238095238);
+    min-height: calc(496px - (1440px - 100vw) * 0.2708333333);
   }
 }
 @media (max-width: 767px) {
   .advantage__container {
-    min-height: calc(314px + (768px - 100vw) * 0.1986607143);
     padding-top: calc(31px - (768px - 100vw) * 0.0290178571);
     padding-bottom: calc(32px - (768px - 100vw) * 0.0357142857);
+    min-height: calc(314px - (768px - 100vw) * -0.1986607143);
   }
 }
 @media (max-width: 320px) {
   .advantage__container {
-    min-height: 403px;
     padding-top: 18px;
     padding-bottom: 16px;
+    min-height: 403px;
   }
 }
 @media (max-width: 1439px) {
   .advantage__title {
-    margin-left: calc((1440px - 100vw) * 0.0014880952);
+    margin-left: calc(0px - (1440px - 100vw) * -0.0014880952);
   }
 }
 @media (max-width: 767px) {
@@ -1655,13 +1656,13 @@
   }
 }
 .advantage__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 160px;
   height: 160px;
   background: white;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media (max-width: 1439px) {
   .advantage__icon {
@@ -1691,7 +1692,7 @@
 @media (max-width: 1439px) {
   .advantage__icon_free {
     width: calc(84px - (1440px - 100vw) * 0.0416666667);
-    margin: calc(3px - (1440px - 100vw) * 0.0014880952) 0 calc((1440px - 100vw) * 0.0029761905) calc(5px - (1440px - 100vw) * 0.0014880952);
+    margin: calc(3px - (1440px - 100vw) * 0.0014880952) 0 calc(0px - (1440px - 100vw) * -0.0029761905) calc(5px - (1440px - 100vw) * 0.0014880952);
   }
 }
 @media (max-width: 767px) {
@@ -1713,7 +1714,7 @@
 @media (max-width: 1439px) {
   .advantage__icon_checklist {
     width: calc(62px - (1440px - 100vw) * 0.0327380952);
-    margin: 0 0 calc((1440px - 100vw) * 0.0014880952) calc(6px - (1440px - 100vw) * 0.0029761905);
+    margin: 0 0 calc(0px - (1440px - 100vw) * -0.0014880952) calc(6px - (1440px - 100vw) * 0.0029761905);
   }
 }
 @media (max-width: 767px) {
@@ -1812,9 +1813,9 @@
   font-family: "Myriad Pro Regular", serif;
   font-size: 18px;
   line-height: 22px;
-  text-align: center;
   display: flex;
   justify-content: center;
+  text-align: center;
   margin-top: 32px;
 }
 @media (max-width: 1439px) {
