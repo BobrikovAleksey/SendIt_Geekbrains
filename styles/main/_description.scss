@@ -364,14 +364,12 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-phone-tablet(18, 36), calc-size-phone-tablet(22, 43));
       width: 100%;
-      font-size: calc-size-phone-tablet(18, 36);
-      line-height: calc-size-phone-tablet(22, 43);
     }
 
     @media (max-width: $SizePhone) {
-      font-size: 18px;
-      line-height: 22px;
+      @include font-size(18px, 22px);
     }
   }
 
@@ -380,22 +378,19 @@
     margin-top: 26px;
 
     @media (max-width: $SizeDesktop - 1px) {
+      @include font-size(calc-size-tablet-desktop(14, 16), calc-size-tablet-desktop(17, 19));
       width: calc-size-tablet-desktop(280, 460);
-      font-size: calc-size-tablet-desktop(14, 16);
-      line-height: calc-size-tablet-desktop(17, 19);
       margin-top: calc-size-tablet-desktop(20, 26);
     }
 
     @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-phone-tablet(12, 16), calc-size-phone-tablet(14, 19));
       width: 100%;
-      font-size: calc-size-phone-tablet(12, 16);
-      line-height: calc-size-phone-tablet(14, 19);
       margin-top: calc-size-phone-tablet(10, 26);
     }
 
     @media (max-width: $SizePhone) {
-      font-size: 12px;
-      line-height: 14px;
+      @include font-size(12px, 14px);
       margin-top: 10px;
     }
   }

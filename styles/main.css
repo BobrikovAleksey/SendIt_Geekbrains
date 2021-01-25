@@ -629,9 +629,9 @@
 }
 @media (max-width: 767px) {
   .description__title {
-    width: 100%;
     font-size: calc(36px - (768px - 100vw) * 0.0401785714);
     line-height: calc(43px - (768px - 100vw) * 0.046875);
+    width: 100%;
   }
 }
 @media (max-width: 320px) {
@@ -645,17 +645,17 @@
 }
 @media (max-width: 1439px) {
   .description__text {
-    width: calc(460px - (1440px - 100vw) * 0.2678571429);
     font-size: calc(16px - (1440px - 100vw) * 0.0029761905);
     line-height: calc(19px - (1440px - 100vw) * 0.0029761905);
+    width: calc(460px - (1440px - 100vw) * 0.2678571429);
     margin-top: calc(26px - (1440px - 100vw) * 0.0089285714);
   }
 }
 @media (max-width: 767px) {
   .description__text {
-    width: 100%;
     font-size: calc(16px - (768px - 100vw) * 0.0089285714);
     line-height: calc(19px - (768px - 100vw) * 0.0111607143);
+    width: 100%;
     margin-top: calc(26px - (768px - 100vw) * 0.0357142857);
   }
 }
@@ -1037,41 +1037,41 @@
   background: #008DCD;
 }
 .callback__container {
-  min-height: 240px;
   display: flex;
   justify-content: space-between;
   padding-top: 64px;
   padding-bottom: 36px;
+  min-height: 240px;
 }
 @media (max-width: 1439px) {
   .callback__container {
-    min-height: calc(240px - (1220px - 100vw) * 0.1526548673);
     padding-top: calc(64px - (1440px - 100vw) * 0.056547619);
     padding-bottom: calc(36px - (1440px - 100vw) * 0.0357142857);
+    min-height: calc(240px - (1440px - 100vw) * 0.1026785714);
   }
 }
 @media (max-width: 767px) {
   .callback__container {
-    min-height: 171px;
     padding-top: 26px;
     padding-bottom: 12px;
+    min-height: 171px;
   }
 }
 @media (max-width: 630px) {
   .callback__container {
+    padding-top: calc(36px - (630px - 100vw) * 0.0290322581);
+    padding-bottom: calc(12px - (630px - 100vw) * 0.0193548387);
     min-height: calc(171px - (630px - 100vw) * 0.3612903226);
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-top: calc(36px - (630px - 100vw) * 0.0290322581);
-    padding-bottom: calc(12px - (630px - 100vw) * 0.0193548387);
   }
 }
 @media (max-width: 320px) {
   .callback__container {
-    min-height: 283px;
     padding-top: 27px;
     padding-bottom: 6px;
+    min-height: 283px;
   }
 }
 .callback__caption {
