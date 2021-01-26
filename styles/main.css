@@ -3268,8 +3268,8 @@
 }
 @media (max-width: 767px) {
   .partners__container {
-    padding-top: calc(14px - (768px - 100vw) * 0.015625);
-    padding-bottom: calc(14px - (768px - 100vw) * 0.0089285714);
+    padding-top: calc(24px - (768px - 100vw) * 0.0267857143);
+    padding-bottom: calc(18px - (768px - 100vw) * 0.0223214286);
     min-height: calc(112px - (768px - 100vw) * -0.0267857143);
   }
 }
@@ -3455,12 +3455,8 @@
 }
 @media (max-width: 320px) {
   .partners__icon {
+    background-position: 0 0;
     background-size: 66px;
-  }
-}
-@media (max-width: 320px) {
-  .partners__icon img {
-    background-position: 0;
   }
 }
 
@@ -3479,12 +3475,17 @@
 }
 @media (max-width: 1439px) {
   .partners__content .slick-arrow {
-    bottom: calc(11px - (1440px - 100vw) * 0.0119047619);
+    bottom: calc(11px - (1440px - 100vw) * 0.0104166667);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .partners__content .slick-arrow {
-    bottom: 9px;
+    bottom: calc(4px - (768px - 100vw) * -0.0089285714);
+  }
+}
+@media (max-width: 320px) {
+  .partners__content .slick-arrow {
+    bottom: 8px;
   }
 }
 .partners__content .slick-prev {
@@ -3492,12 +3493,12 @@
 }
 @media (max-width: 1439px) {
   .partners__content .slick-prev {
-    left: calc(-94px - (1440px - 100vw) * -0.0535714286);
+    left: calc(-94px - (1440px - 100vw) * -0.0550595238);
   }
 }
 @media (max-width: 767px) {
   .partners__content .slick-prev {
-    left: calc(-58px - (768px - 100vw) * -0.0848214286);
+    left: calc(-72px - (768px - 100vw) * -0.1160714286);
   }
 }
 @media (max-width: 320px) {
@@ -3515,7 +3516,7 @@
 }
 @media (max-width: 767px) {
   .partners__content .slick-next {
-    right: calc(-40px - (768px - 100vw) * -0.0513392857);
+    right: calc(-55px - (768px - 100vw) * -0.0848214286);
   }
 }
 @media (max-width: 320px) {

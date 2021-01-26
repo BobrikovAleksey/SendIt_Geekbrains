@@ -621,6 +621,15 @@
         $('.partners__content').slick({
             infinite: true,
             variableWidth: true,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 631,
+                    settings: {
+                        slidesToScroll: 3,
+                    },
+                },
+            ],
         });
     </script>
 </body>
