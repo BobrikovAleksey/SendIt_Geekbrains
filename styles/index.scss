@@ -1,4 +1,4 @@
-@import "fonts", "mixins", "vars", "functions";
+@import "mixins", "vars", "functions", "fonts";
 
 
 * {
@@ -64,6 +64,14 @@ img {
 
 li {
   list-style-type: none;
+}
+
+
+
+@media (pointer: fine) {
+  a, button, input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 }
 
 

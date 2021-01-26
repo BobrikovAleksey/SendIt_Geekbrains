@@ -1,24 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Myriad Pro Light";
-  src: url("../fonts/myriadpro-light.ttf");
-}
-@font-face {
-  font-family: "Myriad Pro Regular";
-  src: url("../fonts/myriadpro-regular.ttf");
-}
-@font-face {
-  font-family: "Myriad Pro Semibold";
-  src: url("../fonts/myriadpro-semibold.ttf");
-}
-@font-face {
-  font-family: "Myriad Pro Bold";
-  src: url("../fonts/myriadpro-bold.ttf");
-}
-@font-face {
-  font-family: "Myriad Pro Black";
-  src: url("../fonts/myriadpro-black.ttf");
-}
 /************************************************
  *                  S I Z E S                   *
  ************************************************/
@@ -76,6 +56,26 @@
 /************************************************
  *   C A L C  S I Z E S  W I T H  S C R O L L   *
  ************************************************/
+@font-face {
+  font-family: "Myriad Pro Light";
+  src: url("../fonts/myriadpro-light.ttf");
+}
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("../fonts/myriadpro-regular.ttf");
+}
+@font-face {
+  font-family: "Myriad Pro Semibold";
+  src: url("../fonts/myriadpro-semibold.ttf");
+}
+@font-face {
+  font-family: "Myriad Pro Bold";
+  src: url("../fonts/myriadpro-bold.ttf");
+}
+@font-face {
+  font-family: "Myriad Pro Black";
+  src: url("../fonts/myriadpro-black.ttf");
+}
 * {
   box-sizing: border-box;
   outline: none;
@@ -152,6 +152,11 @@ li {
   list-style-type: none;
 }
 
+@media (pointer: fine) {
+  a, button, input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
 /************************************************
  *                  S I Z E S                   *
  ************************************************/
