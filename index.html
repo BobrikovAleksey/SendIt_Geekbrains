@@ -507,6 +507,20 @@
 
                     <span class="partners__icon partners__icon_ups"> </span>
                 </div>
+
+
+
+                <div>
+                    <span class="partners__icon partners__icon_city-express"> </span>
+
+                    <span class="partners__icon partners__icon_dpd"> </span>
+                </div>
+
+                <div>
+                    <span class="partners__icon partners__icon_pony-express"> </span>
+
+                    <span class="partners__icon partners__icon_spsr"> </span>
+                </div>
             </div>
         </div>
     </section>
@@ -620,12 +634,13 @@
 
         $('.partners__content').slick({
             infinite: true,
-            variableWidth: true,
+            slidesToShow: 4,
             slidesToScroll: 4,
             responsive: [
                 {
                     breakpoint: 631,
                     settings: {
+                        slidesToShow: 3,
                         slidesToScroll: 3,
                     },
                 },

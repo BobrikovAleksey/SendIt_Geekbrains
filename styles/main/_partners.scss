@@ -16,39 +16,40 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      @include padding-vertical(calc-size-phone-tablet(12, 24), calc-size-phone-tablet(8, 18));
+      @include padding-vertical(calc-size-phone-tablet(16, 32), calc-size-phone-tablet(8, 24));
       min-height: calc-size-phone-tablet(124, 112);
     }
 
     @media (max-width: $SizePhone) {
-      @include padding-vertical(12px, 8px);
+      @include padding-vertical(16px, 8px);
       min-height: 124px;
     }
   }
 
 
   &__content {
-    width: 983px;
+    width: 1016px;
     display: flex;
     position: relative;
-    margin-left: 24px;
+    margin-left: 56px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      width: calc-size-tablet-desktop(598, 983);
-      margin-left: calc-size-tablet-desktop(17, 24);
+      width: calc-size-tablet-desktop(608, 1016);
+      margin-left: calc-size-tablet-desktop(27, 56);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      width: calc-size-630px-tablet(419, 475);
-      margin-left: 3px;
+      width: calc-size-630px-tablet(444, 508);
+      margin-left: calc-size-phone-tablet(23, -7);
     }
 
     @media (max-width: $Breakpoint-630) {
-      width: calc-size-phone-630px(236, 308);
+      width: calc-size-phone-630px(255, 333);
     }
 
     @media (max-width: $SizePhone) {
-      width: 236px;
+      width: 255px;
+      margin-left: 23px;
     }
   }
 
@@ -213,11 +214,11 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      bottom: calc-size-phone-tablet(8, 4);
+      bottom: calc-size-phone-tablet(12, 4);
     }
 
     @media (max-width: $SizePhone) {
-      bottom: 8px;
+      bottom: 12px;
     }
   }
 
@@ -238,18 +239,18 @@
   }
 
   &-next {
-    right: -72px;
+    right: -40px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      right: calc-size-tablet-desktop(-40, -72);
+      right: calc-size-tablet-desktop(-30, -40);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      right: calc-size-phone-tablet(-17, -55);
+      right: calc-size-phone-tablet(2, -34);
     }
 
     @media (max-width: $SizePhone) {
-      right: -17px;
+      right: 2px;
     }
   }
 }

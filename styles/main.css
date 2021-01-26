@@ -3268,44 +3268,45 @@
 }
 @media (max-width: 767px) {
   .partners__container {
-    padding-top: calc(24px - (768px - 100vw) * 0.0267857143);
-    padding-bottom: calc(18px - (768px - 100vw) * 0.0223214286);
+    padding-top: calc(32px - (768px - 100vw) * 0.0357142857);
+    padding-bottom: calc(24px - (768px - 100vw) * 0.0357142857);
     min-height: calc(112px - (768px - 100vw) * -0.0267857143);
   }
 }
 @media (max-width: 320px) {
   .partners__container {
-    padding-top: 12px;
+    padding-top: 16px;
     padding-bottom: 8px;
     min-height: 124px;
   }
 }
 .partners__content {
-  width: 983px;
+  width: 1016px;
   display: flex;
   position: relative;
-  margin-left: 24px;
+  margin-left: 56px;
 }
 @media (max-width: 1439px) {
   .partners__content {
-    width: calc(983px - (1440px - 100vw) * 0.5729166667);
-    margin-left: calc(24px - (1440px - 100vw) * 0.0104166667);
+    width: calc(1016px - (1440px - 100vw) * 0.6071428571);
+    margin-left: calc(56px - (1440px - 100vw) * 0.0431547619);
   }
 }
 @media (max-width: 767px) {
   .partners__content {
-    width: calc(475px - (768px - 100vw) * 0.4057971014);
-    margin-left: 3px;
+    width: calc(508px - (768px - 100vw) * 0.4637681159);
+    margin-left: calc(-7px - (768px - 100vw) * -0.0669642857);
   }
 }
 @media (max-width: 630px) {
   .partners__content {
-    width: calc(308px - (630px - 100vw) * 0.2322580645);
+    width: calc(333px - (630px - 100vw) * 0.2516129032);
   }
 }
 @media (max-width: 320px) {
   .partners__content {
-    width: 236px;
+    width: 255px;
+    margin-left: 23px;
   }
 }
 .partners__icon {
@@ -3480,12 +3481,12 @@
 }
 @media (max-width: 767px) {
   .partners__content .slick-arrow {
-    bottom: calc(4px - (768px - 100vw) * -0.0089285714);
+    bottom: calc(4px - (768px - 100vw) * -0.0178571429);
   }
 }
 @media (max-width: 320px) {
   .partners__content .slick-arrow {
-    bottom: 8px;
+    bottom: 12px;
   }
 }
 .partners__content .slick-prev {
@@ -3507,21 +3508,21 @@
   }
 }
 .partners__content .slick-next {
-  right: -72px;
+  right: -40px;
 }
 @media (max-width: 1439px) {
   .partners__content .slick-next {
-    right: calc(-72px - (1440px - 100vw) * -0.0476190476);
+    right: calc(-40px - (1440px - 100vw) * -0.0148809524);
   }
 }
 @media (max-width: 767px) {
   .partners__content .slick-next {
-    right: calc(-55px - (768px - 100vw) * -0.0848214286);
+    right: calc(-34px - (768px - 100vw) * -0.0803571429);
   }
 }
 @media (max-width: 320px) {
   .partners__content .slick-next {
-    right: -17px;
+    right: 2px;
   }
 }
 
