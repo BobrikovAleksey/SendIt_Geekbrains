@@ -67,9 +67,8 @@ li {
 }
 
 
-
 @media (pointer: fine) {
-  a, button, input {
+  a, button, details, summary, input, label {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }

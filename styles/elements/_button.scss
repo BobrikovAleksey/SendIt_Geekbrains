@@ -14,10 +14,10 @@
   padding: 8px 26px 7px;
 
   @media (pointer: fine) {
-    transition: linear 250ms;
+    transition: linear $TransitionHover;
 
     &:active:not(:disabled) {
-      transition: linear 25ms;
+      transition: linear $TransitionActive;
     }
   }
 
