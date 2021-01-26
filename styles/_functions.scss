@@ -25,6 +25,10 @@
   @return calc-size($size-min, $size-max, $SizePhoneN, $SizeTabletN, $inc);
 }
 
+@function calc-size-phone-730px($size-min, $size-max, $inc: false) {
+  @return calc-size($size-min, $size-max, $SizePhoneN, $Breakpoint-730N, $inc);
+}
+
 @function calc-size-phone-630px($size-min, $size-max, $inc: false) {
   @return calc-size($size-min, $size-max, $SizePhoneN, $Breakpoint-630N, $inc);
 }

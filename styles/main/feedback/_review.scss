@@ -21,10 +21,9 @@
   }
 
   @media (max-width: $Breakpoint-730) {
-    width: calc-size(250, 460, $SizePhoneN, $Breakpoint-730N);
-    grid-template-columns: calc-size(100, 160, $SizePhoneN, $Breakpoint-730N)
-                           calc-size(111, 270, $SizePhoneN, $Breakpoint-730N);
-    grid-gap: calc-size(9, 12, $SizePhoneN, $Breakpoint-730N) calc-size(19, 30, $SizePhoneN, $Breakpoint-730N);
+    width: calc-size-phone-730px(250, 460);
+    grid-template-columns: calc-size-phone-730px(100, 160) calc-size-phone-730px(111, 270);
+    grid-gap: calc-size-phone-730px(9, 12) calc-size-phone-730px(19, 30);
   }
 
   @media (max-width: $SizePhone) {
@@ -47,8 +46,8 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      width: calc-size(100, 160, $SizePhoneN, $Breakpoint-730N);
-      height: calc-size(100, 160, $SizePhoneN, $Breakpoint-730N);
+      width: calc-size-phone-730px(100, 160);
+      height: calc-size-phone-730px(100, 160);
     }
 
     @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
@@ -58,8 +57,8 @@
 
 
     img {
-      width: inherit;
-      height: inherit;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -81,10 +80,9 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      @include font-size(calc-size(26, 32, $SizePhoneN, $Breakpoint-730N),
-                         calc-size(31, 43, $SizePhoneN, $Breakpoint-730N));
-      letter-spacing: calc-size(0.7, 1, $SizePhoneN, $Breakpoint-730N);
-      margin-left: calc-size(1, 0, $SizePhoneN, $Breakpoint-730N);
+      @include font-size(calc-size-phone-730px(26, 32), calc-size-phone-730px(31, 43));
+      letter-spacing: calc-size-phone-730px(0.7, 1);
+      margin-left: calc-size-phone-730px(1, 0);
     }
 
     @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
@@ -106,9 +104,8 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      @include font-size(calc-size(18, 20, $SizePhoneN, $Breakpoint-730N),
-                         calc-size(22, 24, $SizePhoneN, $Breakpoint-730N));
-      margin-top: calc-size(2, 14, $SizePhoneN, $Breakpoint-730N);
+      @include font-size(calc-size-phone-730px(18, 20), calc-size-phone-730px(22, 24));
+      margin-top: calc-size-phone-730px(2, 14);
     }
 
     @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
@@ -124,8 +121,7 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      @include font-size(calc-size(10, 16, $SizePhoneN, $Breakpoint-730N),
-                         calc-size(12, 19, $SizePhoneN, $Breakpoint-730N));
+      @include font-size(calc-size-phone-730px(10, 16), calc-size-phone-730px(12, 19));
     }
 
     @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
@@ -143,7 +139,7 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      margin-top: calc-size(8, 16, $SizePhoneN, $Breakpoint-730N);
+      margin-top: calc-size-phone-730px(8, 16);
     }
 
     @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
@@ -165,7 +161,7 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      margin-top: calc-size(4, 3, $SizePhoneN, $Breakpoint-730N);
+      margin-top: calc-size-phone-730px(4, 3);
     }
 
     @media (max-width: $SizePhone), (min-width: $Breakpoint-730 + 1px) and (max-width: $SizeTablet) {
@@ -186,8 +182,7 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      @include font-size(calc-size(12, 16, $SizePhoneN, $Breakpoint-730N),
-                         calc-size(15, 19, $SizePhoneN, $Breakpoint-730N));
+      @include font-size(calc-size-phone-730px(12, 16), calc-size-phone-730px(15, 19));
       margin-top: 1px;
     }
 

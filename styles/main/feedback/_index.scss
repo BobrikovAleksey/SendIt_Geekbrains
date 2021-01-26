@@ -20,9 +20,8 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      @include padding-vertical(calc-size(12, 38, $SizePhoneN, $Breakpoint-730N),
-                                calc-size(12, 32, $SizePhoneN, $Breakpoint-730N));
-      min-height: calc-size(324, 401, $SizePhoneN, $Breakpoint-730N);
+      @include padding-vertical(calc-size-phone-730px(12, 38), calc-size-phone-730px(12, 32));
+      min-height: calc-size-phone-730px(324, 401);
     }
 
     @media (max-width: $SizePhone) {
@@ -34,8 +33,7 @@
 
   &__title {
     @media (max-width: $Breakpoint-730) {
-      @include font-size(calc-size(28, 36, $SizePhoneN, $Breakpoint-730N),
-                         calc-size(34, 43, $SizePhoneN, $Breakpoint-730N));
+      @include font-size(calc-size-phone-730px(28, 36), calc-size-phone-730px(34, 43));
     }
 
     @media (max-width: $SizePhone) {
@@ -60,8 +58,8 @@
     }
 
     @media (max-width: $Breakpoint-730) {
-      width: calc-size(230, 460, $SizePhoneN, $Breakpoint-730N);
-      margin: calc-size(7, 16, $SizePhoneN, $Breakpoint-730N) auto 0;
+      width: calc-size-phone-730px(230, 460);
+      margin: calc-size-phone-730px(7, 16) auto 0;
     }
 
     @media (max-width: $SizePhone) {
@@ -88,6 +86,7 @@
 .feedback__reviews .slick {
   &-arrow {
     top: 122px;
+
     @media (pointer: fine) {
       &:hover, &:active, &:focus {
         border-color: $Blue;
@@ -95,7 +94,7 @@
     }
 
     @media (max-width: $SizeDesktop - 1px) {
-      top: calc-size-tablet-desktop(76, 122);
+      top: calc-size-tablet-desktop(77, 122);
     }
 
     @media (max-width: $Breakpoint-730) {
@@ -111,12 +110,12 @@
       left: calc-size-tablet-desktop(-57, -95);
     }
 
-    @media (max-width: $SizeTablet) {
+    @media (max-width: $SizeTablet - 1px) {
       left: calc-size(-38, -57, $Breakpoint-730N, $SizeTabletN);
     }
 
-    @media (max-width: $Breakpoint-730) {
-      left: calc-size(-22, -95, $SizePhoneN, $Breakpoint-730N);
+    @media (max-width: $Breakpoint-730 - 1px) {
+      left: calc-size-phone-730px(-22, -95);
     }
 
     @media (max-width: $SizePhone) {
@@ -132,12 +131,12 @@
       right: calc-size-tablet-desktop(-58, -95);
     }
 
-    @media (max-width: $SizeTablet) {
+    @media (max-width: $SizeTablet - 1px) {
       right: calc-size(-39, -58, $Breakpoint-730N, $SizeTabletN);
     }
 
-    @media (max-width: $Breakpoint-730) {
-      right: calc-size(-22, -96, $SizePhoneN, $Breakpoint-730N);
+    @media (max-width: $Breakpoint-730 - 1px) {
+      right: calc-size-phone-730px(-22, -96);
     }
 
     @media (max-width: $SizePhone) {
