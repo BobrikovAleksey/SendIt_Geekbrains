@@ -11,8 +11,12 @@
     min-height: 240px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      @include padding-vertical(calc-size-tablet-desktop(26, 64), calc-size-tablet-desktop(12, 36));
-      min-height: calc-size-tablet-desktop(171, 240);
+      padding-top: calc-size-tablet-desktop(26, 64);
+    }
+
+    @media (max-width: $Breakpoint-1220 - 1px) {
+      min-height: calc-size(171, 240, $SizeTabletN, $Breakpoint-1220N);
+      padding-bottom: calc-size(12, 36, $SizeTabletN, $Breakpoint-1220N);
     }
 
     @media (max-width: $SizeTablet - 1px) {
@@ -37,11 +41,23 @@
 
   &__caption {
     width: 760px;
-    max-width: 100%;
     padding-top: 1px;
 
+    @media (max-width: $Breakpoint-1220) {
+      width: calc-size(280, 360, $SizeTabletN, $Breakpoint-1220N);
+    }
+
     @media (max-width: $Breakpoint-630) {
+      width: 100%;
       padding-top: 0;
+    }
+
+    @media (max-width: 480px) {
+      width: calc-size-phone-630px($InputWidthMdN, $InputWidthLgN);
+    }
+
+    @media (max-width: $SizePhone) {
+      width: $InputWidthMd;
     }
   }
 
@@ -70,13 +86,8 @@
       margin-top: calc-size-tablet-desktop(15, 17);
     }
 
-    @media (max-width: $Breakpoint-1220) {
-      max-width: 75%;
-    }
-
     @media (max-width: $SizeTablet) {
       @include font-size(14px, 13px);
-      max-width: 100%;
       margin-top: 15px;
     }
 
@@ -101,7 +112,7 @@
 
     @media (max-width: $SizeTablet - 1px) {
       width: $InputWidthMd;
-      margin: 5px 0 0 calc-size(32, 40, $Breakpoint-630N, $SizeTabletN);
+      margin: 5px 0 0 calc-size-630px-tablet(32, 40);
     }
 
     @media (max-width: $Breakpoint-630) {
@@ -116,12 +127,12 @@
   }
 
 
-  &__phone {
-    width: inherit;
+  &__phone, &__button {
+    width: 100%;
   }
 
+
   &__button {
-    width: inherit;
     margin-top: 9px;
 
     @media (max-width: $SizeDesktop - 1px) {
@@ -139,6 +150,7 @@
 
 
   &__consent {
+    color: white;
     margin-top: 15px;
 
     @media (max-width: $SizeDesktop - 1px) {

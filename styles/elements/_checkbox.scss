@@ -11,6 +11,7 @@
   .checkbox__input {
     @include hide;
 
+
     &:checked + .checkbox__check {
       &:before {
         @include hide;
@@ -27,14 +28,13 @@
     @include font-size(13px, 13px);
     @include flex-vcenter;
     width: 16px;
-    &:before, &:after {
-      content:"\f046";
-    }
     &:before {
       @include show;
+      content:"\f096";
     }
     &:after {
       @include hide;
+      content:"\f046";
     }
 
     @media (max-width: $SizeDesktop - 1px) {
@@ -44,11 +44,15 @@
       }
     }
 
-    @media (max-width: $Breakpoint-630) {
-      width: calc-size-phone-630px(18, 16);
+    @media (max-width: $SizeTablet) {
+      width: 17px;
       &:before, &:after {
         margin-top: -1px;
       }
+    }
+
+    @media (max-width: $Breakpoint-630) {
+      width: calc-size-phone-630px(18, 16);
     }
 
     @media (max-width: $SizePhone) {
