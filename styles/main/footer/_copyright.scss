@@ -13,12 +13,12 @@
 
   @media (max-width: $SizeTablet - 1px) {
     min-height: calc-size-tablet-desktop(40, 44);
-    padding: calc-size-tablet-desktop(8, 12) calc-size-tablet-desktop(0, 12) calc-size-tablet-desktop(12, 22);
+    padding: calc-size-phone-tablet(10, 8) 0 calc-size-phone-tablet(4, 12);
   }
 
   @media (max-width: $SizePhone) {
     min-height: 40px;
-    padding: calc-size-tablet-desktop(8, 12) calc-size-tablet-desktop(0, 12) calc-size-tablet-desktop(12, 22);
+    padding: 10px 0 4px;
   }
 
 
@@ -29,19 +29,36 @@
       @include font-size(calc-size-tablet-desktop(12, 16), calc-size-tablet-desktop(14, 19));
     }
 
+    @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-tablet-desktop(10, 12), calc-size-tablet-desktop(12, 14));
 
-    &_year {
-      margin: 0 69px;
-
-      @media (max-width: $SizeDesktop - 1px) {
-        margin: 0 calc-size-tablet-desktop(24, 69);
+      &_left {
+        width: 58%;
       }
+
+      &_right {
+        width: 42%;
+      }
+    }
+
+    @media (max-width: $SizePhone) {
+      @include font-size(10px, 12px);
     }
 
 
     &_left &_year {
+      margin-left: 69px;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        margin-left: calc-size-tablet-desktop(24, 69);
+      }
+
+      @media (max-width: $SizeTablet) {
+        margin-left: 24px;
+      }
+
       @media (max-width: $Breakpoint-830) {
-        visibility: hidden;
+        @include hide;
       }
     }
 
@@ -51,10 +68,22 @@
     }
 
     &_right &_year {
-      visibility: hidden;
+      @include hide;
+
+      @media (max-width: $SizeDesktop - 1px) {
+        margin-right: calc-size-tablet-desktop(24, 69);
+      }
 
       @media (max-width: $Breakpoint-830) {
-        visibility: visible;
+        @include show;
+      }
+
+      @media (max-width: $SizeTablet) {
+        margin-right: calc-size-phone-tablet(10, 24);
+      }
+
+      @media (max-width: $SizePhone) {
+        margin-right: 10px;
       }
     }
   }
@@ -67,6 +96,14 @@
 
     @media (max-width: $SizeDesktop - 1px) {
       margin-top: calc-size-tablet-desktop(4, 6);
+    }
+
+    @media (max-width: $SizeTablet) {
+      margin-top: 4px;
+    }
+
+    @media (max-width: $SizeTablet - 1px) {
+      @include hide;
     }
   }
 

@@ -14,11 +14,11 @@
     padding: 0 135px;
 
     @media (max-width: $SizeDesktop - 1px) {
-      padding: 0 calc-size-with-scroll-tablet-desktop(34, 135, 21px) 0 calc-size-tablet-desktop(34, 135);
+      padding: 0 calc-size-with-scroll-tablet-desktop(34, 135, 15px) 0 calc-size-tablet-desktop(34, 135);
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      padding: 0 calc-size-phone-tablet(15, 34);
+      padding: 0 calc-size-with-scroll-phone-tablet(15, 34, 15px) 0 calc-size-phone-tablet(15, 34);
     }
 
     @media (max-width: $SizePhone) {
@@ -37,13 +37,19 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      width: calc-size-tablet-desktop(99, 160);
-      height: calc-size-tablet-desktop(30, 48);
+      width: 127px;
+      height: 38px;
+      margin-left: 7px;
     }
+  }
 
-    @media (max-width: $SizePhone) {
-      width: calc-size-tablet-desktop(99, 160);
-      height: calc-size-tablet-desktop(30, 48);
+
+  &__menu-icon {
+    padding: 4px 2px 2px;
+    margin: 0 -2px 0 0;
+
+    svg {
+      fill: $VeryDarkGray;
     }
   }
 }

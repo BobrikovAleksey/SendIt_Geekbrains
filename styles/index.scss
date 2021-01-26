@@ -14,7 +14,12 @@
 body {
   @include font-family("regular");
   user-select: none;
+  overflow-x: hidden;
   color: black;
+
+  @media (max-width: $SizePhone + 20px) {
+    overflow-x: auto;
+  }
 }
 
 
@@ -67,8 +72,30 @@ li {
 }
 
 
-@media (pointer: fine) {
-  a, button, details, summary, input, label {
+.menu-icon {
+  @include hide;
+  cursor: pointer;
+
+  @media (max-width: $SizeTablet - 1px) {
+    @include show;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  svg {
+    width: 40px;
+    height: 29px;
+    fill: black;
+  }
+}
+
+
+a, button, details, summary, input, label {
+  height: max-content;
+
+  @media (pointer: fine) {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }

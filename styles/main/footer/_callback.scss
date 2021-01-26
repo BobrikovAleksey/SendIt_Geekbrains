@@ -56,14 +56,12 @@
     }
 
     @media (max-width: $SizeTablet - 1px) {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-top: calc-size-phone-tablet(10, 15);
+      width: 100%;
+      max-width: #{$InputWidthLg + 2px};
+      margin-top: calc-size-phone-tablet(10, 16);
     }
 
     @media (max-width: $SizePhone) {
-      width: 100%;
       margin-top: 10px;
     }
   }
@@ -80,7 +78,7 @@
 
     @media (max-width: $SizeTablet - 1px) {
       width: 100%;
-      height: calc-size-phone-tablet($InputHeightSm, $InputHeightMd);
+      height: calc-size-phone-tablet($InputHeightSmN, $InputHeightMdN);
     }
 
     @media (max-width: $SizePhone) {
@@ -125,12 +123,11 @@
 
     @media (max-width: $SizeTablet - 1px) {
       padding: 8px calc-size-phone-tablet(20, 26) 7px;
-      margin: calc-size-phone-tablet(10, 14) 0 0 20px;
+      margin: calc-size-phone-tablet(10, 14) 0 0 0;
     }
 
     @media (max-width: $SizePhone) {
       padding: 8px 20px 7px;
-      margin-top: 10px;
     }
   }
 

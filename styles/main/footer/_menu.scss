@@ -1,4 +1,4 @@
-@import "../../vars", "../../mixins";
+@import "../../vars", "../../mixins", "../../functions";
 
 
 .footer-menu {
@@ -9,9 +9,13 @@
   padding: 8px 0 12px 12px;
 
   @media (max-width: $SizeDesktop - 1px) {
-    min-height: calc(94px - (#{$SizeDesktop} - 100vw) * #{14 / ($SizeDesktopN - $SizeTabletN)});
-    padding: 8px 0 calc(12px + (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)})
-             calc(12px - (#{$SizeDesktop} - 100vw) * #{12 / ($SizeDesktopN - $SizeTabletN)});
+    min-height: calc-size-tablet-desktop(80, 94);
+    padding: 8px 0 calc-size-tablet-desktop(16, 12) calc-size-tablet-desktop(0, 12);
+  }
+
+  @media (max-width: $SizeTablet - 1px) {
+    min-height: 87px;
+    padding: 5px 0 8px;
   }
 
 
@@ -19,7 +23,7 @@
     margin: 0 -3px 10px 0;
 
     @media (max-width: $SizeDesktop - 1px) {
-      margin: 0 calc(-3px + (#{$SizeDesktop} - 100vw) * #{4 / ($SizeDesktopN - $SizeTabletN)}) 10px 0;
+      margin: 0 calc-size-tablet-desktop(1, -3) 10px 0;
     }
 
 
@@ -27,7 +31,7 @@
       margin-left: 77px;
 
       @media (max-width: $SizeDesktop - 1px) {
-        margin-left: calc(77px - (#{$SizeDesktop} - 100vw) * #{44.5 / ($SizeDesktopN - $SizeTabletN)});
+        margin-left: calc-size-tablet-desktop(32.5, 77);
       }
 
       &:first-of-type {

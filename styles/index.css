@@ -100,7 +100,13 @@
 body {
   font-family: "Myriad Pro Regular", serif;
   user-select: none;
+  overflow-x: hidden;
   color: black;
+}
+@media (max-width: 340px) {
+  body {
+    overflow-x: auto;
+  }
 }
 
 h1, h2, h3 {
@@ -164,11 +170,35 @@ li {
   list-style-type: none;
 }
 
+.menu-icon {
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .menu-icon {
+    visibility: visible;
+    position: static;
+  }
+}
+.menu-icon input[type=checkbox] {
+  display: none;
+}
+.menu-icon svg {
+  width: 40px;
+  height: 29px;
+  fill: black;
+}
+
+a, button, details, summary, input, label {
+  height: max-content;
+}
 @media (pointer: fine) {
   a, button, details, summary, input, label {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }
+
 /************************************************
  *                E F F E C T S                 *
  ************************************************/

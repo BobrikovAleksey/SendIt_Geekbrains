@@ -60,23 +60,11 @@
 
 
   &__menu-icon {
-    @include hide;
-    cursor: pointer;
     padding: 4px 2px 2px;
     margin: -5px -2px 0 0;
 
-    @media (max-width: $SizeTablet - 1px) {
-      @include show;
-    }
-
-
-    input[type="checkbox"] {
-      display: none;
-    }
-
     svg {
-      width: 40px;
-      height: 29px;
+      fill: white;
     }
   }
 
