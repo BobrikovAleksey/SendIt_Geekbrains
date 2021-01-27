@@ -14,37 +14,35 @@
     <meta name="application-name" content="SendIt">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicon/site.webmanifest">
-    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
     <!-- styles -->
-    <link href="/styles/modules/font-awesome.css" rel="stylesheet">
-    <link href="/styles/modules/slick.css" rel="stylesheet">
-    <link href="/styles/index.css" rel="stylesheet">
-    <link href="/styles/main.css" rel="stylesheet">
+    <link href="./styles/modules/font-awesome.css" rel="stylesheet">
+    <link href="./styles/modules/slick.css" rel="stylesheet">
+    <link href="./styles/index.css" rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet">
 
     <title>SendIt - агрегатор служб доставки</title>
 </head>
 <body>
-    <main data-blur>
+    <main>
         <header class="header">
             <div class="container header__container">
                 <a href="/">
                     <img class="header__logo" src="./images/logos/logo-transparent-white.png" alt="logo">
                 </a>
 
-                <label class="menu-icon header__menu-icon">
-                    <input type="checkbox" />
-
+                <button class="menu-button header__menu-button" data-phone-menu="open">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 29" width="40" height="29">
                         <path d="M0 0H40V4H0V0Z" />
                         <path d="M0 12H40V16H0V12Z" />
                         <path d="M0 25H40V29H0V25Z" />
                     </svg>
-                </label>
+                </button>
 
                 <nav class="main-menu">
                     <ul class="main-menu__list">
@@ -557,15 +555,13 @@
                         <img class="footer__logo" src="./images/logos/logo-sm.png" alt="logo">
                     </a>
 
-                    <label class="menu-icon footer__menu-icon">
-                        <input type="checkbox" />
-
+                    <button class="menu-button footer__menu-button" data-phone-menu="open">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 29" width="40" height="29">
                             <path d="M0 0H40V4H0V0Z" />
                             <path d="M0 12H40V16H0V12Z" />
                             <path d="M0 25H40V29H0V25Z" />
                         </svg>
-                    </label>
+                    </button>
 
                     <nav class="main-menu">
                         <ul class="main-menu__list">
@@ -628,11 +624,90 @@
         </footer>
     </main>
 
-    <div class="phone-menu">
+    <div class="container phone-menu" data-hide>
+        <header class="phone-menu__header">
+            <a href="/">
+                <img class="phone-menu__logo" src="./images/logos/logo-sm.png" alt="logo">
+            </a>
 
+            <button class="menu-button phone-menu__menu-button" data-phone-menu="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31" height="30">
+                    <path d="M3.50592 0L30.376 26.8701L27.5475 29.6985L0.677491 2.82843L3.50592 0Z" />
+                    <path d="M30.3757 2.82843L3.50567 29.6985L0.677246 26.8701L27.5473 2.38419e-07L30.3757 2.82843Z" />
+                </svg>
+            </button>
+        </header>
+
+        <nav class="phone-menu__navigation">
+            <ul class="phone-menu__list">
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/">Главная</a>
+                </li>
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/#description">Описание</a>
+                </li>
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/#advantage">Преимущества</a>
+                </li>
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/#feedback">Отзывы</a>
+                </li>
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/#partners">Партнёры</a>
+                </li>
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/#guarantee">Гарантии</a>
+                </li>
+
+                <li class="phone-menu__item">
+                    <a class="phone-menu__link" href="/#faq">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <footer class="phone-menu__footer">
+            <div class="phone-menu-callback">
+                <h3 class="phone-menu-callback__title">Остались вопросы?</h3>
+
+                <form class="phone-menu-callback__form" action="#" method="post">
+                    <input class="input phone-menu-callback__phone" type="text" name="phone"
+                           placeholder="Ваш телефон" required>
+
+                    <button class="button button_blue phone-menu-callback__button" type="submit">
+                        Заказать звонок
+                    </button>
+
+                    <label class="checkbox phone-menu-callback__consent">
+                        <input class="checkbox__input" type="checkbox" name="consent">
+                        <span class="checkbox__check"> </span>
+                        Я согласен на обработку персональных данных
+                    </label>
+                </form>
+            </div>
+
+            <div class="phone-menu-links">
+                <a class="phone-menu-links__item" href="https://vk.com/" target="_blank">
+                    <img class="phone-menu-links__image" src="./images/icons/vk.png" alt="vk">
+                </a>
+
+                <a class="phone-menu-links__item" href="https://www.instagram.com//" target="_blank">
+                    <img class="phone-menu-links__image" src="./images/icons/instagram.png" alt="instagram">
+                </a>
+
+                <a class="phone-menu-links__item" href="https://www.facebook.com//" target="_blank">
+                    <img class="phone-menu-links__image" src="./images/icons/facebook.png" alt="facebook">
+                </a>
+            </div>
+        </footer>
     </div>
 
-    <div class="contact-form">
+    <div class="contact-form" data-hide>
 
     </div>
 

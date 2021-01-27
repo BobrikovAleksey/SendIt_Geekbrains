@@ -1,0 +1,257 @@
+@import "../vars", "../mixins", "../functions";
+
+
+.phone-menu {
+  @include position-top-left(50%, 50%);
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  width: $SizePhone + 160px;
+  max-height: 100vh;
+  background: white;
+  padding: 18px $ContainerPaddingMd 44px;
+  position: fixed;
+  margin: auto;
+
+  @media (max-width: $SizePhone + 160px) {
+    @include position-top-left(0, 0);
+    transform: none;
+    width: 100vw;
+    min-height: 100vh;
+  }
+
+  @media (max-width: $SizePhone + 159px) {
+    padding: calc-size(13, 18, $SizePhoneN, $SizePhoneN + 160)
+             calc-size($ContainerPaddingSmN, $ContainerPaddingMdN, $SizePhoneN, $SizePhoneN + 160)
+             calc-size(29, 44, $SizePhoneN, $SizePhoneN + 160);
+  }
+
+  @media (max-width: $SizePhone) {
+    padding: 13px $ContainerPaddingSm 29px;
+  }
+
+
+  &__header {
+    @include flex-between-center;
+  }
+
+
+  &__logo {
+    width: 160px;
+    height: 48px;
+  }
+
+
+  &__menu-button {
+    cursor: pointer;
+    padding: 4px;
+    margin: 2px 1px 0 0;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $VeryDarkGray;
+    }
+  }
+
+
+  &__navigation {
+    margin-top: 20px;
+
+    @media (max-width: $SizePhone + 159px) {
+      margin-top: calc-size(14, 20, $SizePhoneN, $SizePhoneN + 160);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 14px;
+    }
+  }
+
+
+  &__list {
+    @include flex-column;
+  }
+
+
+  &__item {
+    margin-top: 20.5px;
+
+    @media (max-width: $SizePhone + 159px) {
+      margin-top: calc-size(20.5, 24.5, $SizePhoneN, $SizePhoneN + 160);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 20.5px;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+
+  &__link {
+    @include font-size(22px, 27px);
+
+    @media (max-width: $SizePhone + 159px) {
+      @include font-size(calc-size(18, 22, $SizePhoneN, $SizePhoneN + 160),
+                         calc-size(22, 27, $SizePhoneN, $SizePhoneN + 160));
+    }
+
+    @media (max-width: $SizePhone) {
+      @include font-size(18px, 22px);
+    }
+  }
+
+
+  &__footer {
+    margin-top: 32px;
+
+    @media (max-width: $SizePhone + 159px) {
+      margin-top: calc-size(23, 32, $SizePhoneN, $SizePhoneN + 160);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 23px;
+    }
+  }
+
+
+  &-callback {
+    @include flex-column;
+
+
+    &__title {
+      @include font-size(22px, 27px);
+      text-transform: uppercase;
+
+      @media (max-width: $SizePhone + 159px) {
+        @include font-size(calc-size(18, 22, $SizePhoneN, $SizePhoneN + 160), calc-size(22, 27, $SizePhoneN, $SizePhoneN + 160));
+      }
+
+      @media (max-width: $SizePhone) {
+        @include font-size(18px, 22px);
+      }
+    }
+
+
+    &__form {
+      @include flex-column;
+      width: $InputWidthLg;
+      margin-top: 14px;
+
+      @media (max-width: $SizePhone + 159px) {
+        width: calc-size($InputWidthSmN, $InputWidthLgN, $SizePhoneN, $SizePhoneN + 160);
+        margin-top: calc-size(10, 14, $SizePhoneN, $SizePhoneN + 160);
+      }
+
+      @media (max-width: $SizePhone) {
+        width: $InputWidthSm;
+        margin-top: 10px;
+      }
+    }
+
+
+    &__phone, &__button {
+      width: 100%;
+      height: $InputHeightLg;
+
+      @media (max-width: $SizePhone + 159px) {
+        height: calc-size($InputHeightSmN, $InputHeightLgN, $SizePhoneN, $SizePhoneN + 160);
+      }
+
+      @media (max-width: $SizePhone) {
+        height: $InputHeightSm;
+      }
+    }
+
+
+    &__phone {
+      @include font-size(18px, 22px);
+      color: $VeryDarkGray;
+      border-color: $VeryDarkGray;
+      padding: 8px 28px;
+      &::placeholder {
+        color: $VeryDarkGray;
+      }
+
+      @media (max-width: $SizePhone + 159px) {
+        @include font-size(calc-size(14, 18, $SizePhoneN, $SizePhoneN + 160),
+                           calc-size(17, 22, $SizePhoneN, $SizePhoneN + 160));
+        padding: 8px calc-size(22, 28, $SizePhoneN, $SizePhoneN + 160);
+      }
+
+      @media (max-width: $SizePhone) {
+        @include font-size(14px, 17px);
+        padding: 8px 22px;
+      }
+    }
+
+
+    &__button {
+      margin-top: 14px;
+
+      @media (max-width: $SizePhone + 159px) {
+        margin-top: calc-size(10, 14, $SizePhoneN, $SizePhoneN + 160);
+      }
+
+      @media (max-width: $SizePhone) {
+        margin-top: 10px;
+      }
+    }
+
+
+    &__consent {
+      margin: 14px 0 0 4px;
+
+      @media (max-width: $SizePhone + 159px) {
+        margin-top: calc-size(11, 14, $SizePhoneN, $SizePhoneN + 160);
+      }
+
+      @media (max-width: $SizePhone) {
+        margin-top: 11px;
+      }
+    }
+  }
+
+
+  &-links {
+    @include flex-hbetween;
+    width: $InputWidthLg;
+    margin: 32px auto 0;
+
+    @media (max-width: $SizePhone + 159px) {
+      width: calc-size($InputWidthSmN, $InputWidthLgN, $SizePhoneN, $SizePhoneN + 160);
+      margin-top: calc-size(24, 32, $SizePhoneN, $SizePhoneN + 160);
+    }
+
+    @media (max-width: $SizePhone) {
+      width: $InputWidthSm;
+      margin-top: 24px;
+    }
+
+
+    &__item {
+      @include flex-center-center;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+
+      @media (max-width: $SizePhone + 159px) {
+        width: calc-size(38, 48, $SizePhoneN, $SizePhoneN + 160);
+        height: calc-size(38, 48, $SizePhoneN, $SizePhoneN + 160);
+      }
+
+      @media (max-width: $SizePhone) {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+
+    &__image {
+      width: inherit;
+      height: auto;
+    }
+  }
+}

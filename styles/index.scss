@@ -11,6 +11,16 @@
 }
 
 
+*[data-blur] {
+  filter: blur(7px) brightness(80%);
+}
+
+
+*[data-hide] {
+  display: none;
+}
+
+
 body {
   @include font-family("regular");
   user-select: none;
@@ -72,7 +82,16 @@ li {
 }
 
 
-.menu-icon {
+a, button, details, summary, input, label {
+  height: max-content;
+
+  @media (pointer: fine) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
+.menu-button {
   @include hide;
   cursor: pointer;
 
@@ -80,23 +99,8 @@ li {
     @include show;
   }
 
-  input[type="checkbox"] {
-    display: none;
-  }
-
   svg {
-    width: 40px;
-    height: 29px;
     fill: black;
-  }
-}
-
-
-a, button, details, summary, input, label {
-  height: max-content;
-
-  @media (pointer: fine) {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }
 

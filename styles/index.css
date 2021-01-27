@@ -97,6 +97,14 @@
   margin: 0;
 }
 
+*[data-blur] {
+  filter: blur(7px) brightness(80%);
+}
+
+*[data-hide] {
+  display: none;
+}
+
 body {
   font-family: "Myriad Pro Regular", serif;
   user-select: none;
@@ -170,26 +178,6 @@ li {
   list-style-type: none;
 }
 
-.menu-icon {
-  visibility: hidden;
-  position: absolute;
-  cursor: pointer;
-}
-@media (max-width: 767px) {
-  .menu-icon {
-    visibility: visible;
-    position: static;
-  }
-}
-.menu-icon input[type=checkbox] {
-  display: none;
-}
-.menu-icon svg {
-  width: 40px;
-  height: 29px;
-  fill: black;
-}
-
 a, button, details, summary, input, label {
   height: max-content;
 }
@@ -197,6 +185,21 @@ a, button, details, summary, input, label {
   a, button, details, summary, input, label {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+}
+
+.menu-button {
+  visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .menu-button {
+    visibility: visible;
+    position: static;
+  }
+}
+.menu-button svg {
+  fill: black;
 }
 
 /************************************************
