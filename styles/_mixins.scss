@@ -1,4 +1,6 @@
 @import "vars", "functions";
+@import "mixins/animation";
+@import "mixins/input";
 
 
 /************************************************
@@ -9,7 +11,6 @@
   visibility: hidden;
   position: absolute;
 }
-
 
 @mixin show($position: static) {
   visibility: visible;
@@ -74,12 +75,6 @@
   @include P;
   color: $DarkBlue;
   text-decoration: none;
-
-  @media (pointer: fine) {
-    &:active {
-      color: $VeryDarkBlue;
-    }
-  }
 }
 
 

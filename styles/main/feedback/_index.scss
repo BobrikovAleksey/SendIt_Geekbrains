@@ -87,12 +87,6 @@
   &-arrow {
     top: 122px;
 
-    @media (pointer: fine) {
-      &:hover, &:active, &:focus {
-        border-color: $Blue;
-      }
-    }
-
     @media (max-width: $SizeDesktop - 1px) {
       top: calc-size-tablet-desktop(77, 122);
     }

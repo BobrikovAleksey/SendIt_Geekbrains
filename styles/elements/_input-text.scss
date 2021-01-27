@@ -3,15 +3,13 @@
 
 .input {
   @include P;
+  @include placeholder(white);
   width: $InputWidthLg;
   height: $InputHeightMd;
   color: white;
   border: 1px solid white;
   border-radius: $InputHeightMd * 0.625;
   padding: 8px 20px 7px;
-  &::placeholder {
-    color: white;
-  }
 
   @media (max-width: $Breakpoint-1220) {
     width: calc-size-tablet-desktop($InputWidthMdN, $InputWidthLgN);

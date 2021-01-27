@@ -14,10 +14,10 @@
   padding: 8px 26px 7px;
 
   @media (pointer: fine) {
-    transition: linear $TransitionHover;
+    @include transition(box-shadow);
 
     &:active:not(:disabled) {
-      transition: linear $TransitionActive;
+      @include transition(box-shadow, $TransitionActive);
     }
   }
 

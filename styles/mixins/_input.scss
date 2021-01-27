@@ -1,0 +1,45 @@
+@import "../vars", "../functions", "animation";
+
+
+@mixin _placeholder($color) {
+  color: $color;
+  @include transition(opacity);
+}
+
+@mixin _placeholderFocus($color) {
+  opacity: 0;
+  @include transition(opacity, $TransitionActive);
+}
+
+@mixin placeholder($color: $Silver) {
+  &:-ms-input-placeholder {
+    @include _placeholder($color);
+  }
+  &:focus:-ms-input-placeholder {
+    @include _placeholderFocus($color);
+  }
+  &::-moz-placeholder {
+    @include _placeholder($color);
+  }
+  &:focus::-moz-placeholder {
+    @include _placeholderFocus($color);
+  }
+  &:-moz-placeholder {
+    @include _placeholder($color);
+  }
+  &:focus:-moz-placeholder {
+    @include _placeholderFocus($color);
+  }
+  &::-webkit-input-placeholder {
+    @include _placeholder($color);
+  }
+  &:focus::-webkit-input-placeholder {
+    @include _placeholderFocus($color);
+  }
+  &::placeholder {
+    @include _placeholder($color);
+  }
+  &:focus::placeholder {
+    @include _placeholderFocus($color);
+  }
+}

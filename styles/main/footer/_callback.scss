@@ -88,12 +88,10 @@
 
 
   &__phone {
+    @include placeholder($VeryDarkGray);
     color: $VeryDarkGray;
     border-color: $VeryDarkGray;
     padding: 8px 29px;
-    &::placeholder {
-      color: $VeryDarkGray;
-    }
 
     @media (max-width: $SizeDesktop - 1px) {
       @include font-size(calc-size-tablet-desktop(14, 16), calc-size-tablet-desktop(17, 19));

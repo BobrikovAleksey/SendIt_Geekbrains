@@ -62,12 +62,14 @@ a {
 
 
 details > summary {
-  list-style: none
-}
+  list-style: none;
 
-
-details summary::-webkit-details-marker {
-  display: none;
+  &::-webkit-details-marker {
+    display: none;
+  }
+  &::marker {
+    display: none;
+  }
 }
 
 
@@ -87,6 +89,17 @@ a, button, details, summary, input, label {
 
   @media (pointer: fine) {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
+.link {
+  @media (pointer: fine) {
+    @include transition(color);
+    &:active {
+      @include transition(color, $TransitionActive);
+      color: $VeryDarkBlue;
+    }
   }
 }
 

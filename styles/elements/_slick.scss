@@ -3,6 +3,7 @@
 
 .slick {
   &-arrow {
+    @include transition(border-color);
     cursor: pointer;
     overflow: hidden;
     width: 22px;
@@ -13,8 +14,13 @@
     position: absolute;
 
     @media (pointer: fine) {
-      &:hover, &:active, &:focus {
+      &:hover, &:focus {
         border-color: $Blue;
+      }
+
+      &:active {
+        @include transition(border-color, $TransitionActive);
+        border-color: $LightBlue;
       }
     }
 

@@ -1,0 +1,9 @@
+@import "../vars", "../functions";
+
+
+@mixin transition($property: all, $duration: $TransitionHover, $function: linear, $delay: 0ms) {
+  -o-transition: $property $duration $delay $function;
+  -webkit-transition: $property $duration $delay $function;
+  -moz-transition: $property $duration $delay $function;
+  transition: $property $duration $delay $function;
+}
