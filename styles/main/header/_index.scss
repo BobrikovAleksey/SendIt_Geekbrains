@@ -61,10 +61,23 @@
 
   &__menu-button {
     padding: 4px 2px 2px;
-    margin: -5px -2px 0 0;
+    margin: -6px -2px 0 0;
 
     svg {
+      @include transition(fill stroke);
+      height: 31px;
       fill: white;
+    }
+
+    @media (pointer: fine) {
+      &:hover:not(:active) svg {
+        stroke: white;
+        stroke-width: 1px;
+      }
+
+      &:active svg {
+        @include transition(fill stroke, $TransitionActive);
+      }
     }
   }
 

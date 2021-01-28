@@ -54,5 +54,16 @@
     @media (max-width: $SizeDesktop - 1px) {
       @include font-size(calc-size-tablet-desktop(14, 18), calc-size-tablet-desktop(17, 22));
     }
+
+
+    @media (pointer: fine) {
+      &:hover:not(:active) {
+        border-bottom: 1px solid white;
+      }
+
+      &:active {
+        border-bottom: 1px solid white;
+      }
+    }
   }
 }

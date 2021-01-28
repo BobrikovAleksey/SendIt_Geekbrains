@@ -319,6 +319,14 @@
     line-height: calc(22px - (1440px - 100vw) * 0.0074404762);
   }
 }
+@media (pointer: fine) {
+  .main-menu__link:hover:not(:active) {
+    border-bottom: 1px solid white;
+  }
+  .main-menu__link:active {
+    border-bottom: 1px solid white;
+  }
+}
 
 .header__container {
   background: url("../images/background.jpg") 0 -2px no-repeat;
@@ -381,10 +389,27 @@
 }
 .header__menu-button {
   padding: 4px 2px 2px;
-  margin: -5px -2px 0 0;
+  margin: -6px -2px 0 0;
 }
 .header__menu-button svg {
+  -o-transition: fill stroke 250ms 0ms linear;
+  -webkit-transition: fill stroke 250ms 0ms linear;
+  -moz-transition: fill stroke 250ms 0ms linear;
+  transition: fill stroke 250ms 0ms linear;
+  height: 31px;
   fill: white;
+}
+@media (pointer: fine) {
+  .header__menu-button:hover:not(:active) svg {
+    stroke: white;
+    stroke-width: 1px;
+  }
+  .header__menu-button:active svg {
+    -o-transition: fill stroke 25ms 0ms linear;
+    -webkit-transition: fill stroke 25ms 0ms linear;
+    -moz-transition: fill stroke 25ms 0ms linear;
+    transition: fill stroke 25ms 0ms linear;
+  }
 }
 .header__caption {
   top: 153px;
@@ -4935,6 +4960,14 @@
 .footer-menu .main-menu__link {
   color: black;
 }
+@media (pointer: fine) {
+  .footer-menu .main-menu__link:hover:not(:active) {
+    border-bottom: 1px solid black;
+  }
+  .footer-menu .main-menu__link:active {
+    border-bottom: 1px solid black;
+  }
+}
 
 /************************************************
  *                E F F E C T S                 *
@@ -5272,10 +5305,27 @@
 }
 .footer__menu-button {
   padding: 4px 2px 2px;
-  margin: 0 -2px 0 0;
+  margin: -1px -2px 0 0;
 }
 .footer__menu-button svg {
+  -o-transition: fill stroke 250ms 0ms linear;
+  -webkit-transition: fill stroke 250ms 0ms linear;
+  -moz-transition: fill stroke 250ms 0ms linear;
+  transition: fill stroke 250ms 0ms linear;
+  height: 31px;
   fill: #363636;
+}
+@media (pointer: fine) {
+  .footer__menu-button:hover:not(:active) svg {
+    stroke: #363636;
+    stroke-width: 1px;
+  }
+  .footer__menu-button:active svg {
+    -o-transition: fill stroke 25ms 0ms linear;
+    -webkit-transition: fill stroke 25ms 0ms linear;
+    -moz-transition: fill stroke 25ms 0ms linear;
+    transition: fill stroke 25ms 0ms linear;
+  }
 }
 
 /************************************************
@@ -5462,12 +5512,28 @@
 .phone-menu__menu-button {
   cursor: pointer;
   padding: 4px;
-  margin: 2px 1px 0 0;
+  margin-top: 1px;
 }
 .phone-menu__menu-button svg {
-  width: 30px;
-  height: 30px;
+  -o-transition: fill stroke 250ms 0ms linear;
+  -webkit-transition: fill stroke 250ms 0ms linear;
+  -moz-transition: fill stroke 250ms 0ms linear;
+  transition: fill stroke 250ms 0ms linear;
+  width: 32px;
+  height: 32px;
   fill: #363636;
+}
+@media (pointer: fine) {
+  .phone-menu__menu-button:hover:not(:active) svg {
+    stroke: #363636;
+    stroke-width: 1px;
+  }
+  .phone-menu__menu-button:active svg {
+    -o-transition: fill stroke 25ms 0ms linear;
+    -webkit-transition: fill stroke 25ms 0ms linear;
+    -moz-transition: fill stroke 25ms 0ms linear;
+    transition: fill stroke 25ms 0ms linear;
+  }
 }
 .phone-menu__navigation {
   margin-top: 20px;

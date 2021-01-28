@@ -44,12 +44,24 @@
   &__menu-button {
     cursor: pointer;
     padding: 4px;
-    margin: 2px 1px 0 0;
+    margin-top: 1px;
 
     svg {
-      width: 30px;
-      height: 30px;
+      @include transition(fill stroke);
+      width: 32px;
+      height: 32px;
       fill: $VeryDarkGray;
+    }
+
+    @media (pointer: fine) {
+      &:hover:not(:active) svg {
+        stroke: $VeryDarkGray;
+        stroke-width: 1px;
+      }
+
+      &:active svg {
+        @include transition(fill stroke, $TransitionActive);
+      }
     }
   }
 

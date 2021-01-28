@@ -924,18 +924,6 @@ a, button, details, summary, input, label {
   width: fit-content;
   display: flex;
 }
-.checkbox .checkbox__input {
-  visibility: hidden;
-  position: absolute;
-}
-.checkbox .checkbox__input:checked + .checkbox__check:before {
-  visibility: hidden;
-  position: absolute;
-}
-.checkbox .checkbox__input:checked + .checkbox__check:after {
-  visibility: visible;
-  position: static;
-}
 .checkbox .checkbox__check {
   font-family: "FontAwesome", serif;
   font-size: 13px;
@@ -943,22 +931,34 @@ a, button, details, summary, input, label {
   display: flex;
   align-items: center;
   width: 16px;
+  position: relative;
 }
 .checkbox .checkbox__check:before {
-  visibility: visible;
-  position: static;
+  -o-transition: opacity 250ms 0ms linear;
+  -webkit-transition: opacity 250ms 0ms linear;
+  -moz-transition: opacity 250ms 0ms linear;
+  transition: opacity 250ms 0ms linear;
+  top: 0;
+  left: 0;
   content: "";
+  position: absolute;
 }
 .checkbox .checkbox__check:after {
-  visibility: hidden;
-  position: absolute;
+  -o-transition: opacity 250ms 0ms linear;
+  -webkit-transition: opacity 250ms 0ms linear;
+  -moz-transition: opacity 250ms 0ms linear;
+  transition: opacity 250ms 0ms linear;
   content: "";
+  opacity: 0;
 }
 @media (max-width: 1439px) {
   .checkbox .checkbox__check {
     width: calc(16px - (1440px - 100vw) * -0.0014880952);
   }
-  .checkbox .checkbox__check:before, .checkbox .checkbox__check:after {
+  .checkbox .checkbox__check:before {
+    top: calc(0px - (1440px - 100vw) * 0.0014880952);
+  }
+  .checkbox .checkbox__check:after {
     margin-top: calc(0px - (1440px - 100vw) * 0.0014880952);
   }
 }
@@ -966,7 +966,10 @@ a, button, details, summary, input, label {
   .checkbox .checkbox__check {
     width: 17px;
   }
-  .checkbox .checkbox__check:before, .checkbox .checkbox__check:after {
+  .checkbox .checkbox__check:before {
+    top: -1px;
+  }
+  .checkbox .checkbox__check:after {
     margin-top: -1px;
   }
 }
@@ -978,6 +981,35 @@ a, button, details, summary, input, label {
 @media (max-width: 320px) {
   .checkbox .checkbox__check {
     width: 18px;
+  }
+}
+.checkbox .checkbox__input {
+  visibility: hidden;
+  position: absolute;
+}
+.checkbox .checkbox__input:checked ~ .checkbox__check:after {
+  opacity: 1;
+}
+@media (pointer: fine) {
+  .checkbox:hover:not(:active) > .checkbox__check:after {
+    opacity: 0.2;
+  }
+  .checkbox:hover:not(:active) > .checkbox__input:checked ~ .checkbox__check:after {
+    opacity: 0.8;
+  }
+  .checkbox:active > .checkbox__check:after {
+    -o-transition: fill stroke 25ms 0ms linear;
+    -webkit-transition: fill stroke 25ms 0ms linear;
+    -moz-transition: fill stroke 25ms 0ms linear;
+    transition: fill stroke 25ms 0ms linear;
+    opacity: 0.8;
+  }
+  .checkbox:active > .checkbox__input:checked ~ .checkbox__check:after {
+    -o-transition: fill stroke 25ms 0ms linear;
+    -webkit-transition: fill stroke 25ms 0ms linear;
+    -moz-transition: fill stroke 25ms 0ms linear;
+    transition: fill stroke 25ms 0ms linear;
+    opacity: 0.2;
   }
 }
 

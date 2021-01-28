@@ -8,45 +8,42 @@
   display: flex;
 
 
-  .checkbox__input {
-    @include hide;
-
-
-    &:checked + .checkbox__check {
-      &:before {
-        @include hide;
-      }
-      &:after {
-        @include show;
-      }
-    }
-  }
-
-
   .checkbox__check {
     @include font-awesome;
     @include font-size(13px, 13px);
     @include flex-vcenter;
     width: 16px;
+    position: relative;
+
     &:before {
-      @include show;
-      content:"\f096";
+      @include transition(opacity);
+      @include position-top-left();
+      content: "\f096";
+      position: absolute;
     }
+
     &:after {
-      @include hide;
-      content:"\f046";
+      @include transition(opacity);;
+      content: "\f046";
+      opacity: 0;
     }
 
     @media (max-width: $SizeDesktop - 1px) {
       width: calc-size-tablet-desktop(17, 16);
-      &:before, &:after {
+      &:before {
+        top: calc-size-tablet-desktop(-1, 0);
+      }
+      &:after {
         margin-top: calc-size-tablet-desktop(-1, 0);
       }
     }
 
     @media (max-width: $SizeTablet) {
       width: 17px;
-      &:before, &:after {
+      &:before {
+        top: -1px;
+      }
+      &:after {
         margin-top: -1px;
       }
     }
@@ -57,6 +54,39 @@
 
     @media (max-width: $SizePhone) {
       width: 18px;
+    }
+  }
+
+
+  .checkbox__input {
+    @include hide;
+
+
+    &:checked ~ .checkbox__check {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  @media (pointer: fine) {
+    &:hover:not(:active) > .checkbox__check:after {
+      opacity: 0.2;
+    }
+
+    &:hover:not(:active) > .checkbox__input:checked ~ .checkbox__check:after {
+      opacity: 0.8;
+    }
+
+    &:active > .checkbox__check:after {
+      @include transition(fill stroke, $TransitionActive);
+      opacity: 0.8;
+    }
+
+    &:active > .checkbox__input:checked ~ .checkbox__check:after {
+      @include transition(fill stroke, $TransitionActive);
+      opacity: 0.2;
     }
   }
 }
