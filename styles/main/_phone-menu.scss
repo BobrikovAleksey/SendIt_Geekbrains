@@ -112,6 +112,17 @@
     @media (max-width: $SizePhone) {
       @include font-size(18px, 22px);
     }
+
+
+    @media (pointer: fine) {
+      &:hover:not(:active) {
+        border-bottom: 1px solid black;
+      }
+
+      &:active {
+        border-bottom: 1px solid black;
+      }
+    }
   }
 
 
@@ -179,12 +190,10 @@
 
     &__phone {
       @include font-size(18px, 22px);
+      @include placeholder($VeryDarkGray);
       color: $VeryDarkGray;
       border-color: $VeryDarkGray;
       padding: 8px 28px;
-      &::placeholder {
-        color: $VeryDarkGray;
-      }
 
       @media (max-width: $SizePhone + 159px) {
         @include font-size(calc-size(14, 18, $SizePhoneN, $SizePhoneN + 160),

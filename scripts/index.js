@@ -17,6 +17,10 @@ const app = {
     cache: {},
     state: {},
 
+    popupClick(event) {
+        if (event.target.classList.contains('popup')) this.closePopup();
+    },
+
     /**
      * Открывает всплывающее окно
      * @param name String
@@ -28,6 +32,7 @@ const app = {
 
         !$$.main.hasAttribute('data-blur') && $$.main.setAttribute('data-blur', '');
         $$.popup[name].hasAttribute('data-hide') && $$.popup[name].removeAttribute('data-hide');
+        $$.popup.main.hasAttribute('data-hide') && $$.popup.main.removeAttribute('data-hide');
     },
 
     /**
@@ -46,6 +51,7 @@ const app = {
             });
         } else {
             !$$.popup[name].hasAttribute('data-hide') && $$.popup[name].setAttribute('data-hide', '');
+            !$$.popup.main.hasAttribute('data-hide') && $$.popup.main.setAttribute('data-hide', '');
         }
     },
 
@@ -54,17 +60,27 @@ const app = {
             initialized: true,
             main: document.querySelector('main'),
             popup: {
+                main: document.querySelector('.popup'),
                 phoneMenu: document.querySelector('.phone-menu'),
                 contactForm: document.querySelector('.contact-form'),
             },
         };
 
         window.addEventListener('resize', this.closePopup.bind(this, ''));
+
+        this.cache.popup.main.addEventListener('click', this.popupClick.bind(this));
+
+        document.querySelectorAll('.phone-menu__link').forEach((el) => {
+            el.addEventListener('click', this.closePopup.bind(this, "phoneMenu"));
+        });
         document.querySelectorAll('button[data-phone-menu="open"]').forEach((el) => {
             el.addEventListener('click', this.openPopup.bind(this, "phoneMenu"));
         });
         document.querySelectorAll('button[data-phone-menu="close"]').forEach((el) => {
             el.addEventListener('click', this.closePopup.bind(this, "phoneMenu"));
+        });
+        document.querySelectorAll('button[data-contact-form="open"]').forEach((el) => {
+            el.addEventListener('click', this.openPopup.bind(this, "contactForm"));
         });
     },
 };

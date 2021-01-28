@@ -1,0 +1,104 @@
+@import "../vars", "../mixins", "../functions";
+
+
+.contact-form {
+  @include position-top-left(50%, 50%);
+  transform: translate(-50%, -50%);
+  width: #{$InputWidthLg + 80px};
+  background: white;
+  border: 1px solid $Silver;
+  border-radius: 32px;
+  padding: 64px 40px 47px;
+  position: fixed;
+  margin: auto;
+
+  @media (max-width: $SizeTablet - 1px) {
+    @include font-size(calc-size-phone-tablet(18, 20), calc-size-phone-tablet(22, 24));
+    width: calc-size-phone-tablet($SizePhoneN - 16, $InputWidthLgN + 80);
+    padding: calc-size-phone-tablet(48, 64) calc-size-phone-tablet(21, 40) calc-size-phone-tablet(32, 47);
+  }
+
+  @media (max-width: $SizePhone) {
+    width: $SizePhone - $ContainerPaddingSm;
+    padding: 48px 16px 32px;
+  }
+
+
+  &__title {
+    @include font-family("semibold");
+    @include font-size(20px, 24px);
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-phone-tablet(18, 20), calc-size-phone-tablet(22, 24));
+    }
+
+    @media (max-width: $SizePhone) {
+      @include font-size(18px, 22px);
+    }
+  }
+
+
+  &__name, &__phone, &__button {
+    width: 100%;
+  }
+
+
+  &__name, &__phone {
+    @include placeholder($Blue);
+    color: $Blue;
+    border-color: $Blue;
+
+    @media (max-width: $SizeTablet - 1px) {
+      @include font-size(calc-size-phone-tablet(14, 16), calc-size-phone-tablet(17, 19));
+      padding: 8px calc-size-phone-tablet(20, 22) 7px;
+    }
+
+    @media (max-width: $SizePhone) {
+      @include font-size(14px, 17px);
+      padding: 8px 22px 7px;
+    }
+  }
+
+
+  &__name {
+    margin-top: 32px;
+
+    @media (max-width: $SizeTablet - 1px) {
+      margin-top: calc-size-phone-tablet(10, 13);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 10px;
+    }
+  }
+
+
+  &__phone {
+    margin-top: 13px;
+
+    @media (max-width: $SizeTablet - 1px) {
+      margin-top: calc-size-phone-tablet(10, 13);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 10px;
+    }
+  }
+
+
+  &__button {
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+
+    @media (max-width: $SizeTablet - 1px) {
+      margin-top: calc-size-phone-tablet(10, 12);
+    }
+
+    @media (max-width: $SizePhone) {
+      margin-top: 10px;
+    }
+  }
+}

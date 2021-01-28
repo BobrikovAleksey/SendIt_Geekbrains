@@ -82,7 +82,7 @@
 
                     <h2 class="header__text">А посылка доедет сама</h2>
 
-                    <button class="button button_blue header__button">Отправить посылку</button>
+                    <button class="button button_blue header__button" data-contact-form="open">Отправить посылку</button>
                 </div>
             </div>
         </header>
@@ -119,7 +119,7 @@
                         сервис в подарок!
                     </p>
 
-                    <button class="button button_blue description__button">Отправить посылку</button>
+                    <button class="button button_blue description__button" data-contact-form="open">Отправить посылку</button>
                 </div>
             </div>
         </section>
@@ -187,7 +187,7 @@
             <div class="container parcel__container">
                 <h2 class="parcel__title">Мы берём все заботы по доставке на себя!</h2>
 
-                <button class="button button_blue parcel__button">Отправить посылку</button>
+                <button class="button button_blue parcel__button" data-contact-form="open">Отправить посылку</button>
             </div>
         </section>
 
@@ -624,92 +624,103 @@
         </footer>
     </main>
 
-    <div class="container phone-menu" data-hide>
-        <header class="phone-menu__header">
-            <a href="/">
-                <img class="phone-menu__logo" src="./images/logos/logo-sm.png" alt="logo">
-            </a>
+    <section class="popup" data-hide>
 
-            <button class="menu-button phone-menu__menu-button" data-phone-menu="close">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31" height="30">
-                    <path d="M3.50592 0L30.376 26.8701L27.5475 29.6985L0.677491 2.82843L3.50592 0Z" />
-                    <path d="M30.3757 2.82843L3.50567 29.6985L0.677246 26.8701L27.5473 2.38419e-07L30.3757 2.82843Z" />
-                </svg>
-            </button>
-        </header>
-
-        <nav class="phone-menu__navigation">
-            <ul class="phone-menu__list">
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/">Главная</a>
-                </li>
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/#description">Описание</a>
-                </li>
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/#advantage">Преимущества</a>
-                </li>
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/#feedback">Отзывы</a>
-                </li>
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/#partners">Партнёры</a>
-                </li>
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/#guarantee">Гарантии</a>
-                </li>
-
-                <li class="phone-menu__item">
-                    <a class="phone-menu__link" href="/#faq">FAQ</a>
-                </li>
-            </ul>
-        </nav>
-
-        <footer class="phone-menu__footer">
-            <div class="phone-menu-callback">
-                <h3 class="phone-menu-callback__title">Остались вопросы?</h3>
-
-                <form class="phone-menu-callback__form" action="#" method="post">
-                    <input class="input phone-menu-callback__phone" type="text" name="phone"
-                           placeholder="Ваш телефон" required>
-
-                    <button class="button button_blue phone-menu-callback__button" type="submit">
-                        Заказать звонок
-                    </button>
-
-                    <label class="checkbox phone-menu-callback__consent">
-                        <input class="checkbox__input" type="checkbox" name="consent">
-                        <span class="checkbox__check"> </span>
-                        Я согласен на обработку персональных данных
-                    </label>
-                </form>
-            </div>
-
-            <div class="phone-menu-links">
-                <a class="phone-menu-links__item" href="https://vk.com/" target="_blank">
-                    <img class="phone-menu-links__image" src="./images/icons/vk.png" alt="vk">
+        <div class="container phone-menu" data-hide>
+            <header class="phone-menu__header">
+                <a href="/">
+                    <img class="phone-menu__logo" src="./images/logos/logo-sm.png" alt="logo">
                 </a>
 
-                <a class="phone-menu-links__item" href="https://www.instagram.com//" target="_blank">
-                    <img class="phone-menu-links__image" src="./images/icons/instagram.png" alt="instagram">
-                </a>
+                <button class="menu-button phone-menu__menu-button" data-phone-menu="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 30" width="31" height="30">
+                        <path d="M3.50592 0L30.376 26.8701L27.5475 29.6985L0.677491 2.82843L3.50592 0Z" />
+                        <path d="M30.3757 2.82843L3.50567 29.6985L0.677246 26.8701L27.5473 2.38419e-07L30.3757 2.82843Z" />
+                    </svg>
+                </button>
+            </header>
 
-                <a class="phone-menu-links__item" href="https://www.facebook.com//" target="_blank">
-                    <img class="phone-menu-links__image" src="./images/icons/facebook.png" alt="facebook">
-                </a>
-            </div>
-        </footer>
-    </div>
+            <nav class="phone-menu__navigation">
+                <ul class="phone-menu__list">
 
-    <div class="contact-form" data-hide>
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/">Главная</a>
+                    </li>
 
-    </div>
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/#description">Описание</a>
+                    </li>
+
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/#advantage">Преимущества</a>
+                    </li>
+
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/#feedback">Отзывы</a>
+                    </li>
+
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/#partners">Партнёры</a>
+                    </li>
+
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/#guarantee">Гарантии</a>
+                    </li>
+
+                    <li class="phone-menu__item">
+                        <a class="phone-menu__link" href="/#faq">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer class="phone-menu__footer">
+                <div class="phone-menu-callback">
+                    <h3 class="phone-menu-callback__title">Остались вопросы?</h3>
+
+                    <form class="phone-menu-callback__form" action="#" method="post">
+                        <input class="input phone-menu-callback__phone" type="text" name="phone"
+                               placeholder="Ваш телефон" required>
+
+                        <button class="button button_blue phone-menu-callback__button" type="submit">
+                            Заказать звонок
+                        </button>
+
+                        <label class="checkbox phone-menu-callback__consent">
+                            <input class="checkbox__input" type="checkbox" name="consent">
+                            <span class="checkbox__check"> </span>
+                            Я согласен на обработку персональных данных
+                        </label>
+                    </form>
+                </div>
+
+                <div class="phone-menu-links">
+                    <a class="phone-menu-links__item" href="https://vk.com/" target="_blank">
+                        <img class="phone-menu-links__image" src="./images/icons/vk.png" alt="vk">
+                    </a>
+
+                    <a class="phone-menu-links__item" href="https://www.instagram.com//" target="_blank">
+                        <img class="phone-menu-links__image" src="./images/icons/instagram.png" alt="instagram">
+                    </a>
+
+                    <a class="phone-menu-links__item" href="https://www.facebook.com//" target="_blank">
+                        <img class="phone-menu-links__image" src="./images/icons/facebook.png" alt="facebook">
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <div class="contact-form" data-hide>
+            <p class="contact-form__title">Оставьте заявку, и мы Вам перезвоним!</p>
+
+            <form action="#" method="post">
+                <input class="input contact-form__name" type="text" name="name" placeholder="Ваше имя" required>
+
+                <input class="input contact-form__phone" type="text" name="phone" placeholder="Ваш телефон" required>
+
+                <button class="button button_blue contact-form__button" type="submit">Заказать звонок</button>
+            </form>
+        </div>
+    </section>
 
     <!-- scripts -->
     <script type="module" src="scripts/index.js"></script>
