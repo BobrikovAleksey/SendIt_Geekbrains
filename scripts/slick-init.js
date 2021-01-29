@@ -1,20 +1,29 @@
 $(document).ready(function() {
     $('.feedback__reviews').slick({
         infinite: true,
-        variableWidth: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 731,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     });
 
     $('.guarantee__content').slick({
         infinite: true,
-        variableWidth: true,
-        arrows:	false,
-        draggable: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
-                    arrows:	true,
-                    draggable: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 },
             },
         ],
