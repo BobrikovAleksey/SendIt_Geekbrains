@@ -1,4 +1,3 @@
-import './modules/jquery.js';
 import './slick-init.js';
 import './input-mask-init.js';
 
@@ -19,7 +18,11 @@ const app = {
     state: {},
 
     submitContacts(event) {
+        const inputs = event.target.querySelectorAll('input[type="text"], input[type="phone"]');
+        inputs.forEach((el) => el.value = '');
 
+        event.preventDefault();
+        this.closePopup();
     },
 
     popupClick(event) {
@@ -75,17 +78,19 @@ const app = {
 
         this.cache.popup.main.addEventListener('click', this.popupClick.bind(this));
 
-        document.querySelectorAll('.phone-menu__link').forEach((el) => {
-            el.addEventListener('click', this.closePopup.bind(this, "phoneMenu"));
+        document.querySelectorAll('[data-phone-submit]').forEach((el) => {
+            el.addEventListener('submit', this.submitContacts.bind(this));
         });
-        document.querySelectorAll('button[data-phone-menu="open"]').forEach((el) => {
-            el.addEventListener('click', this.openPopup.bind(this, "phoneMenu"));
+
+        document.querySelectorAll('[data-phone-menu="open"]').forEach((el) => {
+            el.addEventListener('click', this.openPopup.bind(this, 'phoneMenu'));
         });
-        document.querySelectorAll('button[data-phone-menu="close"]').forEach((el) => {
-            el.addEventListener('click', this.closePopup.bind(this, "phoneMenu"));
+        document.querySelectorAll('.phone-menu__link, [data-phone-menu="close"]').forEach((el) => {
+            el.addEventListener('click', this.closePopup.bind(this, 'phoneMenu'));
         });
-        document.querySelectorAll('button[data-contact-form="open"]').forEach((el) => {
-            el.addEventListener('click', this.openPopup.bind(this, "contactForm"));
+
+        document.querySelectorAll('[data-contact-form="open"]').forEach((el) => {
+            el.addEventListener('click', this.openPopup.bind(this, 'contactForm'));
         });
     },
 };

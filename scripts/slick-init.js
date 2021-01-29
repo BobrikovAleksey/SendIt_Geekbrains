@@ -1,6 +1,3 @@
-import './modules/jquery-slick.js';
-
-
 $(document).ready(function() {
     $('.feedback__reviews').slick({
         infinite: true,

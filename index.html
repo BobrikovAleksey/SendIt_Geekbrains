@@ -199,7 +199,7 @@
                     <p class="callback__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
                 </div>
 
-                <form class="callback__form" method="post" data-contact-submit>
+                <form class="callback__form" method="post" data-phone-submit>
                     <input class="input callback__phone" type="text" name="phone" placeholder="Ваш телефон"
                            data-phone required>
 
@@ -535,7 +535,7 @@
                 <div class="footer-callback">
                     <h3 class="footer-callback__title">Остались вопросы?</h3>
 
-                    <form class="footer-callback__form" method="post" data-contact-submit>
+                    <form class="footer-callback__form" method="post" data-phone-submit>
                         <input class="input footer-callback__phone" type="text" name="phone" placeholder="Ваш телефон"
                                data-phone required>
 
@@ -677,11 +677,12 @@
                 <div class="phone-menu-callback">
                     <h3 class="phone-menu-callback__title">Остались вопросы?</h3>
 
-                    <form class="phone-menu-callback__form" method="post" data-contact-submit>
+                    <form class="phone-menu-callback__form" method="post" data-phone-submit>
                         <input class="input phone-menu-callback__phone" type="text" name="phone"
                                placeholder="Ваш телефон" data-phone required>
 
-                        <button class="button button_blue phone-menu-callback__button" type="submit">
+                        <button class="button button_blue phone-menu-callback__button" type="submit"
+                                data-phone-menu="close">
                             Заказать звонок
                         </button>
 
@@ -694,15 +695,17 @@
                 </div>
 
                 <div class="phone-menu-links">
-                    <a class="phone-menu-links__item" href="https://vk.com/" target="_blank">
+                    <a class="phone-menu-links__item" href="https://vk.com/" data-phone-menu="close" target="_blank">
                         <img class="phone-menu-links__image" src="./images/icons/vk.png" alt="vk">
                     </a>
 
-                    <a class="phone-menu-links__item" href="https://www.instagram.com//" target="_blank">
+                    <a class="phone-menu-links__item" href="https://www.instagram.com//" data-phone-menu="close"
+                       target="_blank">
                         <img class="phone-menu-links__image" src="./images/icons/instagram.png" alt="instagram">
                     </a>
 
-                    <a class="phone-menu-links__item" href="https://www.facebook.com//" target="_blank">
+                    <a class="phone-menu-links__item" href="https://www.facebook.com//" data-phone-menu="close"
+                       target="_blank">
                         <img class="phone-menu-links__image" src="./images/icons/facebook.png" alt="facebook">
                     </a>
                 </div>
@@ -712,7 +715,7 @@
         <div class="contact-form" data-hide>
             <p class="contact-form__title">Оставьте заявку, и мы Вам перезвоним!</p>
 
-            <form method="post" data-contact-submit>
+            <form method="post" data-phone-submit>
                 <input class="input contact-form__name" type="text" name="name" placeholder="Ваше имя" required>
 
                 <input class="input contact-form__phone" type="text" name="phone" placeholder="Ваш телефон" data-phone
@@ -724,8 +727,9 @@
     </section>
 
     <!-- scripts -->
-<!--    <script src="./scripts/modules/jquery.js"></script>-->
-<!--    <script src="./scripts/modules/jquery-inputmask.js"></script>-->
-    <script defer type="module" src="./scripts/index.js"></script>
+    <script src="./scripts/modules/jquery.js"></script>
+    <script src="./scripts/modules/jquery-inputmask.js"></script>
+    <script src="./scripts/modules/jquery-slick.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
