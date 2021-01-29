@@ -199,8 +199,9 @@
                     <p class="callback__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
                 </div>
 
-                <form class="callback__form" action="#" method="post">
-                    <input class="input callback__phone" type="text" name="phone" placeholder="Ваш телефон" required>
+                <form class="callback__form" method="post" data-contact-submit>
+                    <input class="input callback__phone" type="text" name="phone" placeholder="Ваш телефон"
+                           data-phone required>
 
                     <button class="button button_orange callback__button" type="submit">Заказать звонок</button>
 
@@ -534,9 +535,9 @@
                 <div class="footer-callback">
                     <h3 class="footer-callback__title">Остались вопросы?</h3>
 
-                    <form class="footer-callback__form" action="#" method="post">
-                        <input class="input footer-callback__phone" type="text" name="phone"
-                               placeholder="Ваш телефон" required>
+                    <form class="footer-callback__form" method="post" data-contact-submit>
+                        <input class="input footer-callback__phone" type="text" name="phone" placeholder="Ваш телефон"
+                               data-phone required>
 
                         <button class="button button_blue footer-callback__button" type="submit">
                             Заказать звонок
@@ -625,7 +626,6 @@
     </main>
 
     <section class="popup" data-hide>
-
         <div class="container phone-menu" data-hide>
             <header class="phone-menu__header">
                 <a href="/">
@@ -677,9 +677,9 @@
                 <div class="phone-menu-callback">
                     <h3 class="phone-menu-callback__title">Остались вопросы?</h3>
 
-                    <form class="phone-menu-callback__form" action="#" method="post">
+                    <form class="phone-menu-callback__form" method="post" data-contact-submit>
                         <input class="input phone-menu-callback__phone" type="text" name="phone"
-                               placeholder="Ваш телефон" required>
+                               placeholder="Ваш телефон" data-phone required>
 
                         <button class="button button_blue phone-menu-callback__button" type="submit">
                             Заказать звонок
@@ -712,10 +712,11 @@
         <div class="contact-form" data-hide>
             <p class="contact-form__title">Оставьте заявку, и мы Вам перезвоним!</p>
 
-            <form action="#" method="post">
+            <form method="post" data-contact-submit>
                 <input class="input contact-form__name" type="text" name="name" placeholder="Ваше имя" required>
 
-                <input class="input contact-form__phone" type="text" name="phone" placeholder="Ваш телефон" required>
+                <input class="input contact-form__phone" type="text" name="phone" placeholder="Ваш телефон" data-phone
+                       required>
 
                 <button class="button button_blue contact-form__button" type="submit">Заказать звонок</button>
             </form>
@@ -723,6 +724,8 @@
     </section>
 
     <!-- scripts -->
-    <script type="module" src="scripts/index.js"></script>
+<!--    <script src="./scripts/modules/jquery.js"></script>-->
+<!--    <script src="./scripts/modules/jquery-inputmask.js"></script>-->
+    <script defer type="module" src="./scripts/index.js"></script>
 </body>
 </html>

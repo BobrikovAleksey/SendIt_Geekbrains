@@ -1,5 +1,6 @@
 import './modules/jquery.js';
 import './slick-init.js';
+import './input-mask-init.js';
 
 
 if (location.host === 'bobrikovaleksey.github.io') {
@@ -16,6 +17,10 @@ if (location.host === 'bobrikovaleksey.github.io') {
 const app = {
     cache: {},
     state: {},
+
+    submitContacts(event) {
+
+    },
 
     popupClick(event) {
         if (event.target.classList.contains('popup')) this.closePopup();
