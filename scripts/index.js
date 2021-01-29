@@ -92,6 +92,9 @@ const app = {
         document.querySelectorAll('[data-contact-form="open"]').forEach((el) => {
             el.addEventListener('click', this.openPopup.bind(this, 'contactForm'));
         });
+        document.querySelectorAll('[data-contact-form="close"]').forEach((el) => {
+            el.addEventListener('click', this.closePopup.bind(this, 'contactForm'));
+        });
     },
 };
 

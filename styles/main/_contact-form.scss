@@ -8,19 +8,56 @@
   background: white;
   border: 1px solid $Silver;
   border-radius: 32px;
-  padding: 64px 40px 47px;
+  padding: 63px 40px 46px;
   position: fixed;
   margin: auto;
 
   @media (max-width: $SizeTablet - 1px) {
     @include font-size(calc-size-phone-tablet(18, 20), calc-size-phone-tablet(22, 24));
     width: calc-size-phone-tablet($SizePhoneN - 16, $InputWidthLgN + 80);
-    padding: calc-size-phone-tablet(48, 64) calc-size-phone-tablet(21, 40) calc-size-phone-tablet(32, 47);
+    padding: calc-size-phone-tablet(48, 63) calc-size-phone-tablet(21, 40) calc-size-phone-tablet(32, 46);
   }
 
   @media (max-width: $SizePhone) {
     width: $SizePhone - $ContainerPaddingSm;
     padding: 48px 16px 32px;
+  }
+
+
+  &__exit {
+    @include transition(background);
+    @include flex-center-center;
+    @include position-top-right(13px, 10px);
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    position: absolute;
+
+    & svg {
+      @include transition(color);
+      fill: $Blue;
+    }
+
+    @media (pointer: fine) {
+      &:hover:not(:active) {
+        background: $Blue;
+
+        & > svg {
+          fill: white;
+        }
+      }
+
+      &:active {
+        @include transition(background, $TransitionActive);
+        background: $LightBlue;
+
+        & > svg {
+          @include transition(color, $TransitionActive);
+          fill: white;
+        }
+      }
+    }
   }
 
 
