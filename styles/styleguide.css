@@ -277,6 +277,12 @@ body {
     color: #003675;
   }
 }
+.page-2__link_hover {
+  border-bottom: none;
+}
+.page-2__link_active {
+  color: #003675;
+}
 .page-2__link_upper {
   text-transform: uppercase;
 }
@@ -352,6 +358,10 @@ body {
 
 .page-7__inform {
   padding: 0;
+}
+
+.slick-arrow {
+  display: none;
 }
 
 /************************************************

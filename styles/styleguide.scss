@@ -167,6 +167,15 @@ body {
         color: $VeryDarkBlue;
       }
     }
+
+
+    &_hover {
+      border-bottom: none;
+    }
+
+    &_active {
+      color: $VeryDarkBlue;
+    }
   }
 
 
@@ -276,6 +285,12 @@ body {
     padding: 0;
   }
 }
+
+.slick {
+   &-arrow {
+     display: none;
+   }
+ }
 
 
 @import "elements/breadcrumbs";
