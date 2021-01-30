@@ -1,4 +1,4 @@
-@import "mixins", "vars";
+@import "mixins", "vars", "functions";
 
 
 body {
@@ -8,12 +8,11 @@ body {
 
 
 .container {
+  @include flex-between-center;
+  z-index: 100;
   width: 1380px;
   height: 100%;
   background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 30px;
   position: relative;
   margin: 0 auto;
@@ -28,8 +27,7 @@ body {
   }
 
   &__block {
-    display: flex;
-    align-items: center;
+    @include flex-vcenter;
   }
 
   &__logo {
@@ -37,10 +35,19 @@ body {
   }
 
   &__text {
-    font-family: "Myriad Pro Semibold", serif;
+    @include font-family("semibold");
+
     & span {
       margin-left: 122px;
     }
+  }
+
+
+  &__page-title {
+    @include font-family("bold");
+    @include font-size(22px, 26px);
+    width: 768px;
+    text-align: center;
   }
 }
 
@@ -48,19 +55,21 @@ body {
 .page {
   height: 876px;
 
+
   &__container {
-    height: fit-content;
     display: grid;
     grid-template-columns: [inform] 313px [content] 985px;
     grid-gap: 30px 20px;
   }
 
+
   &__inform {
     grid-column: inform;
     align-self: self-start;
     padding: 0 3px;
-    margin-top: -2px;
+    margin-top: -3px;
   }
+
 
   &__content {
     grid-column: content;
@@ -68,25 +77,14 @@ body {
     padding: 30px;
   }
 
-  &__title {
-    width: 985px;
-    font-family: "Myriad Pro Bold", serif;
-    font-size: 22px;
-    line-height: 26.4px;
-    text-align: center;
-    position: absolute;
-    top: -60px;
-    right: 30px;
-  }
 
   &__number {
-    font-size: 14px;
-    line-height: 16.8px;
+    @include font-size(14px, 16.8px);
+    @include position-bottom-left(25px, 30px);
     position: absolute;
-    bottom: 25px;
-    left: 30px;
+
     &_bold {
-      font-family: "Myriad Pro Black", serif;
+      @include font-family("black");
     }
   }
 }
@@ -97,32 +95,32 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 273px 198px 0;
+    padding: 272px 198px 0;
   }
+
 
   &__title {
+    @include font-size(112px, 134.4px);
     color: $Blue;
-    font-size: 112px;
-    line-height: 134.4px;
   }
+
 
   &__text {
-    color: $DarkGray;
-    font-size: 42px;
-    line-height: 50.4px;
-    margin-top: 13px;
+    @include font-size(42px, 50.4px);
+    color: $VeryDarkGray;
+    margin-top: 14px;
   }
+
 
   &__date {
-    font-size: 14px;
-    line-height: 16.8px;
+    @include font-size(14px, 17px);
+    @include position-bottom-left(26px, 30px);
     position: absolute;
-    bottom: 26px;
-    left: 30px;
   }
 
+
   &__number {
-    right: 30px;
+    @include position-bottom-right(26px, 30px);
     left: auto;
   }
 }
@@ -130,35 +128,50 @@ body {
 
 .page-2 {
   &__text {
-    padding: 20px 31px 38px;
+    padding: 20px 30px 38px;
+
+    h1, h2 {
+      text-transform: none;
+    }
 
     h3 {
-      margin: 25px 0;
+      margin: 25px 0 23px;
     }
   }
 
+
   &__breadcrumbs {
-    margin-bottom: 19px;
+    margin-bottom: 18px;
   }
+
 
   &__links {
-    margin-top: 35px;
+    margin-top: 38px;
   }
 
-  &__link:not(:first-of-type) {
-    margin-left: 31px;
+
+  &__link {
+    @include A;
+    border-bottom: 1px solid $DarkBlue;
+
+    &:not(:first-of-type) {
+      margin-left: 31px;
+    }
+
+    @media (pointer: fine) {
+      &:hover:not(:active) {
+        border-bottom: none;
+      }
+
+      &:active {
+        color: $VeryDarkBlue;
+      }
+    }
   }
+
 
   &__link_upper {
     text-transform: uppercase;
-  }
-
-  &__fonts {
-    background: #F7F7F7;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px 60px;
-    padding: 24px 20px 34px;
   }
 }
 
@@ -175,11 +188,36 @@ body {
     }
   }
 
+
   &__buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px 35px;
     padding-bottom: 44px;
+  }
+
+
+  &__button {
+    width: 285px;
+    height: $InputHeightLg;
+
+
+    &-blue_hover {
+      @include box-shadow(rgba($Blue, 0.45), 15px, 4px);
+    }
+
+    &-blue_active {
+      background: $LightBlue;
+    }
+
+
+    &-orange_hover {
+      @include box-shadow(rgba($Orange, 0.55), 10px, 2px);
+    }
+
+    &-orange_active {
+      background: $LightOrange;
+    }
   }
 }
 
@@ -240,7 +278,7 @@ body {
 }
 
 
+@import "elements/breadcrumbs";
 @import "styleguide/fonts";
-@import "styleguide/breadcrumbs";
 @import "styleguide/colors";
 @import "styleguide/logos";

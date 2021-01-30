@@ -1,21 +1,21 @@
-@import "../mixins", "../vars";
+@import "../mixins", "../vars", "../functions";
 
 
 .breadcrumbs {
   display: flex;
 
   &__item {
+    @include font-size(14px, 17px);
     text-decoration: none;
     color: $DarkGray;
-    font-size: 14px;
-    line-height: 16.8px;
     border: none;
     margin-left: 3px;
     &:before {
       content: "/";
-      display:inline-block;
+      display: inline-block;
       margin-right: 3px;
     }
+
     &:first-of-type {
       margin-left: 0;
       &:before {
@@ -23,12 +23,17 @@
         margin-right: 0;
       }
     }
-    &:hover:not(:active) {
-      text-decoration: underline;
-    }
-    &:active {
-      color: $Gray;
-      border: none;
+
+
+    @media (pointer: fine) {
+      &:hover:not(:active) {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: $Gray;
+        border: none;
+      }
     }
   }
 }

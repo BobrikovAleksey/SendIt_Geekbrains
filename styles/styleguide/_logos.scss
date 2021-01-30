@@ -2,8 +2,7 @@
 
 
 .main-logo {
-  display: flex;
-  justify-content: space-between;
+  @include flex-hbetween;
   padding-bottom: 21px;
 
   &__block {
@@ -11,10 +10,8 @@
   }
 
   &__image {
+    @include flex-center-center;
     height: 244px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &_without-tagline {
       width: 238px;
@@ -39,11 +36,9 @@
   grid-gap: 20px;
 
   &__image {
+    @include flex-center-center;
     width: 453px;
     height: 187px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &_black {
       background: $DarkGray;
