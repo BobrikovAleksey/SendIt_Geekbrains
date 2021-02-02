@@ -375,10 +375,10 @@ body {
   margin: auto;
 }
 .slick-prev {
-  left: -32px;
+  left: -22px;
 }
 .slick-next {
-  right: -32px;
+  right: -22px;
 }
 
 /************************************************
