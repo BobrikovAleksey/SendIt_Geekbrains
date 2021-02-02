@@ -52,6 +52,12 @@ body {
 }
 
 
+.pages {
+  width: 1380px;
+  margin: 0 auto;
+}
+
+
 .page {
   height: 876px;
 
@@ -287,9 +293,22 @@ body {
 }
 
 .slick {
-   &-arrow {
-     display: none;
-   }
+  &-arrow {
+    @include position-top-bottom(0, 44px);
+    z-index: 100;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    margin: auto;
+  }
+
+  &-prev {
+    left: -32px;
+  }
+
+  &-next {
+    right: -32px;
+  }
  }
 
 
